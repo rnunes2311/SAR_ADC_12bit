@@ -1,0 +1,162 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_ff_n40C_1v95 Corner ===================================
+
+Startpoint: vin_p_sw_on (input port clocked by __VIRTUAL_CLK__)
+Endpoint: vss_n_o[5] (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  2.000000    2.000000 v input external delay
+     1    0.004781    0.007870    0.004032    2.004032 v vin_p_sw_on (in)
+                                                         vin_p_sw_on (net)
+                      0.007871    0.000000    2.004032 v input25/A (sky130_fd_sc_hd__buf_1)
+     1    0.026890    0.107014    0.118494    2.122526 v input25/X (sky130_fd_sc_hd__buf_1)
+                                                         net25 (net)
+                      0.107027    0.001009    2.123535 v _210_/B (sky130_fd_sc_hd__nor3_1)
+     2    0.008832    0.207585    0.215086    2.338621 ^ _210_/Y (sky130_fd_sc_hd__nor3_1)
+                                                         net39 (net)
+                      0.207586    0.000379    2.339001 ^ fanout98/A (sky130_fd_sc_hd__clkbuf_4)
+    10    0.060647    0.141088    0.205586    2.544587 ^ fanout98/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         net98 (net)
+                      0.141190    0.003120    2.547707 ^ _211_/B (sky130_fd_sc_hd__and2_1)
+     2    0.016036    0.123403    0.156065    2.703772 ^ _211_/X (sky130_fd_sc_hd__and2_1)
+                                                         _058_ (net)
+                      0.123408    0.000683    2.704454 ^ fanout96/A (sky130_fd_sc_hd__clkbuf_2)
+     7    0.028220    0.121032    0.151058    2.855512 ^ fanout96/X (sky130_fd_sc_hd__clkbuf_2)
+                                                         net96 (net)
+                      0.121033    0.000341    2.855853 ^ _226_/A2 (sky130_fd_sc_hd__a21oi_1)
+     2    0.007201    0.053782    0.068997    2.924850 v _226_/Y (sky130_fd_sc_hd__a21oi_1)
+                                                         _068_ (net)
+                      0.053782    0.000098    2.924948 v _227_/A2 (sky130_fd_sc_hd__o21ai_1)
+     1    0.017387    0.248830    0.215360    3.140307 ^ _227_/Y (sky130_fd_sc_hd__o21ai_1)
+                                                         net79 (net)
+                      0.248841    0.001362    3.141670 ^ output79/A (sky130_fd_sc_hd__buf_2)
+     1    0.037166    0.138941    0.179610    3.321280 ^ output79/X (sky130_fd_sc_hd__buf_2)
+                                                         vss_n_o[5] (net)
+                      0.138957    0.001240    3.322520 ^ vss_n_o[5] (out)
+                                              3.322520   data arrival time
+
+                      0.000000   10.000000   10.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000   10.000000   clock network delay (ideal)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -3.322520   data arrival time
+---------------------------------------------------------------------------------------------
+                                              4.427480   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_ff_n40C_1v95 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_ff_n40C_1v95 Corner ===================================
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+_302_/Y                                  10     11        (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 0 unannotated drivers.
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 1
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 28 unclocked register/latch pins.
+  _413_/CLK
+  _414_/CLK
+  _415_/CLK
+  _416_/CLK
+  _417_/CLK
+  _418_/CLK
+  _419_/CLK
+  _420_/CLK
+  _421_/CLK
+  _422_/CLK
+  _423_/CLK
+  _424_/CLK
+  _425_/CLK
+  _426_/CLK
+  _427_/CLK
+  _428_/CLK
+  _429_/CLK
+  _430_/CLK
+  _431_/CLK
+  _432_/CLK
+  _433_/CLK
+  _434_/CLK
+  _435_/CLK
+  _436_/CLK
+  _437_/CLK
+  _438_/CLK
+  _439_/CLK
+  _440_/CLK
+Warning: There are 36 unconstrained endpoints.
+  clk_data
+  data[0]
+  data[1]
+  data[2]
+  data[3]
+  data[4]
+  data[5]
+  en_vcm_sw_o
+  _413_/D
+  _414_/D
+  _415_/D
+  _416_/D
+  _417_/D
+  _418_/D
+  _419_/D
+  _420_/D
+  _421_/D
+  _422_/D
+  _423_/D
+  _424_/D
+  _425_/D
+  _426_/D
+  _427_/D
+  _428_/D
+  _429_/D
+  _430_/D
+  _431_/D
+  _432_/D
+  _433_/D
+  _434_/D
+  _435_/D
+  _436_/D
+  _437_/D
+  _438_/D
+  _439_/D
+  _440_/D

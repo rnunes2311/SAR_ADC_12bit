@@ -1,0 +1,472 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: debug_mux[0] (input port clocked by __VIRTUAL_CLK__)
+Endpoint: debug_out (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  2.000000    2.000000 ^ input external delay
+     1    0.003455    0.022577    0.012622    2.012622 ^ debug_mux[0] (in)
+                                                         debug_mux[0] (net)
+                      0.022578    0.000000    2.012622 ^ input4/A (sky130_fd_sc_hd__clkbuf_2)
+     7    0.024017    0.135491    0.161435    2.174057 ^ input4/X (sky130_fd_sc_hd__clkbuf_2)
+                                                         net4 (net)
+                      0.135501    0.000965    2.175022 ^ _098_/S0 (sky130_fd_sc_hd__mux4_1)
+     1    0.002691    0.083539    0.555924    2.730946 v _098_/X (sky130_fd_sc_hd__mux4_1)
+                                                         _035_ (net)
+                      0.083539    0.000085    2.731031 v _100_/B (sky130_fd_sc_hd__and3b_1)
+     1    0.003109    0.038574    0.175949    2.906980 v _100_/X (sky130_fd_sc_hd__and3b_1)
+                                                         _037_ (net)
+                      0.038574    0.000097    2.907077 v _101_/B1 (sky130_fd_sc_hd__a31o_1)
+     1    0.002971    0.037684    0.177470    3.084547 v _101_/X (sky130_fd_sc_hd__a31o_1)
+                                                         _038_ (net)
+                      0.037684    0.000070    3.084617 v _114_/A1 (sky130_fd_sc_hd__o32a_1)
+     1    0.004801    0.060926    0.347556    3.432173 v _114_/X (sky130_fd_sc_hd__o32a_1)
+                                                         net32 (net)
+                      0.060927    0.000201    3.432375 v output32/A (sky130_fd_sc_hd__clkbuf_4)
+     1    0.036229    0.083249    0.192320    3.624695 v output32/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         debug_out (net)
+                      0.083272    0.001151    3.625847 v debug_out (out)
+                                              3.625847   data arrival time
+
+                      0.000000   10.000000   10.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000   10.000000   clock network delay (ideal)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -3.625847   data arrival time
+---------------------------------------------------------------------------------------------
+                                              4.124154   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+_134_/X                                  10     12     -2 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 315 unannotated drivers.
+ clk
+ comp_n
+ comp_p
+ debug_mux[0]
+ debug_mux[1]
+ debug_mux[2]
+ debug_mux[3]
+ en_offset_cal
+ en_vcm_sw_o_i
+ rst_z
+ start
+ vcm_o_i[0]
+ vcm_o_i[10]
+ vcm_o_i[1]
+ vcm_o_i[2]
+ vcm_o_i[3]
+ vcm_o_i[4]
+ vcm_o_i[5]
+ vcm_o_i[6]
+ vcm_o_i[7]
+ vcm_o_i[8]
+ vcm_o_i[9]
+ vin_n_sw_on
+ vin_p_sw_on
+ _087_/Y
+ _088_/Y
+ _089_/Y
+ _090_/Y
+ _091_/Y
+ _092_/Y
+ _093_/Y
+ _094_/Y
+ _095_/X
+ _096_/Y
+ _097_/Y
+ _098_/X
+ _099_/X
+ _100_/X
+ _101_/X
+ _102_/X
+ _103_/Y
+ _104_/X
+ _105_/X
+ _106_/X
+ _107_/Y
+ _108_/X
+ _109_/Y
+ _110_/X
+ _111_/X
+ _112_/X
+ _113_/X
+ _114_/X
+ _115_/X
+ _116_/X
+ _117_/X
+ _118_/X
+ _119_/X
+ _120_/Y
+ _121_/Y
+ _122_/X
+ _123_/Y
+ _124_/X
+ _125_/Y
+ _126_/X
+ _127_/Y
+ _128_/X
+ _129_/Y
+ _130_/X
+ _131_/Y
+ _132_/X
+ _133_/Y
+ _134_/X
+ _135_/Y
+ _136_/Y
+ _137_/Y
+ _138_/Y
+ _139_/Y
+ _140_/Y
+ _141_/Y
+ _142_/Y
+ _143_/Y
+ _144_/Y
+ _145_/Y
+ _146_/Y
+ _147_/X
+ _148_/X
+ _149_/X
+ _150_/Y
+ _151_/X
+ _152_/Y
+ _153_/X
+ _154_/Y
+ _155_/X
+ _156_/Y
+ _157_/X
+ _158_/Y
+ _159_/X
+ _160_/Y
+ _161_/X
+ _162_/Y
+ _163_/X
+ _164_/Y
+ _165_/X
+ _166_/Y
+ _167_/X
+ _168_/Y
+ _169_/X
+ _170_/Y
+ _171_/Y
+ _172_/Y
+ _173_/Y
+ _174_/Y
+ _175_/Y
+ _176_/Y
+ _177_/X
+ _178_/Y
+ _179_/X
+ _180_/Y
+ _181_/Y
+ _182_/Y
+ _183_/Y
+ _184_/Y
+ _185_/Y
+ _186_/Y
+ _187_/Y
+ _188_/Y
+ _189_/Y
+ _190_/Y
+ _191_/Y
+ _192_/Y
+ _193_/X
+ _194_/X
+ _195_/Y
+ _196_/Y
+ _197_/X
+ _198_/X
+ _199_/X
+ _200_/X
+ _201_/X
+ _202_/X
+ _203_/X
+ _204_/X
+ _205_/X
+ _206_/X
+ _207_/X
+ _208_/X
+ _209_/X
+ _210_/X
+ _211_/X
+ _212_/X
+ _213_/X
+ _214_/X
+ _215_/X
+ _216_/X
+ _217_/X
+ _218_/X
+ _219_/X
+ _220_/X
+ _221_/X
+ _222_/X
+ _223_/X
+ _224_/X
+ _225_/X
+ _226_/X
+ _227_/X
+ _228_/X
+ _229_/X
+ _230_/X
+ _231_/X
+ _232_/X
+ _233_/X
+ _234_/X
+ _235_/X
+ _236_/X
+ _237_/X
+ _238_/X
+ _239_/X
+ _240_/X
+ _241_/X
+ _242_/X
+ _243_/Q
+ _244_/Q
+ _245_/Q
+ _246_/Q
+ _247_/Q
+ _248_/Q
+ _249_/Q
+ _250_/Q
+ _251_/Q
+ _252_/Q
+ _253_/Q
+ _254_/Q
+ _255_/Q
+ _256_/Q
+ _257_/Q
+ _258_/Q
+ _259_/Q
+ _260_/Q
+ _261_/Q
+ _262_/Q
+ _263_/Q
+ _264_/Q
+ _265_/Q
+ _266_/Q
+ _267_/Q
+ _268_/Q
+ _269_/Q
+ fanout100/X
+ fanout101/X
+ fanout102/X
+ fanout103/X
+ fanout104/X
+ fanout105/X
+ fanout106/X
+ fanout107/X
+ fanout108/X
+ fanout94/X
+ fanout95/X
+ fanout96/X
+ fanout97/X
+ fanout98/X
+ fanout99/X
+ input1/X
+ input10/X
+ input11/X
+ input12/X
+ input13/X
+ input14/X
+ input15/X
+ input16/X
+ input17/X
+ input18/X
+ input19/X
+ input2/X
+ input20/X
+ input21/X
+ input22/X
+ input23/X
+ input24/X
+ input3/X
+ input4/X
+ input5/X
+ input6/X
+ input7/X
+ input8/X
+ input9/X
+ output25/X
+ output26/X
+ output27/X
+ output28/X
+ output29/X
+ output30/X
+ output31/X
+ output32/X
+ output33/X
+ output34/X
+ output35/X
+ output36/X
+ output37/X
+ output38/X
+ output39/X
+ output40/X
+ output41/X
+ output42/X
+ output43/X
+ output44/X
+ output45/X
+ output46/X
+ output47/X
+ output48/X
+ output49/X
+ output50/X
+ output51/X
+ output52/X
+ output53/X
+ output54/X
+ output55/X
+ output56/X
+ output57/X
+ output58/X
+ output59/X
+ output60/X
+ output61/X
+ output62/X
+ output63/X
+ output64/X
+ output65/X
+ output66/X
+ output67/X
+ output68/X
+ output69/X
+ output70/X
+ output71/X
+ output72/X
+ output73/X
+ output74/X
+ output75/X
+ output76/X
+ output77/X
+ output78/X
+ output79/X
+ output80/X
+ output81/X
+ output82/X
+ output83/X
+ output84/X
+ output85/X
+ output86/X
+ output87/X
+ output88/X
+ output89/X
+ output90/X
+ output91/X
+ output92/X
+ output93/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+Writing metric design__max_slew_violation__count__corner:nom_tt_025C_1v80: 0
+max fanout violation count 1
+Writing metric design__max_fanout_violation__count__corner:nom_tt_025C_1v80: 1
+max cap violation count 0
+Writing metric design__max_cap_violation__count__corner:nom_tt_025C_1v80: 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 27 unclocked register/latch pins.
+  _243_/CLK
+  _244_/CLK
+  _245_/CLK
+  _246_/CLK
+  _247_/CLK
+  _248_/CLK
+  _249_/CLK
+  _250_/CLK
+  _251_/CLK
+  _252_/CLK
+  _253_/CLK
+  _254_/CLK
+  _255_/CLK
+  _256_/CLK
+  _257_/CLK
+  _258_/CLK
+  _259_/CLK
+  _260_/CLK
+  _261_/CLK
+  _262_/CLK
+  _263_/CLK
+  _264_/CLK
+  _265_/CLK
+  _266_/CLK
+  _267_/CLK
+  _268_/CLK
+  _269_/CLK
+Warning: There are 35 unconstrained endpoints.
+  clk_data
+  data[0]
+  data[1]
+  data[2]
+  data[3]
+  data[4]
+  data[5]
+  en_vcm_sw_o
+  _243_/D
+  _244_/D
+  _245_/D
+  _246_/D
+  _247_/D
+  _248_/D
+  _249_/D
+  _250_/D
+  _251_/D
+  _252_/D
+  _253_/D
+  _254_/D
+  _255_/D
+  _256_/D
+  _257_/D
+  _258_/D
+  _259_/D
+  _260_/D
+  _261_/D
+  _262_/D
+  _263_/D
+  _264_/D
+  _265_/D
+  _266_/D
+  _267_/D
+  _268_/D
+  _269_/D

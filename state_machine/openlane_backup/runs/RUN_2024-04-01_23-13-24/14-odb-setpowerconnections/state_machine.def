@@ -1,0 +1,924 @@
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN state_machine ;
+UNITS DISTANCE MICRONS 1000 ;
+DIEAREA ( 0 0 ) ( 145000 50000 ) ;
+ROW ROW_0 unithd 5520 10880 N DO 291 BY 1 STEP 460 0 ;
+ROW ROW_1 unithd 5520 13600 FS DO 291 BY 1 STEP 460 0 ;
+ROW ROW_2 unithd 5520 16320 N DO 291 BY 1 STEP 460 0 ;
+ROW ROW_3 unithd 5520 19040 FS DO 291 BY 1 STEP 460 0 ;
+ROW ROW_4 unithd 5520 21760 N DO 291 BY 1 STEP 460 0 ;
+ROW ROW_5 unithd 5520 24480 FS DO 291 BY 1 STEP 460 0 ;
+ROW ROW_6 unithd 5520 27200 N DO 291 BY 1 STEP 460 0 ;
+ROW ROW_7 unithd 5520 29920 FS DO 291 BY 1 STEP 460 0 ;
+ROW ROW_8 unithd 5520 32640 N DO 291 BY 1 STEP 460 0 ;
+ROW ROW_9 unithd 5520 35360 FS DO 291 BY 1 STEP 460 0 ;
+TRACKS X 230 DO 315 STEP 460 LAYER li1 ;
+TRACKS Y 170 DO 147 STEP 340 LAYER li1 ;
+TRACKS X 170 DO 426 STEP 340 LAYER met1 ;
+TRACKS Y 170 DO 147 STEP 340 LAYER met1 ;
+TRACKS X 230 DO 315 STEP 460 LAYER met2 ;
+TRACKS Y 230 DO 109 STEP 460 LAYER met2 ;
+TRACKS X 340 DO 213 STEP 680 LAYER met3 ;
+TRACKS Y 340 DO 73 STEP 680 LAYER met3 ;
+TRACKS X 460 DO 157 STEP 920 LAYER met4 ;
+TRACKS Y 460 DO 54 STEP 920 LAYER met4 ;
+TRACKS X 1700 DO 42 STEP 3400 LAYER met5 ;
+TRACKS Y 1700 DO 14 STEP 3400 LAYER met5 ;
+COMPONENTS 310 ;
+    - x1 sky130_fd_sc_hd__nand2_1 ;
+    - x10 sky130_fd_sc_hd__nand2_1 ;
+    - x10_0 sky130_fd_sc_hd__inv_1 ;
+    - x10_1 sky130_fd_sc_hd__inv_1 ;
+    - x10_10 sky130_fd_sc_hd__inv_1 ;
+    - x10_2 sky130_fd_sc_hd__inv_1 ;
+    - x10_3 sky130_fd_sc_hd__inv_1 ;
+    - x10_4 sky130_fd_sc_hd__inv_1 ;
+    - x10_5 sky130_fd_sc_hd__inv_1 ;
+    - x10_6 sky130_fd_sc_hd__inv_1 ;
+    - x10_7 sky130_fd_sc_hd__inv_1 ;
+    - x10_8 sky130_fd_sc_hd__inv_1 ;
+    - x10_9 sky130_fd_sc_hd__inv_1 ;
+    - x11 sky130_fd_sc_hd__inv_2 ;
+    - x11_0 sky130_fd_sc_hd__nand2_1 ;
+    - x11_1 sky130_fd_sc_hd__nand2_1 ;
+    - x11_10 sky130_fd_sc_hd__nand2_1 ;
+    - x11_2 sky130_fd_sc_hd__nand2_1 ;
+    - x11_3 sky130_fd_sc_hd__nand2_1 ;
+    - x11_4 sky130_fd_sc_hd__nand2_1 ;
+    - x11_5 sky130_fd_sc_hd__nand2_1 ;
+    - x11_6 sky130_fd_sc_hd__nand2_1 ;
+    - x11_7 sky130_fd_sc_hd__nand2_1 ;
+    - x11_8 sky130_fd_sc_hd__nand2_1 ;
+    - x11_9 sky130_fd_sc_hd__nand2_1 ;
+    - x12 sky130_fd_sc_hd__nor2_1 ;
+    - x12_0 sky130_fd_sc_hd__inv_1 ;
+    - x12_1 sky130_fd_sc_hd__inv_1 ;
+    - x12_10 sky130_fd_sc_hd__inv_1 ;
+    - x12_2 sky130_fd_sc_hd__inv_1 ;
+    - x12_3 sky130_fd_sc_hd__inv_1 ;
+    - x12_4 sky130_fd_sc_hd__inv_1 ;
+    - x12_5 sky130_fd_sc_hd__inv_1 ;
+    - x12_6 sky130_fd_sc_hd__inv_1 ;
+    - x12_7 sky130_fd_sc_hd__inv_1 ;
+    - x12_8 sky130_fd_sc_hd__inv_1 ;
+    - x12_9 sky130_fd_sc_hd__inv_1 ;
+    - x13 sky130_fd_sc_hd__and2_0 ;
+    - x13_0 sky130_fd_sc_hd__mux2_1 ;
+    - x13_1 sky130_fd_sc_hd__mux2_1 ;
+    - x13_2 sky130_fd_sc_hd__mux2_1 ;
+    - x13_3 sky130_fd_sc_hd__mux2_1 ;
+    - x13_4 sky130_fd_sc_hd__mux2_1 ;
+    - x13_5 sky130_fd_sc_hd__mux2_1 ;
+    - x14 sky130_fd_sc_hd__nand2_1 ;
+    - x14_0 sky130_fd_sc_hd__inv_16 ;
+    - x14_1 sky130_fd_sc_hd__inv_16 ;
+    - x14_2 sky130_fd_sc_hd__inv_16 ;
+    - x14_3 sky130_fd_sc_hd__inv_16 ;
+    - x14_4 sky130_fd_sc_hd__inv_16 ;
+    - x14_5 sky130_fd_sc_hd__inv_16 ;
+    - x15 sky130_fd_sc_hd__nand2_1 ;
+    - x16 sky130_fd_sc_hd__inv_2 ;
+    - x17 sky130_fd_sc_hd__inv_1 ;
+    - x18 sky130_fd_sc_hd__nand2_1 ;
+    - x19 sky130_fd_sc_hd__inv_4 ;
+    - x1_0 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_1 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_10 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_11 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_2 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_3 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_4 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_5 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_6 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_7 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_8 sky130_fd_sc_hd__dfrtp_1 ;
+    - x1_9 sky130_fd_sc_hd__dfrtp_1 ;
+    - x2 sky130_fd_sc_hd__nand2_1 ;
+    - x20 sky130_fd_sc_hd__conb_1 ;
+    - x21 sky130_fd_sc_hd__nor2_1 ;
+    - x21_0 sky130_fd_sc_hd__inv_4 ;
+    - x21_1 sky130_fd_sc_hd__inv_4 ;
+    - x21_10 sky130_fd_sc_hd__inv_4 ;
+    - x21_2 sky130_fd_sc_hd__inv_4 ;
+    - x21_3 sky130_fd_sc_hd__inv_4 ;
+    - x21_4 sky130_fd_sc_hd__inv_4 ;
+    - x21_5 sky130_fd_sc_hd__inv_4 ;
+    - x21_6 sky130_fd_sc_hd__inv_4 ;
+    - x21_7 sky130_fd_sc_hd__inv_4 ;
+    - x21_8 sky130_fd_sc_hd__inv_4 ;
+    - x21_9 sky130_fd_sc_hd__inv_4 ;
+    - x22 sky130_fd_sc_hd__nand2_4 ;
+    - x23 sky130_fd_sc_hd__and2b_1 ;
+    - x24 sky130_fd_sc_hd__nand2_1 ;
+    - x25 sky130_fd_sc_hd__nand2_1 ;
+    - x26 sky130_fd_sc_hd__inv_1 ;
+    - x27 sky130_fd_sc_hd__inv_1 ;
+    - x28 sky130_fd_sc_hd__nor2b_1 ;
+    - x29 sky130_fd_sc_hd__and3b_1 ;
+    - x2_0 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_1 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_10 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_2 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_3 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_4 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_5 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_6 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_7 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_8 sky130_fd_sc_hd__nor2b_2 ;
+    - x2_9 sky130_fd_sc_hd__nor2b_2 ;
+    - x3 sky130_fd_sc_hd__nor2_1 ;
+    - x30 sky130_fd_sc_hd__nand2_1 ;
+    - x31 sky130_fd_sc_hd__and3_1 ;
+    - x32 sky130_fd_sc_hd__dlymetal6s6s_1 ;
+    - x33 sky130_fd_sc_hd__mux4_1 ;
+    - x34 sky130_fd_sc_hd__mux4_1 ;
+    - x35 sky130_fd_sc_hd__inv_2 ;
+    - x36 sky130_fd_sc_hd__and2_1 ;
+    - x37 sky130_fd_sc_hd__inv_4 ;
+    - x38 sky130_fd_sc_hd__inv_2 ;
+    - x38_0 sky130_fd_sc_hd__inv_2 ;
+    - x38_1 sky130_fd_sc_hd__inv_2 ;
+    - x38_10 sky130_fd_sc_hd__inv_2 ;
+    - x38_2 sky130_fd_sc_hd__inv_2 ;
+    - x38_3 sky130_fd_sc_hd__inv_2 ;
+    - x38_4 sky130_fd_sc_hd__inv_2 ;
+    - x38_5 sky130_fd_sc_hd__inv_2 ;
+    - x38_6 sky130_fd_sc_hd__inv_2 ;
+    - x38_7 sky130_fd_sc_hd__inv_2 ;
+    - x38_8 sky130_fd_sc_hd__inv_2 ;
+    - x38_9 sky130_fd_sc_hd__inv_2 ;
+    - x39 sky130_fd_sc_hd__inv_4 ;
+    - x3_0 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_1 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_10 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_2 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_3 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_4 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_5 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_6 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_7 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_8 sky130_fd_sc_hd__nor2b_2 ;
+    - x3_9 sky130_fd_sc_hd__nor2b_2 ;
+    - x4 sky130_fd_sc_hd__inv_1 ;
+    - x40 sky130_fd_sc_hd__nand3b_2 ;
+    - x41 sky130_fd_sc_hd__nor2b_1 ;
+    - x41_0 sky130_fd_sc_hd__and2b_1 ;
+    - x41_1 sky130_fd_sc_hd__and2b_1 ;
+    - x41_10 sky130_fd_sc_hd__and2b_1 ;
+    - x41_11 sky130_fd_sc_hd__and2b_1 ;
+    - x41_2 sky130_fd_sc_hd__and2b_1 ;
+    - x41_3 sky130_fd_sc_hd__and2b_1 ;
+    - x41_4 sky130_fd_sc_hd__and2b_1 ;
+    - x41_5 sky130_fd_sc_hd__and2b_1 ;
+    - x41_6 sky130_fd_sc_hd__and2b_1 ;
+    - x41_7 sky130_fd_sc_hd__and2b_1 ;
+    - x41_8 sky130_fd_sc_hd__and2b_1 ;
+    - x41_9 sky130_fd_sc_hd__and2b_1 ;
+    - x42 sky130_fd_sc_hd__mux4_4 ;
+    - x42_0 sky130_fd_sc_hd__nand2_2 ;
+    - x42_1 sky130_fd_sc_hd__nand2_2 ;
+    - x42_10 sky130_fd_sc_hd__nand2_2 ;
+    - x42_2 sky130_fd_sc_hd__nand2_2 ;
+    - x42_3 sky130_fd_sc_hd__nand2_2 ;
+    - x42_4 sky130_fd_sc_hd__nand2_2 ;
+    - x42_5 sky130_fd_sc_hd__nand2_2 ;
+    - x42_6 sky130_fd_sc_hd__nand2_2 ;
+    - x42_7 sky130_fd_sc_hd__nand2_2 ;
+    - x42_8 sky130_fd_sc_hd__nand2_2 ;
+    - x42_9 sky130_fd_sc_hd__nand2_2 ;
+    - x43 sky130_fd_sc_hd__or2_1 ;
+    - x43_0 sky130_fd_sc_hd__inv_4 ;
+    - x43_1 sky130_fd_sc_hd__inv_4 ;
+    - x43_10 sky130_fd_sc_hd__inv_4 ;
+    - x43_2 sky130_fd_sc_hd__inv_4 ;
+    - x43_3 sky130_fd_sc_hd__inv_4 ;
+    - x43_4 sky130_fd_sc_hd__inv_4 ;
+    - x43_5 sky130_fd_sc_hd__inv_4 ;
+    - x43_6 sky130_fd_sc_hd__inv_4 ;
+    - x43_7 sky130_fd_sc_hd__inv_4 ;
+    - x43_8 sky130_fd_sc_hd__inv_4 ;
+    - x43_9 sky130_fd_sc_hd__inv_4 ;
+    - x44 sky130_fd_sc_hd__dfrtp_1 ;
+    - x44_0 sky130_fd_sc_hd__inv_4 ;
+    - x44_1 sky130_fd_sc_hd__inv_4 ;
+    - x44_10 sky130_fd_sc_hd__inv_4 ;
+    - x44_2 sky130_fd_sc_hd__inv_4 ;
+    - x44_3 sky130_fd_sc_hd__inv_4 ;
+    - x44_4 sky130_fd_sc_hd__inv_4 ;
+    - x44_5 sky130_fd_sc_hd__inv_4 ;
+    - x44_6 sky130_fd_sc_hd__inv_4 ;
+    - x44_7 sky130_fd_sc_hd__inv_4 ;
+    - x44_8 sky130_fd_sc_hd__inv_4 ;
+    - x44_9 sky130_fd_sc_hd__inv_4 ;
+    - x45 sky130_fd_sc_hd__nor2_1 ;
+    - x45_0 sky130_fd_sc_hd__inv_1 ;
+    - x45_1 sky130_fd_sc_hd__inv_1 ;
+    - x45_10 sky130_fd_sc_hd__inv_1 ;
+    - x45_11 sky130_fd_sc_hd__inv_1 ;
+    - x45_2 sky130_fd_sc_hd__inv_1 ;
+    - x45_3 sky130_fd_sc_hd__inv_1 ;
+    - x45_4 sky130_fd_sc_hd__inv_1 ;
+    - x45_5 sky130_fd_sc_hd__inv_1 ;
+    - x45_6 sky130_fd_sc_hd__inv_1 ;
+    - x45_7 sky130_fd_sc_hd__inv_1 ;
+    - x45_8 sky130_fd_sc_hd__inv_1 ;
+    - x45_9 sky130_fd_sc_hd__inv_1 ;
+    - x46 sky130_fd_sc_hd__inv_4 ;
+    - x46_0 sky130_fd_sc_hd__mux2_1 ;
+    - x46_1 sky130_fd_sc_hd__mux2_1 ;
+    - x46_10 sky130_fd_sc_hd__mux2_1 ;
+    - x46_11 sky130_fd_sc_hd__mux2_1 ;
+    - x46_2 sky130_fd_sc_hd__mux2_1 ;
+    - x46_3 sky130_fd_sc_hd__mux2_1 ;
+    - x46_4 sky130_fd_sc_hd__mux2_1 ;
+    - x46_5 sky130_fd_sc_hd__mux2_1 ;
+    - x46_6 sky130_fd_sc_hd__mux2_1 ;
+    - x46_7 sky130_fd_sc_hd__mux2_1 ;
+    - x46_8 sky130_fd_sc_hd__mux2_1 ;
+    - x46_9 sky130_fd_sc_hd__mux2_1 ;
+    - x47 sky130_fd_sc_hd__inv_4 ;
+    - x48 sky130_fd_sc_hd__dlymetal6s6s_1 ;
+    - x49 sky130_fd_sc_hd__nor2_2 ;
+    - x4_0 sky130_fd_sc_hd__nand2_2 ;
+    - x4_1 sky130_fd_sc_hd__nand2_2 ;
+    - x4_10 sky130_fd_sc_hd__nand2_2 ;
+    - x4_2 sky130_fd_sc_hd__nand2_2 ;
+    - x4_3 sky130_fd_sc_hd__nand2_2 ;
+    - x4_4 sky130_fd_sc_hd__nand2_2 ;
+    - x4_5 sky130_fd_sc_hd__nand2_2 ;
+    - x4_6 sky130_fd_sc_hd__nand2_2 ;
+    - x4_7 sky130_fd_sc_hd__nand2_2 ;
+    - x4_8 sky130_fd_sc_hd__nand2_2 ;
+    - x4_9 sky130_fd_sc_hd__nand2_2 ;
+    - x5 sky130_fd_sc_hd__inv_4 ;
+    - x50 sky130_fd_sc_hd__mux4_1 ;
+    - x51 sky130_fd_sc_hd__nand2b_1 ;
+    - x52 sky130_fd_sc_hd__nand2b_1 ;
+    - x53 sky130_fd_sc_hd__nand2_2 ;
+    - x54 sky130_fd_sc_hd__inv_4 ;
+    - x55 sky130_fd_sc_hd__nand2_1 ;
+    - x56 sky130_fd_sc_hd__inv_2 ;
+    - x57 sky130_fd_sc_hd__inv_4 ;
+    - x58 sky130_fd_sc_hd__inv_4 ;
+    - x59 sky130_fd_sc_hd__or2_1 ;
+    - x5_0 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_1 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_10 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_11 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_2 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_3 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_4 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_5 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_6 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_7 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_8 sky130_fd_sc_hd__dfrtp_1 ;
+    - x5_9 sky130_fd_sc_hd__dfrtp_1 ;
+    - x6 sky130_fd_sc_hd__inv_4 ;
+    - x60 sky130_fd_sc_hd__mux4_1 ;
+    - x60_0 sky130_fd_sc_hd__inv_4 ;
+    - x60_1 sky130_fd_sc_hd__inv_4 ;
+    - x60_2 sky130_fd_sc_hd__inv_4 ;
+    - x60_3 sky130_fd_sc_hd__inv_4 ;
+    - x60_4 sky130_fd_sc_hd__inv_4 ;
+    - x60_5 sky130_fd_sc_hd__inv_4 ;
+    - x61 sky130_fd_sc_hd__inv_1 ;
+    - x61_0 sky130_fd_sc_hd__inv_2 ;
+    - x61_1 sky130_fd_sc_hd__inv_2 ;
+    - x61_2 sky130_fd_sc_hd__inv_2 ;
+    - x61_3 sky130_fd_sc_hd__inv_2 ;
+    - x61_4 sky130_fd_sc_hd__inv_2 ;
+    - x61_5 sky130_fd_sc_hd__inv_2 ;
+    - x62 sky130_fd_sc_hd__nor2_2 ;
+    - x63 sky130_fd_sc_hd__inv_8 ;
+    - x64 sky130_fd_sc_hd__inv_16 ;
+    - x65 sky130_fd_sc_hd__inv_16 ;
+    - x66 sky130_fd_sc_hd__inv_4 ;
+    - x6_0 sky130_fd_sc_hd__inv_8 ;
+    - x6_1 sky130_fd_sc_hd__inv_8 ;
+    - x6_2 sky130_fd_sc_hd__inv_8 ;
+    - x6_3 sky130_fd_sc_hd__inv_8 ;
+    - x6_4 sky130_fd_sc_hd__inv_8 ;
+    - x6_5 sky130_fd_sc_hd__inv_8 ;
+    - x7 sky130_fd_sc_hd__and2_0 ;
+    - x7_0 sky130_fd_sc_hd__inv_4 ;
+    - x7_1 sky130_fd_sc_hd__inv_4 ;
+    - x7_10 sky130_fd_sc_hd__inv_4 ;
+    - x7_2 sky130_fd_sc_hd__inv_4 ;
+    - x7_3 sky130_fd_sc_hd__inv_4 ;
+    - x7_4 sky130_fd_sc_hd__inv_4 ;
+    - x7_5 sky130_fd_sc_hd__inv_4 ;
+    - x7_6 sky130_fd_sc_hd__inv_4 ;
+    - x7_7 sky130_fd_sc_hd__inv_4 ;
+    - x7_8 sky130_fd_sc_hd__inv_4 ;
+    - x7_9 sky130_fd_sc_hd__inv_4 ;
+    - x8 sky130_fd_sc_hd__nand2_1 ;
+    - x8_0 sky130_fd_sc_hd__inv_4 ;
+    - x8_1 sky130_fd_sc_hd__inv_4 ;
+    - x8_10 sky130_fd_sc_hd__inv_4 ;
+    - x8_2 sky130_fd_sc_hd__inv_4 ;
+    - x8_3 sky130_fd_sc_hd__inv_4 ;
+    - x8_4 sky130_fd_sc_hd__inv_4 ;
+    - x8_5 sky130_fd_sc_hd__inv_4 ;
+    - x8_6 sky130_fd_sc_hd__inv_4 ;
+    - x8_7 sky130_fd_sc_hd__inv_4 ;
+    - x8_8 sky130_fd_sc_hd__inv_4 ;
+    - x8_9 sky130_fd_sc_hd__inv_4 ;
+    - x9 sky130_fd_sc_hd__nand2_1 ;
+    - x9_0 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_1 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_10 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_2 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_3 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_4 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_5 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_6 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_7 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_8 sky130_fd_sc_hd__nor2b_1 ;
+    - x9_9 sky130_fd_sc_hd__nor2b_1 ;
+END COMPONENTS
+PINS 85 ;
+    - CLK_DATA + NET CLK_DATA + DIRECTION OUTPUT + USE SIGNAL ;
+    - COMP_N + NET COMP_N + DIRECTION INPUT + USE SIGNAL ;
+    - COMP_P + NET COMP_P + DIRECTION INPUT + USE SIGNAL ;
+    - DAC_SETTLE + NET DAC_SETTLE + DIRECTION OUTPUT + USE SIGNAL ;
+    - DAC_SETTLE_D + NET DAC_SETTLE_D + DIRECTION INPUT + USE SIGNAL ;
+    - DATA[0] + NET DATA[0] + DIRECTION OUTPUT + USE SIGNAL ;
+    - DATA[1] + NET DATA[1] + DIRECTION OUTPUT + USE SIGNAL ;
+    - DATA[2] + NET DATA[2] + DIRECTION OUTPUT + USE SIGNAL ;
+    - DATA[3] + NET DATA[3] + DIRECTION OUTPUT + USE SIGNAL ;
+    - DATA[4] + NET DATA[4] + DIRECTION OUTPUT + USE SIGNAL ;
+    - DATA[5] + NET DATA[5] + DIRECTION OUTPUT + USE SIGNAL ;
+    - DEBUG_MUX[0] + NET DEBUG_MUX[0] + DIRECTION INPUT + USE SIGNAL ;
+    - DEBUG_MUX[1] + NET DEBUG_MUX[1] + DIRECTION INPUT + USE SIGNAL ;
+    - DEBUG_MUX[2] + NET DEBUG_MUX[2] + DIRECTION INPUT + USE SIGNAL ;
+    - DEBUG_MUX[3] + NET DEBUG_MUX[3] + DIRECTION INPUT + USE SIGNAL ;
+    - DEBUG_OUT + NET DEBUG_OUT + DIRECTION OUTPUT + USE SIGNAL ;
+    - EN_COMP + NET EN_COMP + DIRECTION OUTPUT + USE SIGNAL ;
+    - EN_OFFSET_CAL + NET EN_OFFSET_CAL + DIRECTION INPUT + USE SIGNAL ;
+    - EN_OFFSET_CAL_O + NET EN_OFFSET_CAL_O + DIRECTION OUTPUT + USE SIGNAL ;
+    - EN_VCM_SW_O + NET EN_VCM_SW_O + DIRECTION OUTPUT + USE SIGNAL ;
+    - HI + NET HI + DIRECTION OUTPUT + USE SIGNAL ;
+    - LO + NET LO + DIRECTION OUTPUT + USE SIGNAL ;
+    - OFFSET_CAL_CYCLE + NET OFFSET_CAL_CYCLE + DIRECTION OUTPUT + USE SIGNAL ;
+    - RST_Z + NET RST_Z + DIRECTION INPUT + USE SIGNAL ;
+    - SAMPLE_D + NET SAMPLE_D + DIRECTION INPUT + USE SIGNAL ;
+    - SAMPLE_O + NET SAMPLE_O + DIRECTION OUTPUT + USE SIGNAL ;
+    - START + NET START + DIRECTION INPUT + USE SIGNAL ;
+    - VCM_DUMMY_O + NET VCM_DUMMY_O + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[0] + NET VCM_O[0] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[10] + NET VCM_O[10] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[1] + NET VCM_O[1] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[2] + NET VCM_O[2] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[3] + NET VCM_O[3] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[4] + NET VCM_O[4] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[5] + NET VCM_O[5] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[6] + NET VCM_O[6] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[7] + NET VCM_O[7] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[8] + NET VCM_O[8] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VCM_O[9] + NET VCM_O[9] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VIN_N_SW_ON + NET VIN_N_SW_ON + DIRECTION INPUT + USE SIGNAL ;
+    - VIN_P_SW_ON + NET VIN_P_SW_ON + DIRECTION INPUT + USE SIGNAL ;
+    - VREF_Z_N_O[0] + NET VREF_Z_N_O[0] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[10] + NET VREF_Z_N_O[10] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[1] + NET VREF_Z_N_O[1] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[2] + NET VREF_Z_N_O[2] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[3] + NET VREF_Z_N_O[3] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[4] + NET VREF_Z_N_O[4] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[5] + NET VREF_Z_N_O[5] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[6] + NET VREF_Z_N_O[6] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[7] + NET VREF_Z_N_O[7] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[8] + NET VREF_Z_N_O[8] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_N_O[9] + NET VREF_Z_N_O[9] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[0] + NET VREF_Z_P_O[0] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[10] + NET VREF_Z_P_O[10] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[1] + NET VREF_Z_P_O[1] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[2] + NET VREF_Z_P_O[2] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[3] + NET VREF_Z_P_O[3] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[4] + NET VREF_Z_P_O[4] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[5] + NET VREF_Z_P_O[5] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[6] + NET VREF_Z_P_O[6] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[7] + NET VREF_Z_P_O[7] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[8] + NET VREF_Z_P_O[8] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VREF_Z_P_O[9] + NET VREF_Z_P_O[9] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[0] + NET VSS_N_O[0] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[10] + NET VSS_N_O[10] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[1] + NET VSS_N_O[1] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[2] + NET VSS_N_O[2] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[3] + NET VSS_N_O[3] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[4] + NET VSS_N_O[4] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[5] + NET VSS_N_O[5] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[6] + NET VSS_N_O[6] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[7] + NET VSS_N_O[7] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[8] + NET VSS_N_O[8] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_N_O[9] + NET VSS_N_O[9] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[0] + NET VSS_P_O[0] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[10] + NET VSS_P_O[10] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[1] + NET VSS_P_O[1] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[2] + NET VSS_P_O[2] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[3] + NET VSS_P_O[3] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[4] + NET VSS_P_O[4] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[5] + NET VSS_P_O[5] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[6] + NET VSS_P_O[6] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[7] + NET VSS_P_O[7] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[8] + NET VSS_P_O[8] + DIRECTION OUTPUT + USE SIGNAL ;
+    - VSS_P_O[9] + NET VSS_P_O[9] + DIRECTION OUTPUT + USE SIGNAL ;
+END PINS
+SPECIALNETS 2 ;
+    - VDD ( x9_9 VPB ) ( x9_8 VPB ) ( x9_7 VPB ) ( x9_6 VPB ) ( x9_5 VPB ) ( x9_4 VPB ) ( x9_3 VPB )
+      ( x9_2 VPB ) ( x9_10 VPB ) ( x9_1 VPB ) ( x9_0 VPB ) ( x9 VPB ) ( x8_9 VPB ) ( x8_8 VPB ) ( x8_7 VPB )
+      ( x8_6 VPB ) ( x8_5 VPB ) ( x8_4 VPB ) ( x8_3 VPB ) ( x8_2 VPB ) ( x8_10 VPB ) ( x8_1 VPB ) ( x8_0 VPB )
+      ( x8 VPB ) ( x7_9 VPB ) ( x7_8 VPB ) ( x7_7 VPB ) ( x7_6 VPB ) ( x7_5 VPB ) ( x7_4 VPB ) ( x7_3 VPB )
+      ( x7_2 VPB ) ( x7_10 VPB ) ( x7_1 VPB ) ( x7_0 VPB ) ( x7 VPB ) ( x6_5 VPB ) ( x6_4 VPB ) ( x6_3 VPB )
+      ( x6_2 VPB ) ( x6_1 VPB ) ( x6_0 VPB ) ( x66 VPB ) ( x65 VPB ) ( x64 VPB ) ( x63 VPB ) ( x62 VPB )
+      ( x61_5 VPB ) ( x61_4 VPB ) ( x61_3 VPB ) ( x61_2 VPB ) ( x61_1 VPB ) ( x61_0 VPB ) ( x61 VPB ) ( x60_5 VPB )
+      ( x60_4 VPB ) ( x60_3 VPB ) ( x60_2 VPB ) ( x60_1 VPB ) ( x60_0 VPB ) ( x60 VPB ) ( x6 VPB ) ( x5_9 VPB )
+      ( x5_8 VPB ) ( x5_7 VPB ) ( x5_6 VPB ) ( x5_5 VPB ) ( x5_4 VPB ) ( x5_3 VPB ) ( x5_2 VPB ) ( x5_11 VPB )
+      ( x5_10 VPB ) ( x5_1 VPB ) ( x5_0 VPB ) ( x59 VPB ) ( x58 VPB ) ( x57 VPB ) ( x56 VPB ) ( x55 VPB )
+      ( x54 VPB ) ( x53 VPB ) ( x52 VPB ) ( x51 VPB ) ( x50 VPB ) ( x5 VPB ) ( x4_9 VPB ) ( x4_8 VPB )
+      ( x4_7 VPB ) ( x4_6 VPB ) ( x4_5 VPB ) ( x4_4 VPB ) ( x4_3 VPB ) ( x4_2 VPB ) ( x4_10 VPB ) ( x4_1 VPB )
+      ( x4_0 VPB ) ( x49 VPB ) ( x48 VPB ) ( x47 VPB ) ( x46_9 VPB ) ( x46_8 VPB ) ( x46_7 VPB ) ( x46_6 VPB )
+      ( x46_5 VPB ) ( x46_4 VPB ) ( x46_3 VPB ) ( x46_2 VPB ) ( x46_11 VPB ) ( x46_10 VPB ) ( x46_1 VPB ) ( x46_0 VPB )
+      ( x46 VPB ) ( x45_9 VPB ) ( x45_8 VPB ) ( x45_7 VPB ) ( x45_6 VPB ) ( x45_5 VPB ) ( x45_4 VPB ) ( x45_3 VPB )
+      ( x45_2 VPB ) ( x45_11 VPB ) ( x45_10 VPB ) ( x45_1 VPB ) ( x45_0 VPB ) ( x45 VPB ) ( x44_9 VPB ) ( x44_8 VPB )
+      ( x44_7 VPB ) ( x44_6 VPB ) ( x44_5 VPB ) ( x44_4 VPB ) ( x44_3 VPB ) ( x44_2 VPB ) ( x44_10 VPB ) ( x44_1 VPB )
+      ( x44_0 VPB ) ( x44 VPB ) ( x43_9 VPB ) ( x43_8 VPB ) ( x43_7 VPB ) ( x43_6 VPB ) ( x43_5 VPB ) ( x43_4 VPB )
+      ( x43_3 VPB ) ( x43_2 VPB ) ( x43_10 VPB ) ( x43_1 VPB ) ( x43_0 VPB ) ( x43 VPB ) ( x42_9 VPB ) ( x42_8 VPB )
+      ( x42_7 VPB ) ( x42_6 VPB ) ( x42_5 VPB ) ( x42_4 VPB ) ( x42_3 VPB ) ( x42_2 VPB ) ( x42_10 VPB ) ( x42_1 VPB )
+      ( x42_0 VPB ) ( x42 VPB ) ( x41_9 VPB ) ( x41_8 VPB ) ( x41_7 VPB ) ( x41_6 VPB ) ( x41_5 VPB ) ( x41_4 VPB )
+      ( x41_3 VPB ) ( x41_2 VPB ) ( x41_11 VPB ) ( x41_10 VPB ) ( x41_1 VPB ) ( x41_0 VPB ) ( x41 VPB ) ( x40 VPB )
+      ( x4 VPB ) ( x3_9 VPB ) ( x3_8 VPB ) ( x3_7 VPB ) ( x3_6 VPB ) ( x3_5 VPB ) ( x3_4 VPB ) ( x3_3 VPB )
+      ( x3_2 VPB ) ( x3_10 VPB ) ( x3_1 VPB ) ( x3_0 VPB ) ( x39 VPB ) ( x38_9 VPB ) ( x38_8 VPB ) ( x38_7 VPB )
+      ( x38_6 VPB ) ( x38_5 VPB ) ( x38_4 VPB ) ( x38_3 VPB ) ( x38_2 VPB ) ( x38_10 VPB ) ( x38_1 VPB ) ( x38_0 VPB )
+      ( x38 VPB ) ( x37 VPB ) ( x36 VPB ) ( x35 VPB ) ( x34 VPB ) ( x33 VPB ) ( x32 VPB ) ( x31 VPB )
+      ( x30 VPB ) ( x3 VPB ) ( x2_9 VPB ) ( x2_8 VPB ) ( x2_7 VPB ) ( x2_6 VPB ) ( x2_5 VPB ) ( x2_4 VPB )
+      ( x2_3 VPB ) ( x2_2 VPB ) ( x2_10 VPB ) ( x2_1 VPB ) ( x2_0 VPB ) ( x29 VPB ) ( x28 VPB ) ( x27 VPB )
+      ( x26 VPB ) ( x25 VPB ) ( x24 VPB ) ( x23 VPB ) ( x22 VPB ) ( x21_9 VPB ) ( x21_8 VPB ) ( x21_7 VPB )
+      ( x21_6 VPB ) ( x21_5 VPB ) ( x21_4 VPB ) ( x21_3 VPB ) ( x21_2 VPB ) ( x21_10 VPB ) ( x21_1 VPB ) ( x21_0 VPB )
+      ( x21 VPB ) ( x20 VPB ) ( x2 VPB ) ( x1_9 VPB ) ( x1_8 VPB ) ( x1_7 VPB ) ( x1_6 VPB ) ( x1_5 VPB )
+      ( x1_4 VPB ) ( x1_3 VPB ) ( x1_2 VPB ) ( x1_11 VPB ) ( x1_10 VPB ) ( x1_1 VPB ) ( x1_0 VPB ) ( x19 VPB )
+      ( x18 VPB ) ( x17 VPB ) ( x16 VPB ) ( x15 VPB ) ( x14_5 VPB ) ( x14_4 VPB ) ( x14_3 VPB ) ( x14_2 VPB )
+      ( x14_1 VPB ) ( x14_0 VPB ) ( x14 VPB ) ( x13_5 VPB ) ( x13_4 VPB ) ( x13_3 VPB ) ( x13_2 VPB ) ( x13_1 VPB )
+      ( x13_0 VPB ) ( x13 VPB ) ( x12_9 VPB ) ( x12_8 VPB ) ( x12_7 VPB ) ( x12_6 VPB ) ( x12_5 VPB ) ( x12_4 VPB )
+      ( x12_3 VPB ) ( x12_2 VPB ) ( x12_10 VPB ) ( x12_1 VPB ) ( x12_0 VPB ) ( x12 VPB ) ( x11_9 VPB ) ( x11_8 VPB )
+      ( x11_7 VPB ) ( x11_6 VPB ) ( x11_5 VPB ) ( x11_4 VPB ) ( x11_3 VPB ) ( x11_2 VPB ) ( x11_10 VPB ) ( x11_1 VPB )
+      ( x11_0 VPB ) ( x11 VPB ) ( x10_9 VPB ) ( x10_8 VPB ) ( x10_7 VPB ) ( x10_6 VPB ) ( x10_5 VPB ) ( x10_4 VPB )
+      ( x10_3 VPB ) ( x10_2 VPB ) ( x10_10 VPB ) ( x10_1 VPB ) ( x10_0 VPB ) ( x10 VPB ) ( x1 VPB ) ( x9_9 VPWR )
+      ( x9_8 VPWR ) ( x9_7 VPWR ) ( x9_6 VPWR ) ( x9_5 VPWR ) ( x9_4 VPWR ) ( x9_3 VPWR ) ( x9_2 VPWR ) ( x9_10 VPWR )
+      ( x9_1 VPWR ) ( x9_0 VPWR ) ( x9 VPWR ) ( x8_9 VPWR ) ( x8_8 VPWR ) ( x8_7 VPWR ) ( x8_6 VPWR ) ( x8_5 VPWR )
+      ( x8_4 VPWR ) ( x8_3 VPWR ) ( x8_2 VPWR ) ( x8_10 VPWR ) ( x8_1 VPWR ) ( x8_0 VPWR ) ( x8 VPWR ) ( x7_9 VPWR )
+      ( x7_8 VPWR ) ( x7_7 VPWR ) ( x7_6 VPWR ) ( x7_5 VPWR ) ( x7_4 VPWR ) ( x7_3 VPWR ) ( x7_2 VPWR ) ( x7_10 VPWR )
+      ( x7_1 VPWR ) ( x7_0 VPWR ) ( x7 VPWR ) ( x6_5 VPWR ) ( x6_4 VPWR ) ( x6_3 VPWR ) ( x6_2 VPWR ) ( x6_1 VPWR )
+      ( x6_0 VPWR ) ( x66 VPWR ) ( x65 VPWR ) ( x64 VPWR ) ( x63 VPWR ) ( x62 VPWR ) ( x61_5 VPWR ) ( x61_4 VPWR )
+      ( x61_3 VPWR ) ( x61_2 VPWR ) ( x61_1 VPWR ) ( x61_0 VPWR ) ( x61 VPWR ) ( x60_5 VPWR ) ( x60_4 VPWR ) ( x60_3 VPWR )
+      ( x60_2 VPWR ) ( x60_1 VPWR ) ( x60_0 VPWR ) ( x60 VPWR ) ( x6 VPWR ) ( x5_9 VPWR ) ( x5_8 VPWR ) ( x5_7 VPWR )
+      ( x5_6 VPWR ) ( x5_5 VPWR ) ( x5_4 VPWR ) ( x5_3 VPWR ) ( x5_2 VPWR ) ( x5_11 VPWR ) ( x5_10 VPWR ) ( x5_1 VPWR )
+      ( x5_0 VPWR ) ( x59 VPWR ) ( x58 VPWR ) ( x57 VPWR ) ( x56 VPWR ) ( x55 VPWR ) ( x54 VPWR ) ( x53 VPWR )
+      ( x52 VPWR ) ( x51 VPWR ) ( x50 VPWR ) ( x5 VPWR ) ( x4_9 VPWR ) ( x4_8 VPWR ) ( x4_7 VPWR ) ( x4_6 VPWR )
+      ( x4_5 VPWR ) ( x4_4 VPWR ) ( x4_3 VPWR ) ( x4_2 VPWR ) ( x4_10 VPWR ) ( x4_1 VPWR ) ( x4_0 VPWR ) ( x49 VPWR )
+      ( x48 VPWR ) ( x47 VPWR ) ( x46_9 VPWR ) ( x46_8 VPWR ) ( x46_7 VPWR ) ( x46_6 VPWR ) ( x46_5 VPWR ) ( x46_4 VPWR )
+      ( x46_3 VPWR ) ( x46_2 VPWR ) ( x46_11 VPWR ) ( x46_10 VPWR ) ( x46_1 VPWR ) ( x46_0 VPWR ) ( x46 VPWR ) ( x45_9 VPWR )
+      ( x45_8 VPWR ) ( x45_7 VPWR ) ( x45_6 VPWR ) ( x45_5 VPWR ) ( x45_4 VPWR ) ( x45_3 VPWR ) ( x45_2 VPWR ) ( x45_11 VPWR )
+      ( x45_10 VPWR ) ( x45_1 VPWR ) ( x45_0 VPWR ) ( x45 VPWR ) ( x44_9 VPWR ) ( x44_8 VPWR ) ( x44_7 VPWR ) ( x44_6 VPWR )
+      ( x44_5 VPWR ) ( x44_4 VPWR ) ( x44_3 VPWR ) ( x44_2 VPWR ) ( x44_10 VPWR ) ( x44_1 VPWR ) ( x44_0 VPWR ) ( x44 VPWR )
+      ( x43_9 VPWR ) ( x43_8 VPWR ) ( x43_7 VPWR ) ( x43_6 VPWR ) ( x43_5 VPWR ) ( x43_4 VPWR ) ( x43_3 VPWR ) ( x43_2 VPWR )
+      ( x43_10 VPWR ) ( x43_1 VPWR ) ( x43_0 VPWR ) ( x43 VPWR ) ( x42_9 VPWR ) ( x42_8 VPWR ) ( x42_7 VPWR ) ( x42_6 VPWR )
+      ( x42_5 VPWR ) ( x42_4 VPWR ) ( x42_3 VPWR ) ( x42_2 VPWR ) ( x42_10 VPWR ) ( x42_1 VPWR ) ( x42_0 VPWR ) ( x42 VPWR )
+      ( x41_9 VPWR ) ( x41_8 VPWR ) ( x41_7 VPWR ) ( x41_6 VPWR ) ( x41_5 VPWR ) ( x41_4 VPWR ) ( x41_3 VPWR ) ( x41_2 VPWR )
+      ( x41_11 VPWR ) ( x41_10 VPWR ) ( x41_1 VPWR ) ( x41_0 VPWR ) ( x41 VPWR ) ( x40 VPWR ) ( x4 VPWR ) ( x3_9 VPWR )
+      ( x3_8 VPWR ) ( x3_7 VPWR ) ( x3_6 VPWR ) ( x3_5 VPWR ) ( x3_4 VPWR ) ( x3_3 VPWR ) ( x3_2 VPWR ) ( x3_10 VPWR )
+      ( x3_1 VPWR ) ( x3_0 VPWR ) ( x39 VPWR ) ( x38_9 VPWR ) ( x38_8 VPWR ) ( x38_7 VPWR ) ( x38_6 VPWR ) ( x38_5 VPWR )
+      ( x38_4 VPWR ) ( x38_3 VPWR ) ( x38_2 VPWR ) ( x38_10 VPWR ) ( x38_1 VPWR ) ( x38_0 VPWR ) ( x38 VPWR ) ( x37 VPWR )
+      ( x36 VPWR ) ( x35 VPWR ) ( x34 VPWR ) ( x33 VPWR ) ( x32 VPWR ) ( x31 VPWR ) ( x30 VPWR ) ( x3 VPWR )
+      ( x2_9 VPWR ) ( x2_8 VPWR ) ( x2_7 VPWR ) ( x2_6 VPWR ) ( x2_5 VPWR ) ( x2_4 VPWR ) ( x2_3 VPWR ) ( x2_2 VPWR )
+      ( x2_10 VPWR ) ( x2_1 VPWR ) ( x2_0 VPWR ) ( x29 VPWR ) ( x28 VPWR ) ( x27 VPWR ) ( x26 VPWR ) ( x25 VPWR )
+      ( x24 VPWR ) ( x23 VPWR ) ( x22 VPWR ) ( x21_9 VPWR ) ( x21_8 VPWR ) ( x21_7 VPWR ) ( x21_6 VPWR ) ( x21_5 VPWR )
+      ( x21_4 VPWR ) ( x21_3 VPWR ) ( x21_2 VPWR ) ( x21_10 VPWR ) ( x21_1 VPWR ) ( x21_0 VPWR ) ( x21 VPWR ) ( x20 VPWR )
+      ( x2 VPWR ) ( x1_9 VPWR ) ( x1_8 VPWR ) ( x1_7 VPWR ) ( x1_6 VPWR ) ( x1_5 VPWR ) ( x1_4 VPWR ) ( x1_3 VPWR )
+      ( x1_2 VPWR ) ( x1_11 VPWR ) ( x1_10 VPWR ) ( x1_1 VPWR ) ( x1_0 VPWR ) ( x19 VPWR ) ( x18 VPWR ) ( x17 VPWR )
+      ( x16 VPWR ) ( x15 VPWR ) ( x14_5 VPWR ) ( x14_4 VPWR ) ( x14_3 VPWR ) ( x14_2 VPWR ) ( x14_1 VPWR ) ( x14_0 VPWR )
+      ( x14 VPWR ) ( x13_5 VPWR ) ( x13_4 VPWR ) ( x13_3 VPWR ) ( x13_2 VPWR ) ( x13_1 VPWR ) ( x13_0 VPWR ) ( x13 VPWR )
+      ( x12_9 VPWR ) ( x12_8 VPWR ) ( x12_7 VPWR ) ( x12_6 VPWR ) ( x12_5 VPWR ) ( x12_4 VPWR ) ( x12_3 VPWR ) ( x12_2 VPWR )
+      ( x12_10 VPWR ) ( x12_1 VPWR ) ( x12_0 VPWR ) ( x12 VPWR ) ( x11_9 VPWR ) ( x11_8 VPWR ) ( x11_7 VPWR ) ( x11_6 VPWR )
+      ( x11_5 VPWR ) ( x11_4 VPWR ) ( x11_3 VPWR ) ( x11_2 VPWR ) ( x11_10 VPWR ) ( x11_1 VPWR ) ( x11_0 VPWR ) ( x11 VPWR )
+      ( x10_9 VPWR ) ( x10_8 VPWR ) ( x10_7 VPWR ) ( x10_6 VPWR ) ( x10_5 VPWR ) ( x10_4 VPWR ) ( x10_3 VPWR ) ( x10_2 VPWR )
+      ( x10_10 VPWR ) ( x10_1 VPWR ) ( x10_0 VPWR ) ( x10 VPWR ) ( x1 VPWR ) + USE POWER ;
+    - VSS ( x9_9 VNB ) ( x9_8 VNB ) ( x9_7 VNB ) ( x9_6 VNB ) ( x9_5 VNB ) ( x9_4 VNB ) ( x9_3 VNB )
+      ( x9_2 VNB ) ( x9_10 VNB ) ( x9_1 VNB ) ( x9_0 VNB ) ( x9 VNB ) ( x8_9 VNB ) ( x8_8 VNB ) ( x8_7 VNB )
+      ( x8_6 VNB ) ( x8_5 VNB ) ( x8_4 VNB ) ( x8_3 VNB ) ( x8_2 VNB ) ( x8_10 VNB ) ( x8_1 VNB ) ( x8_0 VNB )
+      ( x8 VNB ) ( x7_9 VNB ) ( x7_8 VNB ) ( x7_7 VNB ) ( x7_6 VNB ) ( x7_5 VNB ) ( x7_4 VNB ) ( x7_3 VNB )
+      ( x7_2 VNB ) ( x7_10 VNB ) ( x7_1 VNB ) ( x7_0 VNB ) ( x7 VNB ) ( x6_5 VNB ) ( x6_4 VNB ) ( x6_3 VNB )
+      ( x6_2 VNB ) ( x6_1 VNB ) ( x6_0 VNB ) ( x66 VNB ) ( x65 VNB ) ( x64 VNB ) ( x63 VNB ) ( x62 VNB )
+      ( x61_5 VNB ) ( x61_4 VNB ) ( x61_3 VNB ) ( x61_2 VNB ) ( x61_1 VNB ) ( x61_0 VNB ) ( x61 VNB ) ( x60_5 VNB )
+      ( x60_4 VNB ) ( x60_3 VNB ) ( x60_2 VNB ) ( x60_1 VNB ) ( x60_0 VNB ) ( x60 VNB ) ( x6 VNB ) ( x5_9 VNB )
+      ( x5_8 VNB ) ( x5_7 VNB ) ( x5_6 VNB ) ( x5_5 VNB ) ( x5_4 VNB ) ( x5_3 VNB ) ( x5_2 VNB ) ( x5_11 VNB )
+      ( x5_10 VNB ) ( x5_1 VNB ) ( x5_0 VNB ) ( x59 VNB ) ( x58 VNB ) ( x57 VNB ) ( x56 VNB ) ( x55 VNB )
+      ( x54 VNB ) ( x53 VNB ) ( x52 VNB ) ( x51 VNB ) ( x50 VNB ) ( x5 VNB ) ( x4_9 VNB ) ( x4_8 VNB )
+      ( x4_7 VNB ) ( x4_6 VNB ) ( x4_5 VNB ) ( x4_4 VNB ) ( x4_3 VNB ) ( x4_2 VNB ) ( x4_10 VNB ) ( x4_1 VNB )
+      ( x4_0 VNB ) ( x49 VNB ) ( x48 VNB ) ( x47 VNB ) ( x46_9 VNB ) ( x46_8 VNB ) ( x46_7 VNB ) ( x46_6 VNB )
+      ( x46_5 VNB ) ( x46_4 VNB ) ( x46_3 VNB ) ( x46_2 VNB ) ( x46_11 VNB ) ( x46_10 VNB ) ( x46_1 VNB ) ( x46_0 VNB )
+      ( x46 VNB ) ( x45_9 VNB ) ( x45_8 VNB ) ( x45_7 VNB ) ( x45_6 VNB ) ( x45_5 VNB ) ( x45_4 VNB ) ( x45_3 VNB )
+      ( x45_2 VNB ) ( x45_11 VNB ) ( x45_10 VNB ) ( x45_1 VNB ) ( x45_0 VNB ) ( x45 VNB ) ( x44_9 VNB ) ( x44_8 VNB )
+      ( x44_7 VNB ) ( x44_6 VNB ) ( x44_5 VNB ) ( x44_4 VNB ) ( x44_3 VNB ) ( x44_2 VNB ) ( x44_10 VNB ) ( x44_1 VNB )
+      ( x44_0 VNB ) ( x44 VNB ) ( x43_9 VNB ) ( x43_8 VNB ) ( x43_7 VNB ) ( x43_6 VNB ) ( x43_5 VNB ) ( x43_4 VNB )
+      ( x43_3 VNB ) ( x43_2 VNB ) ( x43_10 VNB ) ( x43_1 VNB ) ( x43_0 VNB ) ( x43 VNB ) ( x42_9 VNB ) ( x42_8 VNB )
+      ( x42_7 VNB ) ( x42_6 VNB ) ( x42_5 VNB ) ( x42_4 VNB ) ( x42_3 VNB ) ( x42_2 VNB ) ( x42_10 VNB ) ( x42_1 VNB )
+      ( x42_0 VNB ) ( x42 VNB ) ( x41_9 VNB ) ( x41_8 VNB ) ( x41_7 VNB ) ( x41_6 VNB ) ( x41_5 VNB ) ( x41_4 VNB )
+      ( x41_3 VNB ) ( x41_2 VNB ) ( x41_11 VNB ) ( x41_10 VNB ) ( x41_1 VNB ) ( x41_0 VNB ) ( x41 VNB ) ( x40 VNB )
+      ( x4 VNB ) ( x3_9 VNB ) ( x3_8 VNB ) ( x3_7 VNB ) ( x3_6 VNB ) ( x3_5 VNB ) ( x3_4 VNB ) ( x3_3 VNB )
+      ( x3_2 VNB ) ( x3_10 VNB ) ( x3_1 VNB ) ( x3_0 VNB ) ( x39 VNB ) ( x38_9 VNB ) ( x38_8 VNB ) ( x38_7 VNB )
+      ( x38_6 VNB ) ( x38_5 VNB ) ( x38_4 VNB ) ( x38_3 VNB ) ( x38_2 VNB ) ( x38_10 VNB ) ( x38_1 VNB ) ( x38_0 VNB )
+      ( x38 VNB ) ( x37 VNB ) ( x36 VNB ) ( x35 VNB ) ( x34 VNB ) ( x33 VNB ) ( x32 VNB ) ( x31 VNB )
+      ( x30 VNB ) ( x3 VNB ) ( x2_9 VNB ) ( x2_8 VNB ) ( x2_7 VNB ) ( x2_6 VNB ) ( x2_5 VNB ) ( x2_4 VNB )
+      ( x2_3 VNB ) ( x2_2 VNB ) ( x2_10 VNB ) ( x2_1 VNB ) ( x2_0 VNB ) ( x29 VNB ) ( x28 VNB ) ( x27 VNB )
+      ( x26 VNB ) ( x25 VNB ) ( x24 VNB ) ( x23 VNB ) ( x22 VNB ) ( x21_9 VNB ) ( x21_8 VNB ) ( x21_7 VNB )
+      ( x21_6 VNB ) ( x21_5 VNB ) ( x21_4 VNB ) ( x21_3 VNB ) ( x21_2 VNB ) ( x21_10 VNB ) ( x21_1 VNB ) ( x21_0 VNB )
+      ( x21 VNB ) ( x20 VNB ) ( x2 VNB ) ( x1_9 VNB ) ( x1_8 VNB ) ( x1_7 VNB ) ( x1_6 VNB ) ( x1_5 VNB )
+      ( x1_4 VNB ) ( x1_3 VNB ) ( x1_2 VNB ) ( x1_11 VNB ) ( x1_10 VNB ) ( x1_1 VNB ) ( x1_0 VNB ) ( x19 VNB )
+      ( x18 VNB ) ( x17 VNB ) ( x16 VNB ) ( x15 VNB ) ( x14_5 VNB ) ( x14_4 VNB ) ( x14_3 VNB ) ( x14_2 VNB )
+      ( x14_1 VNB ) ( x14_0 VNB ) ( x14 VNB ) ( x13_5 VNB ) ( x13_4 VNB ) ( x13_3 VNB ) ( x13_2 VNB ) ( x13_1 VNB )
+      ( x13_0 VNB ) ( x13 VNB ) ( x12_9 VNB ) ( x12_8 VNB ) ( x12_7 VNB ) ( x12_6 VNB ) ( x12_5 VNB ) ( x12_4 VNB )
+      ( x12_3 VNB ) ( x12_2 VNB ) ( x12_10 VNB ) ( x12_1 VNB ) ( x12_0 VNB ) ( x12 VNB ) ( x11_9 VNB ) ( x11_8 VNB )
+      ( x11_7 VNB ) ( x11_6 VNB ) ( x11_5 VNB ) ( x11_4 VNB ) ( x11_3 VNB ) ( x11_2 VNB ) ( x11_10 VNB ) ( x11_1 VNB )
+      ( x11_0 VNB ) ( x11 VNB ) ( x10_9 VNB ) ( x10_8 VNB ) ( x10_7 VNB ) ( x10_6 VNB ) ( x10_5 VNB ) ( x10_4 VNB )
+      ( x10_3 VNB ) ( x10_2 VNB ) ( x10_10 VNB ) ( x10_1 VNB ) ( x10_0 VNB ) ( x10 VNB ) ( x1 VNB ) ( x9_9 VGND )
+      ( x9_8 VGND ) ( x9_7 VGND ) ( x9_6 VGND ) ( x9_5 VGND ) ( x9_4 VGND ) ( x9_3 VGND ) ( x9_2 VGND ) ( x9_10 VGND )
+      ( x9_1 VGND ) ( x9_0 VGND ) ( x9 VGND ) ( x8_9 VGND ) ( x8_8 VGND ) ( x8_7 VGND ) ( x8_6 VGND ) ( x8_5 VGND )
+      ( x8_4 VGND ) ( x8_3 VGND ) ( x8_2 VGND ) ( x8_10 VGND ) ( x8_1 VGND ) ( x8_0 VGND ) ( x8 VGND ) ( x7_9 VGND )
+      ( x7_8 VGND ) ( x7_7 VGND ) ( x7_6 VGND ) ( x7_5 VGND ) ( x7_4 VGND ) ( x7_3 VGND ) ( x7_2 VGND ) ( x7_10 VGND )
+      ( x7_1 VGND ) ( x7_0 VGND ) ( x7 VGND ) ( x6_5 VGND ) ( x6_4 VGND ) ( x6_3 VGND ) ( x6_2 VGND ) ( x6_1 VGND )
+      ( x6_0 VGND ) ( x66 VGND ) ( x65 VGND ) ( x64 VGND ) ( x63 VGND ) ( x62 VGND ) ( x61_5 VGND ) ( x61_4 VGND )
+      ( x61_3 VGND ) ( x61_2 VGND ) ( x61_1 VGND ) ( x61_0 VGND ) ( x61 VGND ) ( x60_5 VGND ) ( x60_4 VGND ) ( x60_3 VGND )
+      ( x60_2 VGND ) ( x60_1 VGND ) ( x60_0 VGND ) ( x60 VGND ) ( x6 VGND ) ( x5_9 VGND ) ( x5_8 VGND ) ( x5_7 VGND )
+      ( x5_6 VGND ) ( x5_5 VGND ) ( x5_4 VGND ) ( x5_3 VGND ) ( x5_2 VGND ) ( x5_11 VGND ) ( x5_10 VGND ) ( x5_1 VGND )
+      ( x5_0 VGND ) ( x59 VGND ) ( x58 VGND ) ( x57 VGND ) ( x56 VGND ) ( x55 VGND ) ( x54 VGND ) ( x53 VGND )
+      ( x52 VGND ) ( x51 VGND ) ( x50 VGND ) ( x5 VGND ) ( x4_9 VGND ) ( x4_8 VGND ) ( x4_7 VGND ) ( x4_6 VGND )
+      ( x4_5 VGND ) ( x4_4 VGND ) ( x4_3 VGND ) ( x4_2 VGND ) ( x4_10 VGND ) ( x4_1 VGND ) ( x4_0 VGND ) ( x49 VGND )
+      ( x48 VGND ) ( x47 VGND ) ( x46_9 VGND ) ( x46_8 VGND ) ( x46_7 VGND ) ( x46_6 VGND ) ( x46_5 VGND ) ( x46_4 VGND )
+      ( x46_3 VGND ) ( x46_2 VGND ) ( x46_11 VGND ) ( x46_10 VGND ) ( x46_1 VGND ) ( x46_0 VGND ) ( x46 VGND ) ( x45_9 VGND )
+      ( x45_8 VGND ) ( x45_7 VGND ) ( x45_6 VGND ) ( x45_5 VGND ) ( x45_4 VGND ) ( x45_3 VGND ) ( x45_2 VGND ) ( x45_11 VGND )
+      ( x45_10 VGND ) ( x45_1 VGND ) ( x45_0 VGND ) ( x45 VGND ) ( x44_9 VGND ) ( x44_8 VGND ) ( x44_7 VGND ) ( x44_6 VGND )
+      ( x44_5 VGND ) ( x44_4 VGND ) ( x44_3 VGND ) ( x44_2 VGND ) ( x44_10 VGND ) ( x44_1 VGND ) ( x44_0 VGND ) ( x44 VGND )
+      ( x43_9 VGND ) ( x43_8 VGND ) ( x43_7 VGND ) ( x43_6 VGND ) ( x43_5 VGND ) ( x43_4 VGND ) ( x43_3 VGND ) ( x43_2 VGND )
+      ( x43_10 VGND ) ( x43_1 VGND ) ( x43_0 VGND ) ( x43 VGND ) ( x42_9 VGND ) ( x42_8 VGND ) ( x42_7 VGND ) ( x42_6 VGND )
+      ( x42_5 VGND ) ( x42_4 VGND ) ( x42_3 VGND ) ( x42_2 VGND ) ( x42_10 VGND ) ( x42_1 VGND ) ( x42_0 VGND ) ( x42 VGND )
+      ( x41_9 VGND ) ( x41_8 VGND ) ( x41_7 VGND ) ( x41_6 VGND ) ( x41_5 VGND ) ( x41_4 VGND ) ( x41_3 VGND ) ( x41_2 VGND )
+      ( x41_11 VGND ) ( x41_10 VGND ) ( x41_1 VGND ) ( x41_0 VGND ) ( x41 VGND ) ( x40 VGND ) ( x4 VGND ) ( x3_9 VGND )
+      ( x3_8 VGND ) ( x3_7 VGND ) ( x3_6 VGND ) ( x3_5 VGND ) ( x3_4 VGND ) ( x3_3 VGND ) ( x3_2 VGND ) ( x3_10 VGND )
+      ( x3_1 VGND ) ( x3_0 VGND ) ( x39 VGND ) ( x38_9 VGND ) ( x38_8 VGND ) ( x38_7 VGND ) ( x38_6 VGND ) ( x38_5 VGND )
+      ( x38_4 VGND ) ( x38_3 VGND ) ( x38_2 VGND ) ( x38_10 VGND ) ( x38_1 VGND ) ( x38_0 VGND ) ( x38 VGND ) ( x37 VGND )
+      ( x36 VGND ) ( x35 VGND ) ( x34 VGND ) ( x33 VGND ) ( x32 VGND ) ( x31 VGND ) ( x30 VGND ) ( x3 VGND )
+      ( x2_9 VGND ) ( x2_8 VGND ) ( x2_7 VGND ) ( x2_6 VGND ) ( x2_5 VGND ) ( x2_4 VGND ) ( x2_3 VGND ) ( x2_2 VGND )
+      ( x2_10 VGND ) ( x2_1 VGND ) ( x2_0 VGND ) ( x29 VGND ) ( x28 VGND ) ( x27 VGND ) ( x26 VGND ) ( x25 VGND )
+      ( x24 VGND ) ( x23 VGND ) ( x22 VGND ) ( x21_9 VGND ) ( x21_8 VGND ) ( x21_7 VGND ) ( x21_6 VGND ) ( x21_5 VGND )
+      ( x21_4 VGND ) ( x21_3 VGND ) ( x21_2 VGND ) ( x21_10 VGND ) ( x21_1 VGND ) ( x21_0 VGND ) ( x21 VGND ) ( x20 VGND )
+      ( x2 VGND ) ( x1_9 VGND ) ( x1_8 VGND ) ( x1_7 VGND ) ( x1_6 VGND ) ( x1_5 VGND ) ( x1_4 VGND ) ( x1_3 VGND )
+      ( x1_2 VGND ) ( x1_11 VGND ) ( x1_10 VGND ) ( x1_1 VGND ) ( x1_0 VGND ) ( x19 VGND ) ( x18 VGND ) ( x17 VGND )
+      ( x16 VGND ) ( x15 VGND ) ( x14_5 VGND ) ( x14_4 VGND ) ( x14_3 VGND ) ( x14_2 VGND ) ( x14_1 VGND ) ( x14_0 VGND )
+      ( x14 VGND ) ( x13_5 VGND ) ( x13_4 VGND ) ( x13_3 VGND ) ( x13_2 VGND ) ( x13_1 VGND ) ( x13_0 VGND ) ( x13 VGND )
+      ( x12_9 VGND ) ( x12_8 VGND ) ( x12_7 VGND ) ( x12_6 VGND ) ( x12_5 VGND ) ( x12_4 VGND ) ( x12_3 VGND ) ( x12_2 VGND )
+      ( x12_10 VGND ) ( x12_1 VGND ) ( x12_0 VGND ) ( x12 VGND ) ( x11_9 VGND ) ( x11_8 VGND ) ( x11_7 VGND ) ( x11_6 VGND )
+      ( x11_5 VGND ) ( x11_4 VGND ) ( x11_3 VGND ) ( x11_2 VGND ) ( x11_10 VGND ) ( x11_1 VGND ) ( x11_0 VGND ) ( x11 VGND )
+      ( x10_9 VGND ) ( x10_8 VGND ) ( x10_7 VGND ) ( x10_6 VGND ) ( x10_5 VGND ) ( x10_4 VGND ) ( x10_3 VGND ) ( x10_2 VGND )
+      ( x10_10 VGND ) ( x10_1 VGND ) ( x10_0 VGND ) ( x10 VGND ) ( x1 VGND ) + USE GROUND ;
+END SPECIALNETS
+NETS 324 ;
+    - ALLOW_VCM_SW ( x36 B ) ( x21 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[0\] ( x4_0 B ) ( x42_0 B ) ( x3_0 B_N ) ( x2_0 B_N ) ( x12_0 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[10\] ( x4_10 B ) ( x42_10 B ) ( x3_10 B_N ) ( x2_10 B_N ) ( x12_10 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[1\] ( x4_1 B ) ( x42_1 B ) ( x3_1 B_N ) ( x2_1 B_N ) ( x12_1 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[2\] ( x4_2 B ) ( x42_2 B ) ( x3_2 B_N ) ( x2_2 B_N ) ( x12_2 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[3\] ( x4_3 B ) ( x42_3 B ) ( x3_3 B_N ) ( x2_3 B_N ) ( x12_3 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[4\] ( x4_4 B ) ( x42_4 B ) ( x3_4 B_N ) ( x2_4 B_N ) ( x12_4 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[5\] ( x4_5 B ) ( x42_5 B ) ( x3_5 B_N ) ( x2_5 B_N ) ( x12_5 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[6\] ( x4_6 B ) ( x42_6 B ) ( x3_6 B_N ) ( x2_6 B_N ) ( x12_6 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[7\] ( x4_7 B ) ( x42_7 B ) ( x3_7 B_N ) ( x2_7 B_N ) ( x12_7 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[8\] ( x4_8 B ) ( x42_8 B ) ( x3_8 B_N ) ( x2_8 B_N ) ( x12_8 Y ) + USE SIGNAL ;
+    - ALLOW_VREF_SW\[9\] ( x4_9 B ) ( x42_9 B ) ( x3_9 B_N ) ( x2_9 B_N ) ( x12_9 Y ) + USE SIGNAL ;
+    - CLK_CMP ( x29 X ) ( x28 A ) + USE SIGNAL ;
+    - CLK_COUNTER_Z ( x5_9 CLK ) ( x5_8 CLK ) ( x5_7 CLK ) ( x5_6 CLK ) ( x5_5 CLK ) ( x5_4 CLK ) ( x5_3 CLK )
+      ( x5_2 CLK ) ( x5_11 CLK ) ( x5_10 CLK ) ( x5_1 CLK ) ( x5_0 CLK ) ( x47 A ) ( x34 A0 ) ( x22 Y )
+      ( x1_9 CLK ) ( x1_8 CLK ) ( x1_7 CLK ) ( x1_6 CLK ) ( x1_5 CLK ) ( x1_4 CLK ) ( x1_3 CLK ) ( x1_2 CLK )
+      ( x1_11 CLK ) ( x1_10 CLK ) ( x1_1 CLK ) ( x1_0 CLK ) + USE SIGNAL ;
+    - CLK_DATA ( PIN CLK_DATA ) ( x65 Y ) + USE SIGNAL ;
+    - CLK_PULSE ( x33 A3 ) ( x31 C ) ( x29 B ) ( x26 Y ) ( x23 A_N ) ( x22 B ) + USE SIGNAL ;
+    - COMP_DECIDED ( x52 A_N ) ( x50 A1 ) ( x30 Y ) ( x29 C ) + USE SIGNAL ;
+    - COMP_N ( PIN COMP_N ) ( x50 A3 ) ( x30 B ) + USE SIGNAL ;
+    - COMP_P ( PIN COMP_P ) ( x50 A2 ) ( x46_9 A1 ) ( x46_8 A1 ) ( x46_7 A1 ) ( x46_6 A1 ) ( x46_5 A1 )
+      ( x46_4 A1 ) ( x46_3 A1 ) ( x46_2 A1 ) ( x46_11 A1 ) ( x46_10 A1 ) ( x46_1 A1 ) ( x46_0 A1 ) ( x30 A ) + USE SIGNAL ;
+    - CONVERT ( x7 A ) ( x36 A ) ( x33 A2 ) ( x28 B_N ) ( x23 B ) ( x1_9 RESET_B ) ( x1_8 RESET_B )
+      ( x1_7 RESET_B ) ( x1_6 RESET_B ) ( x1_5 RESET_B ) ( x1_4 RESET_B ) ( x1_3 RESET_B ) ( x1_2 RESET_B ) ( x1_11 RESET_B ) ( x1_10 RESET_B )
+      ( x1_1 RESET_B ) ( x1_0 RESET_B ) ( x16 Y ) ( x13 A ) + USE SIGNAL ;
+    - COUNTER\[0\] ( x60 A3 ) ( x53 A ) ( x51 B ) ( x49 A ) ( x41_0 A_N ) ( x31 B ) ( x29 A_N )
+      ( x1_0 Q ) + USE SIGNAL ;
+    - COUNTER\[10\] ( x9_9 A ) ( x41_9 B ) ( x41_10 A_N ) ( x1_9 D ) ( x1_10 Q ) ( x11_9 B ) + USE SIGNAL ;
+    - COUNTER\[11\] ( x9_10 A ) ( x60 A1 ) ( x41_11 A_N ) ( x41_10 B ) ( x40 A_N ) ( x1_11 Q ) ( x1_10 D )
+      ( x11_10 B ) + USE SIGNAL ;
+    - COUNTER\[1\] ( x9_0 A ) ( x41_1 A_N ) ( x41_0 B ) ( x1_1 Q ) ( x1_0 D ) ( x11_0 B ) + USE SIGNAL ;
+    - COUNTER\[2\] ( x9_1 A ) ( x41_2 A_N ) ( x41_1 B ) ( x1_2 Q ) ( x1_1 D ) ( x11_1 B ) + USE SIGNAL ;
+    - COUNTER\[3\] ( x9_2 A ) ( x41_3 A_N ) ( x41_2 B ) ( x1_3 Q ) ( x1_2 D ) ( x11_2 B ) + USE SIGNAL ;
+    - COUNTER\[4\] ( x9_3 A ) ( x59 A ) ( x41_4 A_N ) ( x41_3 B ) ( x1_4 Q ) ( x1_3 D ) ( x11_3 B ) + USE SIGNAL ;
+    - COUNTER\[5\] ( x9_4 A ) ( x60 A2 ) ( x41_5 A_N ) ( x41_4 B ) ( x35 A ) ( x1_5 Q ) ( x1_4 D )
+      ( x11_4 B ) + USE SIGNAL ;
+    - COUNTER\[6\] ( x9_5 A ) ( x41_6 A_N ) ( x41_5 B ) ( x1_6 Q ) ( x1_5 D ) ( x11_5 B ) + USE SIGNAL ;
+    - COUNTER\[7\] ( x9_6 A ) ( x41_7 A_N ) ( x41_6 B ) ( x1_7 Q ) ( x1_6 D ) ( x11_6 B ) + USE SIGNAL ;
+    - COUNTER\[8\] ( x9_7 A ) ( x41_8 A_N ) ( x41_7 B ) ( x1_8 Q ) ( x1_7 D ) ( x11_7 B ) + USE SIGNAL ;
+    - COUNTER\[9\] ( x9_8 A ) ( x41_9 A_N ) ( x41_8 B ) ( x1_9 Q ) ( x1_8 D ) ( x11_8 B ) + USE SIGNAL ;
+    - DAC_SETTLE ( PIN DAC_SETTLE ) ( x34 A3 ) ( x23 X ) + USE SIGNAL ;
+    - DAC_SETTLE_D ( PIN DAC_SETTLE_D ) ( x50 A0 ) ( x27 A ) + USE SIGNAL ;
+    - DATA[0] ( PIN DATA[0] ) ( x14_0 Y ) + USE SIGNAL ;
+    - DATA[1] ( PIN DATA[1] ) ( x14_1 Y ) + USE SIGNAL ;
+    - DATA[2] ( PIN DATA[2] ) ( x14_2 Y ) + USE SIGNAL ;
+    - DATA[3] ( PIN DATA[3] ) ( x14_3 Y ) + USE SIGNAL ;
+    - DATA[4] ( PIN DATA[4] ) ( x14_4 Y ) + USE SIGNAL ;
+    - DATA[5] ( PIN DATA[5] ) ( x14_5 Y ) + USE SIGNAL ;
+    - DEBUG_MUX[0] ( PIN DEBUG_MUX[0] ) ( x60 S0 ) ( x50 S0 ) ( x34 S0 ) ( x33 S0 ) + USE SIGNAL ;
+    - DEBUG_MUX[1] ( PIN DEBUG_MUX[1] ) ( x60 S1 ) ( x50 S1 ) ( x34 S1 ) ( x33 S1 ) + USE SIGNAL ;
+    - DEBUG_MUX[2] ( PIN DEBUG_MUX[2] ) ( x42 S0 ) + USE SIGNAL ;
+    - DEBUG_MUX[3] ( PIN DEBUG_MUX[3] ) ( x42 S1 ) + USE SIGNAL ;
+    - DEBUG_OUT ( PIN DEBUG_OUT ) ( x64 Y ) + USE SIGNAL ;
+    - DONE ( x7 B ) ( x60 A0 ) ( x59 B ) ( x44 Q ) + USE SIGNAL ;
+    - EN_COMP ( PIN EN_COMP ) ( x47 Y ) ( x34 A1 ) + USE SIGNAL ;
+    - EN_DAC_OUT\[0\] ( x46_0 S ) ( x41_0 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[10\] ( x46_10 S ) ( x41_10 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[11\] ( x46_11 S ) ( x41_11 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[1\] ( x46_1 S ) ( x41_1 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[2\] ( x46_2 S ) ( x41_2 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[3\] ( x46_3 S ) ( x41_3 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[4\] ( x46_4 S ) ( x41_4 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[5\] ( x46_5 S ) ( x41_5 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[6\] ( x46_6 S ) ( x41_6 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[7\] ( x46_7 S ) ( x41_7 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[8\] ( x46_8 S ) ( x41_8 X ) + USE SIGNAL ;
+    - EN_DAC_OUT\[9\] ( x46_9 S ) ( x41_9 X ) + USE SIGNAL ;
+    - EN_OFFSET_CAL ( PIN EN_OFFSET_CAL ) ( x55 B ) ( x53 B ) ( x52 B ) ( x51 A_N ) + USE SIGNAL ;
+    - EN_OFFSET_CAL_O ( PIN EN_OFFSET_CAL_O ) ( x56 Y ) + USE SIGNAL ;
+    - EN_VCM_SW_O ( PIN EN_VCM_SW_O ) ( x46 Y ) ( x43 B ) + USE SIGNAL ;
+    - FINISH ( x52 Y ) ( x31 A ) + USE SIGNAL ;
+    - HI ( PIN HI ) ( x58 Y ) ( x44 D ) ( x41_11 B ) ( x1_11 D ) + USE SIGNAL ;
+    - IDLE ( x61 A ) ( x33 A1 ) ( x2 A ) ( x17 A ) ( x10 B ) ( x1 Y ) + USE SIGNAL ;
+    - LO ( PIN LO ) ( x57 Y ) ( x41 A ) + USE SIGNAL ;
+    - LOAD ( x48 A ) ( x31 X ) + USE SIGNAL ;
+    - LOAD_D ( x44 CLK ) ( x32 X ) + USE SIGNAL ;
+    - OFFSET_CAL_CYCLE ( PIN OFFSET_CAL_CYCLE ) ( x54 Y ) + USE SIGNAL ;
+    - RESULT_Z\[0\] ( x45_0 Y ) ( x13_0 A1 ) + USE SIGNAL ;
+    - RESULT_Z\[10\] ( x4_9 A ) ( x45_10 Y ) ( x3_9 A ) ( x13_4 A0 ) + USE SIGNAL ;
+    - RESULT_Z\[11\] ( x4_10 A ) ( x45_11 Y ) ( x3_10 A ) ( x13_5 A0 ) + USE SIGNAL ;
+    - RESULT_Z\[1\] ( x4_0 A ) ( x45_1 Y ) ( x3_0 A ) ( x13_1 A1 ) + USE SIGNAL ;
+    - RESULT_Z\[2\] ( x4_1 A ) ( x45_2 Y ) ( x3_1 A ) ( x13_2 A1 ) + USE SIGNAL ;
+    - RESULT_Z\[3\] ( x4_2 A ) ( x45_3 Y ) ( x3_2 A ) ( x13_3 A1 ) + USE SIGNAL ;
+    - RESULT_Z\[4\] ( x4_3 A ) ( x45_4 Y ) ( x3_3 A ) ( x13_4 A1 ) + USE SIGNAL ;
+    - RESULT_Z\[5\] ( x4_4 A ) ( x45_5 Y ) ( x3_4 A ) ( x13_5 A1 ) + USE SIGNAL ;
+    - RESULT_Z\[6\] ( x4_5 A ) ( x45_6 Y ) ( x3_5 A ) ( x13_0 A0 ) + USE SIGNAL ;
+    - RESULT_Z\[7\] ( x4_6 A ) ( x45_7 Y ) ( x3_6 A ) ( x13_1 A0 ) + USE SIGNAL ;
+    - RESULT_Z\[8\] ( x4_7 A ) ( x45_8 Y ) ( x3_7 A ) ( x13_2 A0 ) + USE SIGNAL ;
+    - RESULT_Z\[9\] ( x4_8 A ) ( x45_9 Y ) ( x3_8 A ) ( x13_3 A0 ) + USE SIGNAL ;
+    - RESULTi\[0\] ( x5_0 Q ) ( x46_0 A0 ) ( x45_0 A ) + USE SIGNAL ;
+    - RESULTi\[10\] ( x5_10 Q ) ( x46_10 A0 ) ( x45_10 A ) ( x42_9 A ) ( x2_9 A ) + USE SIGNAL ;
+    - RESULTi\[11\] ( x5_11 Q ) ( x46_11 A0 ) ( x45_11 A ) ( x42_10 A ) ( x2_10 A ) + USE SIGNAL ;
+    - RESULTi\[1\] ( x5_1 Q ) ( x46_1 A0 ) ( x45_1 A ) ( x42_0 A ) ( x2_0 A ) + USE SIGNAL ;
+    - RESULTi\[2\] ( x5_2 Q ) ( x46_2 A0 ) ( x45_2 A ) ( x42_1 A ) ( x2_1 A ) + USE SIGNAL ;
+    - RESULTi\[3\] ( x5_3 Q ) ( x46_3 A0 ) ( x45_3 A ) ( x42_2 A ) ( x2_2 A ) + USE SIGNAL ;
+    - RESULTi\[4\] ( x5_4 Q ) ( x46_4 A0 ) ( x45_4 A ) ( x42_3 A ) ( x2_3 A ) + USE SIGNAL ;
+    - RESULTi\[5\] ( x5_5 Q ) ( x46_5 A0 ) ( x45_5 A ) ( x42_4 A ) ( x2_4 A ) + USE SIGNAL ;
+    - RESULTi\[6\] ( x5_6 Q ) ( x46_6 A0 ) ( x45_6 A ) ( x42_5 A ) ( x2_5 A ) + USE SIGNAL ;
+    - RESULTi\[7\] ( x5_7 Q ) ( x46_7 A0 ) ( x45_7 A ) ( x42_6 A ) ( x2_6 A ) + USE SIGNAL ;
+    - RESULTi\[8\] ( x5_8 Q ) ( x46_8 A0 ) ( x45_8 A ) ( x42_7 A ) ( x2_7 A ) + USE SIGNAL ;
+    - RESULTi\[9\] ( x5_9 Q ) ( x46_9 A0 ) ( x45_9 A ) ( x42_8 A ) ( x2_8 A ) + USE SIGNAL ;
+    - RST_RES_REG_Z ( x62 Y ) ( x5_9 RESET_B ) ( x5_8 RESET_B ) ( x5_7 RESET_B ) ( x5_6 RESET_B ) ( x5_5 RESET_B ) ( x5_4 RESET_B )
+      ( x5_3 RESET_B ) ( x5_2 RESET_B ) ( x5_11 RESET_B ) ( x5_10 RESET_B ) ( x5_1 RESET_B ) ( x5_0 RESET_B ) + USE SIGNAL ;
+    - RST_Z ( PIN RST_Z ) ( x5 A ) + USE SIGNAL ;
+    - RST_Zi ( x6 Y ) ( x55 A ) + USE SIGNAL ;
+    - RSTi ( x62 A ) ( x6 A ) ( x5 Y ) ( x45 B ) ( x3 B ) ( x12 B ) + USE SIGNAL ;
+    - R_CLK_PULSE_Z ( x28 Y ) ( x25 B ) + USE SIGNAL ;
+    - R_CONVERT_Z ( x17 Y ) ( x15 B ) + USE SIGNAL ;
+    - R_IDLE_Z ( x4 Y ) ( x2 B ) + USE SIGNAL ;
+    - R_SAMPLE_Z ( x9 B ) ( x12 Y ) + USE SIGNAL ;
+    - SAMPLE ( x62 B ) ( x49 B ) ( x45 A ) ( x43 A ) ( x4 A ) ( x33 A0 ) ( x18 A )
+      ( x11 Y ) + USE SIGNAL ;
+    - SAMPLE_D ( PIN SAMPLE_D ) ( x34 A2 ) ( x18 B ) ( x13 B ) + USE SIGNAL ;
+    - SAMPLE_O ( PIN SAMPLE_O ) ( x39 Y ) + USE SIGNAL ;
+    - START ( PIN START ) ( x10 A ) + USE SIGNAL ;
+    - S_CLK_PULSE_Z ( x27 Y ) ( x24 A ) + USE SIGNAL ;
+    - S_CONVERT_Z ( x18 Y ) ( x14 A ) + USE SIGNAL ;
+    - S_IDLE_Z ( x3 Y ) ( x1 A ) + USE SIGNAL ;
+    - S_SAMPLE_Z ( x8 A ) ( x10 Y ) + USE SIGNAL ;
+    - VCM_DUMMY_O ( PIN VCM_DUMMY_O ) ( x37 Y ) + USE SIGNAL ;
+    - VCM_O[0] ( PIN VCM_O[0] ) ( x21_0 Y ) ( x10_0 A ) + USE SIGNAL ;
+    - VCM_O[10] ( PIN VCM_O[10] ) ( x21_10 Y ) ( x10_10 A ) + USE SIGNAL ;
+    - VCM_O[1] ( PIN VCM_O[1] ) ( x21_1 Y ) ( x10_1 A ) + USE SIGNAL ;
+    - VCM_O[2] ( PIN VCM_O[2] ) ( x21_2 Y ) ( x10_2 A ) + USE SIGNAL ;
+    - VCM_O[3] ( PIN VCM_O[3] ) ( x21_3 Y ) ( x10_3 A ) + USE SIGNAL ;
+    - VCM_O[4] ( PIN VCM_O[4] ) ( x21_4 Y ) ( x10_4 A ) + USE SIGNAL ;
+    - VCM_O[5] ( PIN VCM_O[5] ) ( x21_5 Y ) ( x10_5 A ) + USE SIGNAL ;
+    - VCM_O[6] ( PIN VCM_O[6] ) ( x21_6 Y ) ( x10_6 A ) + USE SIGNAL ;
+    - VCM_O[7] ( PIN VCM_O[7] ) ( x21_7 Y ) ( x10_7 A ) + USE SIGNAL ;
+    - VCM_O[8] ( PIN VCM_O[8] ) ( x21_8 Y ) ( x10_8 A ) + USE SIGNAL ;
+    - VCM_O[9] ( PIN VCM_O[9] ) ( x21_9 Y ) ( x10_9 A ) + USE SIGNAL ;
+    - VCM_Z_O\[0\] ( x11_0 A ) ( x10_0 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[10\] ( x11_10 A ) ( x10_10 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[1\] ( x11_1 A ) ( x10_1 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[2\] ( x11_2 A ) ( x10_2 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[3\] ( x11_3 A ) ( x10_3 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[4\] ( x11_4 A ) ( x10_4 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[5\] ( x11_5 A ) ( x10_5 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[6\] ( x11_6 A ) ( x10_6 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[7\] ( x11_7 A ) ( x10_7 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[8\] ( x11_8 A ) ( x10_8 Y ) + USE SIGNAL ;
+    - VCM_Z_O\[9\] ( x11_9 A ) ( x10_9 Y ) + USE SIGNAL ;
+    - VIN_N_SW_ON ( PIN VIN_N_SW_ON ) ( x21 B ) + USE SIGNAL ;
+    - VIN_P_SW_ON ( PIN VIN_P_SW_ON ) ( x21 A ) + USE SIGNAL ;
+    - VREF_Z_N_O[0] ( PIN VREF_Z_N_O[0] ) ( x43_0 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[10] ( PIN VREF_Z_N_O[10] ) ( x43_10 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[1] ( PIN VREF_Z_N_O[1] ) ( x43_1 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[2] ( PIN VREF_Z_N_O[2] ) ( x43_2 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[3] ( PIN VREF_Z_N_O[3] ) ( x43_3 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[4] ( PIN VREF_Z_N_O[4] ) ( x43_4 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[5] ( PIN VREF_Z_N_O[5] ) ( x43_5 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[6] ( PIN VREF_Z_N_O[6] ) ( x43_6 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[7] ( PIN VREF_Z_N_O[7] ) ( x43_7 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[8] ( PIN VREF_Z_N_O[8] ) ( x43_8 Y ) + USE SIGNAL ;
+    - VREF_Z_N_O[9] ( PIN VREF_Z_N_O[9] ) ( x43_9 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[0] ( PIN VREF_Z_P_O[0] ) ( x8_0 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[10] ( PIN VREF_Z_P_O[10] ) ( x8_10 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[1] ( PIN VREF_Z_P_O[1] ) ( x8_1 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[2] ( PIN VREF_Z_P_O[2] ) ( x8_2 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[3] ( PIN VREF_Z_P_O[3] ) ( x8_3 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[4] ( PIN VREF_Z_P_O[4] ) ( x8_4 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[5] ( PIN VREF_Z_P_O[5] ) ( x8_5 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[6] ( PIN VREF_Z_P_O[6] ) ( x8_6 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[7] ( PIN VREF_Z_P_O[7] ) ( x8_7 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[8] ( PIN VREF_Z_P_O[8] ) ( x8_8 Y ) + USE SIGNAL ;
+    - VREF_Z_P_O[9] ( PIN VREF_Z_P_O[9] ) ( x8_9 Y ) + USE SIGNAL ;
+    - VSS_N_O[0] ( PIN VSS_N_O[0] ) ( x44_0 Y ) + USE SIGNAL ;
+    - VSS_N_O[10] ( PIN VSS_N_O[10] ) ( x44_10 Y ) + USE SIGNAL ;
+    - VSS_N_O[1] ( PIN VSS_N_O[1] ) ( x44_1 Y ) + USE SIGNAL ;
+    - VSS_N_O[2] ( PIN VSS_N_O[2] ) ( x44_2 Y ) + USE SIGNAL ;
+    - VSS_N_O[3] ( PIN VSS_N_O[3] ) ( x44_3 Y ) + USE SIGNAL ;
+    - VSS_N_O[4] ( PIN VSS_N_O[4] ) ( x44_4 Y ) + USE SIGNAL ;
+    - VSS_N_O[5] ( PIN VSS_N_O[5] ) ( x44_5 Y ) + USE SIGNAL ;
+    - VSS_N_O[6] ( PIN VSS_N_O[6] ) ( x44_6 Y ) + USE SIGNAL ;
+    - VSS_N_O[7] ( PIN VSS_N_O[7] ) ( x44_7 Y ) + USE SIGNAL ;
+    - VSS_N_O[8] ( PIN VSS_N_O[8] ) ( x44_8 Y ) + USE SIGNAL ;
+    - VSS_N_O[9] ( PIN VSS_N_O[9] ) ( x44_9 Y ) + USE SIGNAL ;
+    - VSS_P_O[0] ( PIN VSS_P_O[0] ) ( x7_0 Y ) + USE SIGNAL ;
+    - VSS_P_O[10] ( PIN VSS_P_O[10] ) ( x7_10 Y ) + USE SIGNAL ;
+    - VSS_P_O[1] ( PIN VSS_P_O[1] ) ( x7_1 Y ) + USE SIGNAL ;
+    - VSS_P_O[2] ( PIN VSS_P_O[2] ) ( x7_2 Y ) + USE SIGNAL ;
+    - VSS_P_O[3] ( PIN VSS_P_O[3] ) ( x7_3 Y ) + USE SIGNAL ;
+    - VSS_P_O[4] ( PIN VSS_P_O[4] ) ( x7_4 Y ) + USE SIGNAL ;
+    - VSS_P_O[5] ( PIN VSS_P_O[5] ) ( x7_5 Y ) + USE SIGNAL ;
+    - VSS_P_O[6] ( PIN VSS_P_O[6] ) ( x7_6 Y ) + USE SIGNAL ;
+    - VSS_P_O[7] ( PIN VSS_P_O[7] ) ( x7_7 Y ) + USE SIGNAL ;
+    - VSS_P_O[8] ( PIN VSS_P_O[8] ) ( x7_8 Y ) + USE SIGNAL ;
+    - VSS_P_O[9] ( PIN VSS_P_O[9] ) ( x7_9 Y ) + USE SIGNAL ;
+    - net1 ( x2 Y ) ( x1 B ) + USE SIGNAL ;
+    - net10\[0\] ( x5_0 D ) ( x46_0 X ) + USE SIGNAL ;
+    - net10\[10\] ( x5_10 D ) ( x46_10 X ) + USE SIGNAL ;
+    - net10\[11\] ( x5_11 D ) ( x46_11 X ) + USE SIGNAL ;
+    - net10\[1\] ( x5_1 D ) ( x46_1 X ) + USE SIGNAL ;
+    - net10\[2\] ( x5_2 D ) ( x46_2 X ) + USE SIGNAL ;
+    - net10\[3\] ( x5_3 D ) ( x46_3 X ) + USE SIGNAL ;
+    - net10\[4\] ( x5_4 D ) ( x46_4 X ) + USE SIGNAL ;
+    - net10\[5\] ( x5_5 D ) ( x46_5 X ) + USE SIGNAL ;
+    - net10\[6\] ( x5_6 D ) ( x46_6 X ) + USE SIGNAL ;
+    - net10\[7\] ( x5_7 D ) ( x46_7 X ) + USE SIGNAL ;
+    - net10\[8\] ( x5_8 D ) ( x46_8 X ) + USE SIGNAL ;
+    - net10\[9\] ( x5_9 D ) ( x46_9 X ) + USE SIGNAL ;
+    - net11 ( x9_9 B_N ) ( x9_8 B_N ) ( x9_7 B_N ) ( x9_6 B_N ) ( x9_5 B_N ) ( x9_4 B_N ) ( x9_3 B_N )
+      ( x9_2 B_N ) ( x9_10 B_N ) ( x9_1 B_N ) ( x9_0 B_N ) ( x41 B_N ) ( x36 X ) + USE SIGNAL ;
+    - net12 ( x45 Y ) ( x44 RESET_B ) + USE SIGNAL ;
+    - net13 ( x51 Y ) ( x22 A ) + USE SIGNAL ;
+    - net14 ( x58 A ) ( x20 LO ) + USE SIGNAL ;
+    - net15 ( x57 A ) ( x20 HI ) + USE SIGNAL ;
+    - net16 ( x59 X ) ( x13_5 S ) ( x13_4 S ) ( x13_3 S ) ( x13_2 S ) ( x13_1 S ) ( x13_0 S ) + USE SIGNAL ;
+    - net17 ( x42 A0 ) ( x33 X ) + USE SIGNAL ;
+    - net18 ( x42 A1 ) ( x34 X ) + USE SIGNAL ;
+    - net19 ( x63 A ) ( x42 X ) + USE SIGNAL ;
+    - net2 ( x7 X ) ( x3 A ) + USE SIGNAL ;
+    - net20 ( x50 X ) ( x42 A2 ) + USE SIGNAL ;
+    - net21 ( x60 X ) ( x42 A3 ) + USE SIGNAL ;
+    - net22 ( x43 X ) ( x40 B ) + USE SIGNAL ;
+    - net23 ( x61 Y ) ( x40 C ) + USE SIGNAL ;
+    - net24\[0\] ( x38_0 Y ) ( x21_0 A ) + USE SIGNAL ;
+    - net24\[10\] ( x38_10 Y ) ( x21_10 A ) + USE SIGNAL ;
+    - net24\[1\] ( x38_1 Y ) ( x21_1 A ) + USE SIGNAL ;
+    - net24\[2\] ( x38_2 Y ) ( x21_2 A ) + USE SIGNAL ;
+    - net24\[3\] ( x38_3 Y ) ( x21_3 A ) + USE SIGNAL ;
+    - net24\[4\] ( x38_4 Y ) ( x21_4 A ) + USE SIGNAL ;
+    - net24\[5\] ( x38_5 Y ) ( x21_5 A ) + USE SIGNAL ;
+    - net24\[6\] ( x38_6 Y ) ( x21_6 A ) + USE SIGNAL ;
+    - net24\[7\] ( x38_7 Y ) ( x21_7 A ) + USE SIGNAL ;
+    - net24\[8\] ( x38_8 Y ) ( x21_8 A ) + USE SIGNAL ;
+    - net24\[9\] ( x38_9 Y ) ( x21_9 A ) + USE SIGNAL ;
+    - net25 ( x64 A ) ( x63 Y ) + USE SIGNAL ;
+    - net26 ( x40 Y ) ( x39 A ) + USE SIGNAL ;
+    - net27\[0\] ( x9_0 Y ) ( x38_0 A ) + USE SIGNAL ;
+    - net27\[10\] ( x9_10 Y ) ( x38_10 A ) + USE SIGNAL ;
+    - net27\[1\] ( x9_1 Y ) ( x38_1 A ) + USE SIGNAL ;
+    - net27\[2\] ( x9_2 Y ) ( x38_2 A ) + USE SIGNAL ;
+    - net27\[3\] ( x9_3 Y ) ( x38_3 A ) + USE SIGNAL ;
+    - net27\[4\] ( x9_4 Y ) ( x38_4 A ) + USE SIGNAL ;
+    - net27\[5\] ( x9_5 Y ) ( x38_5 A ) + USE SIGNAL ;
+    - net27\[6\] ( x9_6 Y ) ( x38_6 A ) + USE SIGNAL ;
+    - net27\[7\] ( x9_7 Y ) ( x38_7 A ) + USE SIGNAL ;
+    - net27\[8\] ( x9_8 Y ) ( x38_8 A ) + USE SIGNAL ;
+    - net27\[9\] ( x9_9 Y ) ( x38_9 A ) + USE SIGNAL ;
+    - net28\[0\] ( x8_0 A ) ( x2_0 Y ) + USE SIGNAL ;
+    - net28\[10\] ( x8_10 A ) ( x2_10 Y ) + USE SIGNAL ;
+    - net28\[1\] ( x8_1 A ) ( x2_1 Y ) + USE SIGNAL ;
+    - net28\[2\] ( x8_2 A ) ( x2_2 Y ) + USE SIGNAL ;
+    - net28\[3\] ( x8_3 A ) ( x2_3 Y ) + USE SIGNAL ;
+    - net28\[4\] ( x8_4 A ) ( x2_4 Y ) + USE SIGNAL ;
+    - net28\[5\] ( x8_5 A ) ( x2_5 Y ) + USE SIGNAL ;
+    - net28\[6\] ( x8_6 A ) ( x2_6 Y ) + USE SIGNAL ;
+    - net28\[7\] ( x8_7 A ) ( x2_7 Y ) + USE SIGNAL ;
+    - net28\[8\] ( x8_8 A ) ( x2_8 Y ) + USE SIGNAL ;
+    - net28\[9\] ( x8_9 A ) ( x2_9 Y ) + USE SIGNAL ;
+    - net29\[0\] ( x7_0 A ) ( x42_0 Y ) + USE SIGNAL ;
+    - net29\[10\] ( x7_10 A ) ( x42_10 Y ) + USE SIGNAL ;
+    - net29\[1\] ( x7_1 A ) ( x42_1 Y ) + USE SIGNAL ;
+    - net29\[2\] ( x7_2 A ) ( x42_2 Y ) + USE SIGNAL ;
+    - net29\[3\] ( x7_3 A ) ( x42_3 Y ) + USE SIGNAL ;
+    - net29\[4\] ( x7_4 A ) ( x42_4 Y ) + USE SIGNAL ;
+    - net29\[5\] ( x7_5 A ) ( x42_5 Y ) + USE SIGNAL ;
+    - net29\[6\] ( x7_6 A ) ( x42_6 Y ) + USE SIGNAL ;
+    - net29\[7\] ( x7_7 A ) ( x42_7 Y ) + USE SIGNAL ;
+    - net29\[8\] ( x7_8 A ) ( x42_8 Y ) + USE SIGNAL ;
+    - net29\[9\] ( x7_9 A ) ( x42_9 Y ) + USE SIGNAL ;
+    - net3 ( x9 Y ) ( x8 B ) ( x11 A ) + USE SIGNAL ;
+    - net30\[0\] ( x43_0 A ) ( x3_0 Y ) + USE SIGNAL ;
+    - net30\[10\] ( x43_10 A ) ( x3_10 Y ) + USE SIGNAL ;
+    - net30\[1\] ( x43_1 A ) ( x3_1 Y ) + USE SIGNAL ;
+    - net30\[2\] ( x43_2 A ) ( x3_2 Y ) + USE SIGNAL ;
+    - net30\[3\] ( x43_3 A ) ( x3_3 Y ) + USE SIGNAL ;
+    - net30\[4\] ( x43_4 A ) ( x3_4 Y ) + USE SIGNAL ;
+    - net30\[5\] ( x43_5 A ) ( x3_5 Y ) + USE SIGNAL ;
+    - net30\[6\] ( x43_6 A ) ( x3_6 Y ) + USE SIGNAL ;
+    - net30\[7\] ( x43_7 A ) ( x3_7 Y ) + USE SIGNAL ;
+    - net30\[8\] ( x43_8 A ) ( x3_8 Y ) + USE SIGNAL ;
+    - net30\[9\] ( x43_9 A ) ( x3_9 Y ) + USE SIGNAL ;
+    - net31\[0\] ( x4_0 Y ) ( x44_0 A ) + USE SIGNAL ;
+    - net31\[10\] ( x4_10 Y ) ( x44_10 A ) + USE SIGNAL ;
+    - net31\[1\] ( x4_1 Y ) ( x44_1 A ) + USE SIGNAL ;
+    - net31\[2\] ( x4_2 Y ) ( x44_2 A ) + USE SIGNAL ;
+    - net31\[3\] ( x4_3 Y ) ( x44_3 A ) + USE SIGNAL ;
+    - net31\[4\] ( x4_4 Y ) ( x44_4 A ) + USE SIGNAL ;
+    - net31\[5\] ( x4_5 Y ) ( x44_5 A ) + USE SIGNAL ;
+    - net31\[6\] ( x4_6 Y ) ( x44_6 A ) + USE SIGNAL ;
+    - net31\[7\] ( x4_7 Y ) ( x44_7 A ) + USE SIGNAL ;
+    - net31\[8\] ( x4_8 Y ) ( x44_8 A ) + USE SIGNAL ;
+    - net31\[9\] ( x4_9 Y ) ( x44_9 A ) + USE SIGNAL ;
+    - net32 ( x38 Y ) ( x37 A ) + USE SIGNAL ;
+    - net33 ( x41 Y ) ( x38 A ) + USE SIGNAL ;
+    - net34\[0\] ( x12_0 A ) ( x11_0 Y ) + USE SIGNAL ;
+    - net34\[10\] ( x12_10 A ) ( x11_10 Y ) + USE SIGNAL ;
+    - net34\[1\] ( x12_1 A ) ( x11_1 Y ) + USE SIGNAL ;
+    - net34\[2\] ( x12_2 A ) ( x11_2 Y ) + USE SIGNAL ;
+    - net34\[3\] ( x12_3 A ) ( x11_3 Y ) + USE SIGNAL ;
+    - net34\[4\] ( x12_4 A ) ( x11_4 Y ) + USE SIGNAL ;
+    - net34\[5\] ( x12_5 A ) ( x11_5 Y ) + USE SIGNAL ;
+    - net34\[6\] ( x12_6 A ) ( x11_6 Y ) + USE SIGNAL ;
+    - net34\[7\] ( x12_7 A ) ( x11_7 Y ) + USE SIGNAL ;
+    - net34\[8\] ( x12_8 A ) ( x11_8 Y ) + USE SIGNAL ;
+    - net34\[9\] ( x12_9 A ) ( x11_9 Y ) + USE SIGNAL ;
+    - net35 ( x48 X ) ( x32 A ) + USE SIGNAL ;
+    - net36 ( x49 Y ) ( x46 A ) + USE SIGNAL ;
+    - net37 ( x54 A ) ( x53 Y ) + USE SIGNAL ;
+    - net38 ( x56 A ) ( x55 Y ) + USE SIGNAL ;
+    - net39\[0\] ( x61_0 A ) ( x13_0 X ) + USE SIGNAL ;
+    - net39\[1\] ( x61_1 A ) ( x13_1 X ) + USE SIGNAL ;
+    - net39\[2\] ( x61_2 A ) ( x13_2 X ) + USE SIGNAL ;
+    - net39\[3\] ( x61_3 A ) ( x13_3 X ) + USE SIGNAL ;
+    - net39\[4\] ( x61_4 A ) ( x13_4 X ) + USE SIGNAL ;
+    - net39\[5\] ( x61_5 A ) ( x13_5 X ) + USE SIGNAL ;
+    - net4 ( x9 A ) ( x8 Y ) + USE SIGNAL ;
+    - net40 ( x35 Y ) ( x19 A ) + USE SIGNAL ;
+    - net41 ( x66 A ) ( x19 Y ) + USE SIGNAL ;
+    - net42\[0\] ( x61_0 Y ) ( x60_0 A ) + USE SIGNAL ;
+    - net42\[1\] ( x61_1 Y ) ( x60_1 A ) + USE SIGNAL ;
+    - net42\[2\] ( x61_2 Y ) ( x60_2 A ) + USE SIGNAL ;
+    - net42\[3\] ( x61_3 Y ) ( x60_3 A ) + USE SIGNAL ;
+    - net42\[4\] ( x61_4 Y ) ( x60_4 A ) + USE SIGNAL ;
+    - net42\[5\] ( x61_5 Y ) ( x60_5 A ) + USE SIGNAL ;
+    - net43\[0\] ( x6_0 A ) ( x60_0 Y ) + USE SIGNAL ;
+    - net43\[1\] ( x6_1 A ) ( x60_1 Y ) + USE SIGNAL ;
+    - net43\[2\] ( x6_2 A ) ( x60_2 Y ) + USE SIGNAL ;
+    - net43\[3\] ( x6_3 A ) ( x60_3 Y ) + USE SIGNAL ;
+    - net43\[4\] ( x6_4 A ) ( x60_4 Y ) + USE SIGNAL ;
+    - net43\[5\] ( x6_5 A ) ( x60_5 Y ) + USE SIGNAL ;
+    - net44\[0\] ( x6_0 Y ) ( x14_0 A ) + USE SIGNAL ;
+    - net44\[1\] ( x6_1 Y ) ( x14_1 A ) + USE SIGNAL ;
+    - net44\[2\] ( x6_2 Y ) ( x14_2 A ) + USE SIGNAL ;
+    - net44\[3\] ( x6_3 Y ) ( x14_3 A ) + USE SIGNAL ;
+    - net44\[4\] ( x6_4 Y ) ( x14_4 A ) + USE SIGNAL ;
+    - net44\[5\] ( x6_5 Y ) ( x14_5 A ) + USE SIGNAL ;
+    - net45 ( x66 Y ) ( x65 A ) + USE SIGNAL ;
+    - net5 ( x13 X ) ( x12 A ) + USE SIGNAL ;
+    - net6 ( x16 A ) ( x15 Y ) ( x14 B ) + USE SIGNAL ;
+    - net7 ( x15 A ) ( x14 Y ) + USE SIGNAL ;
+    - net8 ( x26 A ) ( x25 Y ) ( x24 B ) + USE SIGNAL ;
+    - net9 ( x25 A ) ( x24 Y ) + USE SIGNAL ;
+END NETS
+END DESIGN

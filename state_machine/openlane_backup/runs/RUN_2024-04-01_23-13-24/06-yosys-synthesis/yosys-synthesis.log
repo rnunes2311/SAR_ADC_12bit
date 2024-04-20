@@ -1,0 +1,240 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)
+
+Loaded SDC plugin
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Liberty frontend: /Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v
+Parsing SystemVerilog input from `/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v' to AST representation.
+Generating RTLIL representation for module `\state_machine'.
+Successfully finished Verilog frontend.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-01_23-13-24/06-yosys-synthesis/hierarchy.dot'.
+Dumping module state_machine to page 1.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \state_machine
+
+4.2. Analyzing design hierarchy..
+Top module:  \state_machine
+Removed 0 unused modules.
+Renaming module state_machine to state_machine.
+
+5. Executing PROC pass (convert processes to netlists).
+
+5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+5.4. Executing PROC_INIT pass (extract init attributes).
+
+5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+6. Executing FLATTEN pass (flatten design).
+
+7. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module state_machine...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-01_23-13-24/tmp/4b0f766074de4b4db16e2d5bd8ae9484.lib ",
+   "modules": {
+      "\\state_machine": {
+         "num_wires":         266,
+         "num_wire_bits":     324,
+         "num_pub_wires":     266,
+         "num_pub_wire_bits": 324,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         310,
+         "area":              1455.145600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__and2_0": 2,
+            "sky130_fd_sc_hd__and2_1": 1,
+            "sky130_fd_sc_hd__and2b_1": 13,
+            "sky130_fd_sc_hd__and3_1": 1,
+            "sky130_fd_sc_hd__and3b_1": 1,
+            "sky130_fd_sc_hd__conb_1": 1,
+            "sky130_fd_sc_hd__dfrtp_1": 25,
+            "sky130_fd_sc_hd__dlymetal6s6s_1": 2,
+            "sky130_fd_sc_hd__inv_1": 39,
+            "sky130_fd_sc_hd__inv_16": 8,
+            "sky130_fd_sc_hd__inv_2": 22,
+            "sky130_fd_sc_hd__inv_4": 72,
+            "sky130_fd_sc_hd__inv_8": 7,
+            "sky130_fd_sc_hd__mux2_1": 18,
+            "sky130_fd_sc_hd__mux4_1": 4,
+            "sky130_fd_sc_hd__mux4_4": 1,
+            "sky130_fd_sc_hd__nand2_1": 23,
+            "sky130_fd_sc_hd__nand2_2": 23,
+            "sky130_fd_sc_hd__nand2_4": 1,
+            "sky130_fd_sc_hd__nand2b_1": 2,
+            "sky130_fd_sc_hd__nand3b_2": 1,
+            "sky130_fd_sc_hd__nor2_1": 4,
+            "sky130_fd_sc_hd__nor2_2": 2,
+            "sky130_fd_sc_hd__nor2b_1": 13,
+            "sky130_fd_sc_hd__nor2b_2": 22,
+            "sky130_fd_sc_hd__or2_1": 2
+         }
+      }
+   },
+      "design": {
+         "num_wires":         266,
+         "num_wire_bits":     324,
+         "num_pub_wires":     266,
+         "num_pub_wire_bits": 324,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         310,
+         "area":              1455.145600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__and2_0": 2,
+            "sky130_fd_sc_hd__and2_1": 1,
+            "sky130_fd_sc_hd__and2b_1": 13,
+            "sky130_fd_sc_hd__and3_1": 1,
+            "sky130_fd_sc_hd__and3b_1": 1,
+            "sky130_fd_sc_hd__conb_1": 1,
+            "sky130_fd_sc_hd__dfrtp_1": 25,
+            "sky130_fd_sc_hd__dlymetal6s6s_1": 2,
+            "sky130_fd_sc_hd__inv_1": 39,
+            "sky130_fd_sc_hd__inv_16": 8,
+            "sky130_fd_sc_hd__inv_2": 22,
+            "sky130_fd_sc_hd__inv_4": 72,
+            "sky130_fd_sc_hd__inv_8": 7,
+            "sky130_fd_sc_hd__mux2_1": 18,
+            "sky130_fd_sc_hd__mux4_1": 4,
+            "sky130_fd_sc_hd__mux4_4": 1,
+            "sky130_fd_sc_hd__nand2_1": 23,
+            "sky130_fd_sc_hd__nand2_2": 23,
+            "sky130_fd_sc_hd__nand2_4": 1,
+            "sky130_fd_sc_hd__nand2b_1": 2,
+            "sky130_fd_sc_hd__nand3b_2": 1,
+            "sky130_fd_sc_hd__nor2_1": 4,
+            "sky130_fd_sc_hd__nor2_2": 2,
+            "sky130_fd_sc_hd__nor2b_1": 13,
+            "sky130_fd_sc_hd__nor2b_2": 22,
+            "sky130_fd_sc_hd__or2_1": 2
+         }
+      }
+}
+
+10. Printing statistics.
+
+=== state_machine ===
+
+   Number of wires:                266
+   Number of wire bits:            324
+   Number of public wires:         266
+   Number of public wire bits:     324
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                310
+     sky130_fd_sc_hd__and2_0         2
+     sky130_fd_sc_hd__and2_1         1
+     sky130_fd_sc_hd__and2b_1       13
+     sky130_fd_sc_hd__and3_1         1
+     sky130_fd_sc_hd__and3b_1        1
+     sky130_fd_sc_hd__conb_1         1
+     sky130_fd_sc_hd__dfrtp_1       25
+     sky130_fd_sc_hd__dlymetal6s6s_1      2
+     sky130_fd_sc_hd__inv_1         39
+     sky130_fd_sc_hd__inv_16         8
+     sky130_fd_sc_hd__inv_2         22
+     sky130_fd_sc_hd__inv_4         72
+     sky130_fd_sc_hd__inv_8          7
+     sky130_fd_sc_hd__mux2_1        18
+     sky130_fd_sc_hd__mux4_1         4
+     sky130_fd_sc_hd__mux4_4         1
+     sky130_fd_sc_hd__nand2_1       23
+     sky130_fd_sc_hd__nand2_2       23
+     sky130_fd_sc_hd__nand2_4        1
+     sky130_fd_sc_hd__nand2b_1       2
+     sky130_fd_sc_hd__nand3b_2       1
+     sky130_fd_sc_hd__nor2_1         4
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__nor2b_1       13
+     sky130_fd_sc_hd__nor2b_2       22
+     sky130_fd_sc_hd__or2_1          2
+
+   Area for cell type \sky130_fd_sc_hd__and2_0 is unknown!
+   Area for cell type \sky130_fd_sc_hd__and2_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__and2b_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__and3_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__and3b_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__dfrtp_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__dlymetal6s6s_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__inv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__mux4_4 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2b_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nor2_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nor2b_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__or2_1 is unknown!
+
+   Chip area for module '\state_machine': 1455.145600
+
+11. Executing Verilog backend.
+Dumping module `\state_machine'.
+
+12. Executing JSON backend.

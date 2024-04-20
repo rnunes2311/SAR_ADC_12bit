@@ -1,0 +1,6 @@
+hspc:  hspc.o matrix_func.o 
+	gcc -o hspc hspc.o matrix_func.o -lm
+hspc.o:  hspc.c matrix_func.h 
+	gcc -c hspc.c  
+matrix_func.o:  matrix_func.c matrix_func.h
+	gcc -c matrix_func.c  

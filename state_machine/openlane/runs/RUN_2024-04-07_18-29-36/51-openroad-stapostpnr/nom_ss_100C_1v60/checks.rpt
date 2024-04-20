@@ -1,0 +1,164 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_ss_100C_1v60 Corner ===================================
+
+Startpoint: clk (input port clocked by __VIRTUAL_CLK__)
+Endpoint: debug_out (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  2.000000    2.000000 v input external delay
+     1    0.003387    0.020729    0.011090    2.011090 v clk (in)
+                                                         clk (net)
+                      0.020730    0.000000    2.011090 v input1/A (sky130_fd_sc_hd__clkbuf_1)
+     1    0.005711    0.079887    0.163746    2.174835 v input1/X (sky130_fd_sc_hd__clkbuf_1)
+                                                         net1 (net)
+                      0.079888    0.000231    2.175067 v fanout108/A (sky130_fd_sc_hd__clkbuf_2)
+     8    0.033167    0.233776    0.336102    2.511168 v fanout108/X (sky130_fd_sc_hd__clkbuf_2)
+                                                         net108 (net)
+                      0.233778    0.000524    2.511693 v fanout106/A (sky130_fd_sc_hd__clkbuf_2)
+    10    0.031663    0.224311    0.400493    2.912186 v fanout106/X (sky130_fd_sc_hd__clkbuf_2)
+                                                         net106 (net)
+                      0.224327    0.001583    2.913769 v _108_/A (sky130_fd_sc_hd__or4_1)
+     1    0.003197    0.182148    1.264539    4.178307 v _108_/X (sky130_fd_sc_hd__or4_1)
+                                                         _044_ (net)
+                      0.182148    0.000099    4.178406 v _109_/A2 (sky130_fd_sc_hd__a211oi_1)
+     1    0.003826    0.359016    0.469761    4.648167 ^ _109_/Y (sky130_fd_sc_hd__a211oi_1)
+                                                         _045_ (net)
+                      0.359016    0.000090    4.648256 ^ _114_/A2 (sky130_fd_sc_hd__o32a_1)
+     1    0.006758    0.142168    0.436227    5.084483 ^ _114_/X (sky130_fd_sc_hd__o32a_1)
+                                                         net32 (net)
+                      0.142169    0.000254    5.084737 ^ output32/A (sky130_fd_sc_hd__clkbuf_4)
+     1    0.035050    0.183045    0.364213    5.448950 ^ output32/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         debug_out (net)
+                      0.183052    0.000917    5.449867 ^ debug_out (out)
+                                              5.449867   data arrival time
+
+                      0.000000   10.000000   10.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000   10.000000   clock network delay (ideal)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -5.449867   data arrival time
+---------------------------------------------------------------------------------------------
+                                              2.300133   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_ss_100C_1v60 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_ss_100C_1v60 Corner ===================================
+
+max slew
+
+Pin                                        Limit        Slew       Slack
+------------------------------------------------------------------------
+_107_/Y                                 0.750000    1.168737   -0.418737 (VIOLATED)
+output33/A                              0.750000    1.168737   -0.418737 (VIOLATED)
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+_134_/X                                  10     12     -2 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 0 unannotated drivers.
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 2
+max fanout violation count 1
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 27 unclocked register/latch pins.
+  _243_/CLK
+  _244_/CLK
+  _245_/CLK
+  _246_/CLK
+  _247_/CLK
+  _248_/CLK
+  _249_/CLK
+  _250_/CLK
+  _251_/CLK
+  _252_/CLK
+  _253_/CLK
+  _254_/CLK
+  _255_/CLK
+  _256_/CLK
+  _257_/CLK
+  _258_/CLK
+  _259_/CLK
+  _260_/CLK
+  _261_/CLK
+  _262_/CLK
+  _263_/CLK
+  _264_/CLK
+  _265_/CLK
+  _266_/CLK
+  _267_/CLK
+  _268_/CLK
+  _269_/CLK
+Warning: There are 35 unconstrained endpoints.
+  clk_data
+  data[0]
+  data[1]
+  data[2]
+  data[3]
+  data[4]
+  data[5]
+  en_vcm_sw_o
+  _243_/D
+  _244_/D
+  _245_/D
+  _246_/D
+  _247_/D
+  _248_/D
+  _249_/D
+  _250_/D
+  _251_/D
+  _252_/D
+  _253_/D
+  _254_/D
+  _255_/D
+  _256_/D
+  _257_/D
+  _258_/D
+  _259_/D
+  _260_/D
+  _261_/D
+  _262_/D
+  _263_/D
+  _264_/D
+  _265_/D
+  _266_/D
+  _267_/D
+  _268_/D
+  _269_/D

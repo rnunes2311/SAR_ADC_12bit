@@ -1,0 +1,1444 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)
+
+Loaded SDC plugin
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Liberty frontend: /Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v
+Parsing SystemVerilog input from `/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v' to AST representation.
+Generating RTLIL representation for module `\state_machine'.
+Successfully finished Verilog frontend.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/06-yosys-synthesis/hierarchy.dot'.
+Dumping module state_machine to page 1.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \state_machine
+
+4.2. Analyzing design hierarchy..
+Top module:  \state_machine
+Removed 0 unused modules.
+Renaming module state_machine to state_machine.
+
+5. Executing TRIBUF pass.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \state_machine
+
+6.2. Analyzing design hierarchy..
+Top module:  \state_machine
+Removed 0 unused modules.
+
+7. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:159$120 in module state_machine.
+Marked 1 switch rules as full_case in process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:159$120 in module state_machine.
+Marked 1 switch rules as full_case in process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63 in module state_machine.
+Marked 5 switch rules as full_case in process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30 in module state_machine.
+Marked 2 switch rules as full_case in process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:84$18 in module state_machine.
+Marked 1 switch rules as full_case in process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:74$15 in module state_machine.
+Marked 2 switch rules as full_case in process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:63$11 in module state_machine.
+Marked 5 switch rules as full_case in process $proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:34$3 in module state_machine.
+Removed a total of 1 dead cases.
+
+9. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 11 redundant assignments.
+Promoted 5 assignments to connections.
+
+10. Executing PROC_INIT pass (extract init attributes).
+
+11. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_z in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30'.
+Found VHDL-style edge-trigger \clk in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30'.
+Found async reset \rst_z in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:84$18'.
+Found async reset \rst_z in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:74$15'.
+Found async reset \rst_z in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:63$11'.
+Found async reset \rst_z in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:34$3'.
+
+12. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~13 debug messages>
+
+13. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:159$120'.
+     1/1: $1\debug_out[0:0]
+Creating decoders for process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+     1/9: $0\allow_vref_sw[10:0]
+     2/9: $0\en_vcm_sw_o[0:0]
+     3/9: $0\vss_n_o[10:0]
+     4/9: $0\vss_p_o[10:0]
+     5/9: $0\vref_z_n_o[10:0]
+     6/9: $0\vref_z_p_o[10:0]
+     7/9: $0\vcm_o[10:0]
+     8/9: $0\offset_cal_cycle[0:0]
+     9/9: $0\en_comp[0:0]
+Creating decoders for process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30'.
+     1/17: $5\i[31:0]
+     2/17: $0\result[11:0] [11]
+     3/17: $0\result[11:0] [10]
+     4/17: $0\result[11:0] [9]
+     5/17: $0\result[11:0] [8]
+     6/17: $0\result[11:0] [7]
+     7/17: $0\result[11:0] [6]
+     8/17: $0\result[11:0] [5]
+     9/17: $0\result[11:0] [4]
+    10/17: $0\result[11:0] [3]
+    11/17: $0\result[11:0] [2]
+    12/17: $0\result[11:0] [1]
+    13/17: $0\result[11:0] [0]
+    14/17: $3\i[31:0]
+    15/17: $2\i[31:0]
+    16/17: $1\i[31:0]
+    17/17: $4\i[31:0]
+Creating decoders for process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:84$18'.
+     1/2: $0\counter[11:0] [11]
+     2/2: $0\counter[11:0] [10:0]
+Creating decoders for process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:74$15'.
+     1/1: $0\single_ended_reg[0:0]
+Creating decoders for process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:63$11'.
+     1/1: $0\counter_sample[0:0]
+Creating decoders for process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:34$3'.
+     1/1: $0\state[1:0]
+
+14. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\state_machine.\debug_out' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:159$120'.
+No latch inferred for signal `\state_machine.\vcm_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\vref_z_p_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\vref_z_n_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\vss_p_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\vss_n_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\vcm_dummy_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\en_vcm_sw_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\en_comp' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\offset_cal_cycle' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\en_offset_cal_o' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\allow_vcm_sw' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+No latch inferred for signal `\state_machine.\allow_vref_sw' from process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+
+15. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\state_machine.\result' using process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30'.
+  created $adff cell `$procdff$331' with positive edge clock and negative level reset.
+Creating register for signal `\state_machine.\i' using process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30'.
+  created $dff cell `$procdff$334' with positive edge clock.
+Creating register for signal `\state_machine.\counter' using process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:84$18'.
+  created $adff cell `$procdff$335' with positive edge clock and negative level reset.
+Creating register for signal `\state_machine.\single_ended_reg' using process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:74$15'.
+  created $adff cell `$procdff$336' with positive edge clock and negative level reset.
+Creating register for signal `\state_machine.\counter_sample' using process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:63$11'.
+  created $adff cell `$procdff$337' with positive edge clock and negative level reset.
+Creating register for signal `\state_machine.\state' using process `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:34$3'.
+  created $adff cell `$procdff$338' with positive edge clock and negative level reset.
+
+16. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+17. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:159$120'.
+Removing empty process `state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:159$120'.
+Found and cleaned up 1 empty switch in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+Removing empty process `state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:130$63'.
+Found and cleaned up 3 empty switches in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30'.
+Removing empty process `state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:102$30'.
+Found and cleaned up 2 empty switches in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:84$18'.
+Removing empty process `state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:84$18'.
+Found and cleaned up 1 empty switch in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:74$15'.
+Removing empty process `state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:74$15'.
+Found and cleaned up 1 empty switch in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:63$11'.
+Removing empty process `state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:63$11'.
+Found and cleaned up 4 empty switches in `\state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:34$3'.
+Removing empty process `state_machine.$proc$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:34$3'.
+Cleaned up 13 empty switches.
+
+18. Executing CHECK pass (checking for obvious problems).
+Checking module state_machine...
+Found and reported 0 problems.
+
+19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~8 debug messages>
+
+20. Executing FLATTEN pass (flatten design).
+
+21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+22. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 13 unused cells and 129 unused wires.
+<suppressed ~16 debug messages>
+
+23. Executing OPT pass (performing simple optimizations).
+
+23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+<suppressed ~105 debug messages>
+Removed a total of 35 cells.
+
+23.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+23.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+23.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+23.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+23.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 35 unused wires.
+<suppressed ~1 debug messages>
+
+23.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+23.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+23.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+23.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+23.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+23.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+23.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+23.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+23.16. Finished OPT passes. (There is nothing left to do.)
+
+24. Executing FSM pass (extract and optimize FSM).
+
+24.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking state_machine.state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+    Circuit seems to be self-resetting.
+
+24.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+24.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+24.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+24.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+24.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+24.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+25. Executing OPT pass (performing simple optimizations).
+
+25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+25.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$336 ($adff) from module state_machine (D = \single_ended, Q = \single_ended_reg).
+Adding EN signal on $procdff$335 ($adff) from module state_machine (D = $0\counter[11:0], Q = \counter).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [0], Q = \result [0]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [1], Q = \result [1]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [2], Q = \result [2]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [3], Q = \result [3]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [4], Q = \result [4]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [5], Q = \result [5]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [6], Q = \result [6]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [7], Q = \result [7]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [8], Q = \result [8]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [9], Q = \result [9]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [10], Q = \result [10]).
+Adding EN signal on $procdff$331 ($adff) from module state_machine (D = $0\result[11:0] [11], Q = \result [11]).
+
+25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~13 debug messages>
+
+25.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+25.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~27 debug messages>
+
+25.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+25.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+<suppressed ~66 debug messages>
+Removed a total of 22 cells.
+
+25.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+25.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 22 unused wires.
+<suppressed ~1 debug messages>
+
+25.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+25.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+25.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~38 debug messages>
+
+25.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+25.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+25.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+25.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+25.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+25.23. Finished OPT passes. (There is nothing left to do.)
+
+26. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell state_machine.$ne$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:67$13 ($ne).
+Removed top 20 bits (of 32) from port A of cell state_machine.$not$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$26 ($not).
+Removed top 20 bits (of 32) from port A of cell state_machine.$add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28 ($add).
+Removed top 21 bits (of 32) from port B of cell state_machine.$add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28 ($add).
+Removed top 19 bits (of 32) from port Y of cell state_machine.$add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28 ($add).
+Removed top 19 bits (of 32) from port B of cell state_machine.$and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$29 ($and).
+Removed top 20 bits (of 32) from port Y of cell state_machine.$and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$29 ($and).
+Removed top 20 bits (of 32) from port A of cell state_machine.$and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$29 ($and).
+Removed top 1 bits (of 13) from port B of cell state_machine.$and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$29 ($and).
+Removed top 1 bits (of 2) from port B of cell state_machine.$eq$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:107$32 ($eq).
+Removed top 1 bits (of 4) from port B of cell state_machine.$procmux$141_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell state_machine.$procmux$142_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell state_machine.$procmux$143_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell state_machine.$procmux$144_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell state_machine.$procmux$145_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell state_machine.$procmux$146_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell state_machine.$procmux$147_CMP0 ($eq).
+Removed top 1 bits (of 2) from mux cell state_machine.$procmux$328 ($mux).
+Removed top 20 bits (of 32) from port Y of cell state_machine.$not$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$26 ($not).
+Removed top 1 bits (of 13) from port Y of cell state_machine.$add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28 ($add).
+Removed top 20 bits (of 32) from wire state_machine.$add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28_Y.
+Removed top 20 bits (of 32) from wire state_machine.$not$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$26_Y.
+Removed top 1 bits (of 2) from wire state_machine.$procmux$328_Y.
+
+27. Executing PEEPOPT pass (run peephole optimizers).
+
+28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+29. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module state_machine:
+  creating $macc model for $add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28 ($add).
+  creating $alu model for $macc $add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28.
+  creating $alu cell for $add$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:99$28: $auto$alumacc.cc:485:replace_alu$452
+  created 1 $alu and 0 $macc cells.
+
+30. Executing SHARE pass (SAT-based resource sharing).
+
+31. Executing OPT pass (performing simple optimizations).
+
+31.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+31.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+31.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~38 debug messages>
+
+31.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+31.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+31.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+31.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+31.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+31.9. Finished OPT passes. (There is nothing left to do.)
+
+32. Executing MEMORY pass.
+
+32.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+32.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+32.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+32.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+32.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+32.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+32.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+32.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+32.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+32.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+33. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+34. Executing OPT pass (performing simple optimizations).
+
+34.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~52 debug messages>
+
+34.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+<suppressed ~30 debug messages>
+Removed a total of 10 cells.
+
+34.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 1 unused cells and 46 unused wires.
+<suppressed ~2 debug messages>
+
+34.5. Finished fast OPT passes.
+
+35. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+36. Executing OPT pass (performing simple optimizations).
+
+36.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~1 debug messages>
+
+36.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+36.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+36.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+    Consolidated identical input bits for $mux cell $procmux$319:
+      Old ports: A=2'10, B=2'00, Y=$procmux$319_Y
+      New ports: A=1'1, B=1'0, Y=$procmux$319_Y [1]
+      New connections: $procmux$319_Y [0] = 1'0
+  Optimizing cells in module \state_machine.
+Performed a total of 1 changes.
+
+36.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+36.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $procmux$153 in front of them:
+        $or$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:143$89
+        $or$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:153$117
+
+    Found cells that share an operand and can be merged by moving the $mux $procmux$171 in front of them:
+        $and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:137$76
+        $and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:147$100
+
+    Found cells that share an operand and can be merged by moving the $mux $procmux$174 in front of them:
+        $and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:136$75
+        $and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:146$99
+
+36.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+36.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~4 debug messages>
+
+36.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+36.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+36.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+36.14. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $auto$opt_share.cc:244:merge_operators$462 in front of them:
+        $and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:143$87
+        $and$/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/state_machine.v:153$115
+
+36.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+36.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~1 debug messages>
+
+36.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+36.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+36.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+36.22. Executing OPT_SHARE pass.
+
+36.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+36.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+36.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+36.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+36.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+36.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+36.30. Executing OPT_SHARE pass.
+
+36.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+36.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+36.34. Finished OPT passes. (There is nothing left to do.)
+
+37. Executing TECHMAP pass (map to technology primitives).
+
+37.1. Executing Verilog-2005 frontend: /nix/store/6w7gra42rk8c62bjpbvsashgg4z4hm81-yosys-with-plugins/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/6w7gra42rk8c62bjpbvsashgg4z4hm81-yosys-with-plugins/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+37.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$556548cb7038fa09465db9fdc5b10cb4e4ea85e6\_90_pmux for cells of type $pmux.
+Using template $paramod$97565c3687be688407d1272a293bd9d0ae6852dc\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_or.
+No more expansions possible.
+<suppressed ~264 debug messages>
+
+38. Executing OPT pass (performing simple optimizations).
+
+38.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~213 debug messages>
+
+38.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+<suppressed ~390 debug messages>
+Removed a total of 130 cells.
+
+38.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+38.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 249 unused wires.
+<suppressed ~1 debug messages>
+
+38.5. Finished fast OPT passes.
+
+39. Executing ABC pass (technology mapping using ABC).
+
+39.1. Extracting gate netlist of module `\state_machine' to `<abc-temp-dir>/input.blif'..
+Extracted 477 gates and 531 wires to a netlist network with 52 inputs and 100 outputs.
+
+39.1.1. Executing ABC.
+Running ABC command: "/nix/store/4rrczjlbx21g7i2nsndckg7kr5jbfrlm-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+39.1.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:       36
+ABC RESULTS:             ORNOT cells:       34
+ABC RESULTS:               NOT cells:       28
+ABC RESULTS:               NOR cells:        8
+ABC RESULTS:               MUX cells:       54
+ABC RESULTS:               AND cells:       19
+ABC RESULTS:            ANDNOT cells:      134
+ABC RESULTS:                OR cells:       73
+ABC RESULTS:        internal signals:      379
+ABC RESULTS:           input signals:       52
+ABC RESULTS:          output signals:      100
+Removing temp directory.
+
+40. Executing OPT pass (performing simple optimizations).
+
+40.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+<suppressed ~35 debug messages>
+
+40.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+40.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+40.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 315 unused wires.
+<suppressed ~4 debug messages>
+
+40.5. Finished fast OPT passes.
+
+41. Executing HIERARCHY pass (managing design hierarchy).
+
+41.1. Analyzing design hierarchy..
+Top module:  \state_machine
+
+41.2. Analyzing design hierarchy..
+Top module:  \state_machine
+Removed 0 unused modules.
+
+42. Printing statistics.
+
+=== state_machine ===
+
+   Number of wires:                335
+   Number of wire bits:            449
+   Number of public wires:          31
+   Number of public wire bits:     122
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                414
+     $_ANDNOT_                     134
+     $_AND_                         19
+     $_DFFE_PN0P_                   25
+     $_DFF_PN0_                      3
+     $_MUX_                         54
+     $_NAND_                        36
+     $_NOR_                          8
+     $_NOT_                         28
+     $_ORNOT_                       34
+     $_OR_                          73
+
+43. Executing CHECK pass (checking for obvious problems).
+Checking module state_machine...
+Found and reported 0 problems.
+
+44. Generating Graphviz representation of design.
+Writing dot description to `/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/06-yosys-synthesis/post_techmap.dot'.
+Dumping module state_machine to page 1.
+
+45. Executing SHARE pass (SAT-based resource sharing).
+
+46. Executing OPT pass (performing simple optimizations).
+
+46.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+46.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+46.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \state_machine..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+46.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \state_machine.
+Performed a total of 0 changes.
+
+46.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\state_machine'.
+Removed a total of 0 cells.
+
+46.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+46.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+
+46.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module state_machine.
+
+46.9. Finished OPT passes. (There is nothing left to do.)
+
+47. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/tmp/a538cbd8e3e94f24b4f84f2d9d1db2e9.lib ",
+   "modules": {
+      "\\state_machine": {
+         "num_wires":         335,
+         "num_wire_bits":     449,
+         "num_pub_wires":     31,
+         "num_pub_wire_bits": 122,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         414,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 134,
+            "$_AND_": 19,
+            "$_DFFE_PN0P_": 25,
+            "$_DFF_PN0_": 3,
+            "$_MUX_": 54,
+            "$_NAND_": 36,
+            "$_NOR_": 8,
+            "$_NOT_": 28,
+            "$_ORNOT_": 34,
+            "$_OR_": 73
+         }
+      }
+   },
+      "design": {
+         "num_wires":         335,
+         "num_wire_bits":     449,
+         "num_pub_wires":     31,
+         "num_pub_wire_bits": 122,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         414,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 134,
+            "$_AND_": 19,
+            "$_DFFE_PN0P_": 25,
+            "$_DFF_PN0_": 3,
+            "$_MUX_": 54,
+            "$_NAND_": 36,
+            "$_NOR_": 8,
+            "$_NOT_": 28,
+            "$_ORNOT_": 34,
+            "$_OR_": 73
+         }
+      }
+}
+
+48. Printing statistics.
+
+=== state_machine ===
+
+   Number of wires:                335
+   Number of wire bits:            449
+   Number of public wires:          31
+   Number of public wire bits:     122
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                414
+     $_ANDNOT_                     134
+     $_AND_                         19
+     $_DFFE_PN0P_                   25
+     $_DFF_PN0_                      3
+     $_MUX_                         54
+     $_NAND_                        36
+     $_NOR_                          8
+     $_NOT_                         28
+     $_ORNOT_                       34
+     $_OR_                          73
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_DFFE_PN0P_ is unknown!
+
+mapping tbuf
+[INFO] Applying tri-state buffer mapping from '/Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'â¦
+
+49. Executing TECHMAP pass (map to technology primitives).
+
+49.1. Executing Verilog-2005 frontend: /Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+49.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+50. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'â¦
+
+51. Executing TECHMAP pass (map to technology primitives).
+
+51.1. Executing Verilog-2005 frontend: /Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/Users/ricardonunes/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+51.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+52. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+53. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+53.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\state_machine':
+  mapped 28 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/tmp/a538cbd8e3e94f24b4f84f2d9d1db2e9.lib ",
+   "modules": {
+      "\\state_machine": {
+         "num_wires":         360,
+         "num_wire_bits":     474,
+         "num_pub_wires":     31,
+         "num_pub_wire_bits": 122,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         439,
+         "area":              735.705600,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 134,
+            "$_AND_": 19,
+            "$_MUX_": 79,
+            "$_NAND_": 36,
+            "$_NOR_": 8,
+            "$_NOT_": 28,
+            "$_ORNOT_": 34,
+            "$_OR_": 73,
+            "sky130_fd_sc_hd__dfrtp_2": 28
+         }
+      }
+   },
+      "design": {
+         "num_wires":         360,
+         "num_wire_bits":     474,
+         "num_pub_wires":     31,
+         "num_pub_wire_bits": 122,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         439,
+         "area":              735.705600,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 134,
+            "$_AND_": 19,
+            "$_MUX_": 79,
+            "$_NAND_": 36,
+            "$_NOR_": 8,
+            "$_NOT_": 28,
+            "$_ORNOT_": 34,
+            "$_OR_": 73,
+            "sky130_fd_sc_hd__dfrtp_2": 28
+         }
+      }
+}
+
+54. Printing statistics.
+
+=== state_machine ===
+
+   Number of wires:                360
+   Number of wire bits:            474
+   Number of public wires:          31
+   Number of public wire bits:     122
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                439
+     $_ANDNOT_                     134
+     $_AND_                         19
+     $_MUX_                         79
+     $_NAND_                        36
+     $_NOR_                          8
+     $_NOT_                         28
+     $_ORNOT_                       34
+     $_OR_                          73
+     sky130_fd_sc_hd__dfrtp_2       28
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\state_machine': 735.705600
+
+[INFO] USING STRATEGY AREA 0
+
+55. Executing ABC pass (technology mapping using ABC).
+
+55.1. Extracting gate netlist of module `\state_machine' to `/tmp/yosys-abc-NTiusC/input.blif'..
+Extracted 411 gates and 464 wires to a netlist network with 53 inputs and 97 outputs.
+
+55.1.1. Executing ABC.
+Running ABC command: "/nix/store/4rrczjlbx21g7i2nsndckg7kr5jbfrlm-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-NTiusC/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-NTiusC/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-NTiusC/input.blif 
+ABC: + read_lib -w /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/tmp/a538cbd8e3e94f24b4f84f2d9d1db2e9.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.06 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/tmp/a538cbd8e3e94f24b4f84f2d9d1db2e9.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.09 sec
+ABC: Memory =    9.54 MB. Time =     0.09 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/06-yosys-synthesis/synthesis.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/06-yosys-synthesis/synthesis.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + retime -D -D 10000 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 10000 
+ABC: + &get -n 
+ABC: + &st 
+ABC: + &dch 
+ABC: + &nf 
+ABC: + &put 
+ABC: + 
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    241 ( 12.4 %)   Cap = 17.3 ff (  4.9 %)   Area =     1954.37 ( 75.1 %)   Delay =  2215.50 ps  (  2.1 %)               
+ABC: Path  0 --       5 : 0    5 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  14.1 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     175 : 2    9 sky130_fd_sc_hd__nand2b_2 A =   8.76  Df = 207.4  -48.6 ps  S = 137.2 ps  Cin =  3.0 ff  Cout =  22.9 ff  Cmax = 285.7 ff  G =  725  
+ABC: Path  2 --     189 : 3   11 sky130_fd_sc_hd__nor3_2   A =  10.01  Df =1040.1 -708.4 ps  S =1087.0 ps  Cin =  4.4 ff  Cout =  67.5 ff  Cmax =  92.5 ff  G = 1516  
+ABC: Path  3 --     190 : 2   17 sky130_fd_sc_hd__and2_2   A =   7.51  Df =1530.3 -851.1 ps  S = 307.1 ps  Cin =  1.5 ff  Cout =  58.4 ff  Cmax = 303.0 ff  G = 3802  
+ABC: Path  4 --     202 : 2    2 sky130_fd_sc_hd__nor2_2   A =   6.26  Df =1612.8 -777.8 ps  S = 100.9 ps  Cin =  4.4 ff  Cout =   6.4 ff  Cmax = 141.9 ff  G =  135  
+ABC: Path  5 --     269 : 3    1 sky130_fd_sc_hd__or3_2    A =   7.51  Df =2215.5-1151.2 ps  S = 172.1 ps  Cin =  1.5 ff  Cout =  33.4 ff  Cmax = 310.4 ff  G = 2202  
+ABC: Start-point = pi4 (\state [0]).  End-point = po44 (\vref_z_p_o [4]).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =   53/   97  lat =    0  nd =   241  edge =    651  area =1954.61  delay = 5.00  lev = 5
+ABC: + write_blif /tmp/yosys-abc-NTiusC/output.blif 
+
+55.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       30
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o2111a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o32a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a41o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       29
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:       28
+ABC RESULTS:        internal signals:      314
+ABC RESULTS:           input signals:       53
+ABC RESULTS:          output signals:       97
+Removing temp directory.
+
+56. Executing SETUNDEF pass (replace undef values with defined constants).
+
+57. Executing HILOMAP pass (mapping to constant drivers).
+Warning: Selection "sky130_fd_sc_hd__conb_1" did not match any module.
+Warning: Selection "LO" did not match any object.
+
+58. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+59. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \state_machine..
+Removed 0 unused cells and 474 unused wires.
+<suppressed ~1 debug messages>
+
+60. Executing INSBUF pass (insert buffer cells for connected wires).
+
+61. Executing CHECK pass (checking for obvious problems).
+Checking module state_machine...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/openlane/runs/RUN_2024-04-14_19-21-46/tmp/a538cbd8e3e94f24b4f84f2d9d1db2e9.lib ",
+   "modules": {
+      "\\state_machine": {
+         "num_wires":         226,
+         "num_wire_bits":     294,
+         "num_pub_wires":     54,
+         "num_pub_wire_bits": 122,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         269,
+         "area":              2690.080000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 1,
+            "sky130_fd_sc_hd__a211oi_2": 2,
+            "sky130_fd_sc_hd__a21bo_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 20,
+            "sky130_fd_sc_hd__a21oi_2": 4,
+            "sky130_fd_sc_hd__a221o_2": 3,
+            "sky130_fd_sc_hd__a22o_2": 10,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 6,
+            "sky130_fd_sc_hd__a32o_2": 1,
+            "sky130_fd_sc_hd__a41o_2": 2,
+            "sky130_fd_sc_hd__and2_2": 11,
+            "sky130_fd_sc_hd__and2b_2": 1,
+            "sky130_fd_sc_hd__and3_2": 6,
+            "sky130_fd_sc_hd__and3b_2": 2,
+            "sky130_fd_sc_hd__and4_2": 4,
+            "sky130_fd_sc_hd__and4b_2": 3,
+            "sky130_fd_sc_hd__and4bb_2": 2,
+            "sky130_fd_sc_hd__dfrtp_2": 28,
+            "sky130_fd_sc_hd__inv_2": 30,
+            "sky130_fd_sc_hd__mux2_1": 28,
+            "sky130_fd_sc_hd__nand2_2": 28,
+            "sky130_fd_sc_hd__nand2b_2": 2,
+            "sky130_fd_sc_hd__nor2_2": 29,
+            "sky130_fd_sc_hd__nor3_2": 2,
+            "sky130_fd_sc_hd__o2111a_2": 1,
+            "sky130_fd_sc_hd__o211a_2": 6,
+            "sky130_fd_sc_hd__o211ai_2": 3,
+            "sky130_fd_sc_hd__o21ai_2": 8,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o311a_2": 1,
+            "sky130_fd_sc_hd__o31a_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__o32a_2": 3,
+            "sky130_fd_sc_hd__or2_2": 5,
+            "sky130_fd_sc_hd__or3_2": 5,
+            "sky130_fd_sc_hd__or3b_2": 5,
+            "sky130_fd_sc_hd__or4b_2": 2
+         }
+      }
+   },
+      "design": {
+         "num_wires":         226,
+         "num_wire_bits":     294,
+         "num_pub_wires":     54,
+         "num_pub_wire_bits": 122,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         269,
+         "area":              2690.080000,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 1,
+            "sky130_fd_sc_hd__a211oi_2": 2,
+            "sky130_fd_sc_hd__a21bo_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 20,
+            "sky130_fd_sc_hd__a21oi_2": 4,
+            "sky130_fd_sc_hd__a221o_2": 3,
+            "sky130_fd_sc_hd__a22o_2": 10,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 6,
+            "sky130_fd_sc_hd__a32o_2": 1,
+            "sky130_fd_sc_hd__a41o_2": 2,
+            "sky130_fd_sc_hd__and2_2": 11,
+            "sky130_fd_sc_hd__and2b_2": 1,
+            "sky130_fd_sc_hd__and3_2": 6,
+            "sky130_fd_sc_hd__and3b_2": 2,
+            "sky130_fd_sc_hd__and4_2": 4,
+            "sky130_fd_sc_hd__and4b_2": 3,
+            "sky130_fd_sc_hd__and4bb_2": 2,
+            "sky130_fd_sc_hd__dfrtp_2": 28,
+            "sky130_fd_sc_hd__inv_2": 30,
+            "sky130_fd_sc_hd__mux2_1": 28,
+            "sky130_fd_sc_hd__nand2_2": 28,
+            "sky130_fd_sc_hd__nand2b_2": 2,
+            "sky130_fd_sc_hd__nor2_2": 29,
+            "sky130_fd_sc_hd__nor3_2": 2,
+            "sky130_fd_sc_hd__o2111a_2": 1,
+            "sky130_fd_sc_hd__o211a_2": 6,
+            "sky130_fd_sc_hd__o211ai_2": 3,
+            "sky130_fd_sc_hd__o21ai_2": 8,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o311a_2": 1,
+            "sky130_fd_sc_hd__o31a_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__o32a_2": 3,
+            "sky130_fd_sc_hd__or2_2": 5,
+            "sky130_fd_sc_hd__or3_2": 5,
+            "sky130_fd_sc_hd__or3b_2": 5,
+            "sky130_fd_sc_hd__or4b_2": 2
+         }
+      }
+}
+
+62. Printing statistics.
+
+=== state_machine ===
+
+   Number of wires:                226
+   Number of wire bits:            294
+   Number of public wires:          54
+   Number of public wire bits:     122
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                269
+     sky130_fd_sc_hd__a211o_2        1
+     sky130_fd_sc_hd__a211oi_2       2
+     sky130_fd_sc_hd__a21bo_2        1
+     sky130_fd_sc_hd__a21o_2        20
+     sky130_fd_sc_hd__a21oi_2        4
+     sky130_fd_sc_hd__a221o_2        3
+     sky130_fd_sc_hd__a22o_2        10
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__a31o_2         6
+     sky130_fd_sc_hd__a32o_2         1
+     sky130_fd_sc_hd__a41o_2         2
+     sky130_fd_sc_hd__and2_2        11
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3_2         6
+     sky130_fd_sc_hd__and3b_2        2
+     sky130_fd_sc_hd__and4_2         4
+     sky130_fd_sc_hd__and4b_2        3
+     sky130_fd_sc_hd__and4bb_2       2
+     sky130_fd_sc_hd__dfrtp_2       28
+     sky130_fd_sc_hd__inv_2         30
+     sky130_fd_sc_hd__mux2_1        28
+     sky130_fd_sc_hd__nand2_2       28
+     sky130_fd_sc_hd__nand2b_2       2
+     sky130_fd_sc_hd__nor2_2        29
+     sky130_fd_sc_hd__nor3_2         2
+     sky130_fd_sc_hd__o2111a_2       1
+     sky130_fd_sc_hd__o211a_2        6
+     sky130_fd_sc_hd__o211ai_2       3
+     sky130_fd_sc_hd__o21ai_2        8
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o311a_2        1
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__o31ai_2        1
+     sky130_fd_sc_hd__o32a_2         3
+     sky130_fd_sc_hd__or2_2          5
+     sky130_fd_sc_hd__or3_2          5
+     sky130_fd_sc_hd__or3b_2         5
+     sky130_fd_sc_hd__or4b_2         2
+
+   Chip area for module '\state_machine': 2690.080000
+
+63. Executing Verilog backend.
+Dumping module `\state_machine'.
+
+64. Executing JSON backend.
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: da6086b4d9, CPU: user 1.29s system 0.09s
+Yosys 0.38 (git sha1 543faed9c8c, clang++ 16.0.6 -fPIC -Os)
+Time spent: 34% 2x abc (0 sec), 24% 7x stat (0 sec), ...

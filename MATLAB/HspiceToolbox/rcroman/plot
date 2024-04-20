@@ -1,0 +1,27 @@
+clf;
+subplot(2,1,1);
+set(semilogx(f, mag), 'LineWidth', 2);
+hold
+a = axis;
+set(semilogx([fpm fpm], [0 a(3)], 'r--'), 'LineWidth', 2);
+if ~isempty(igm)
+  set(semilogx([fgm fgm], [mag(igm) a(3)], 'r--'), 'LineWidth', 2);
+  set(semilogx([f(1) fgm], [mag(igm) mag(igm)], 'r--'), 'LineWidth', 2);
+end
+grid;
+ylabel('Gain (dB)');
+
+subplot(2,1,2);
+set(semilogx(f, ph), 'LineWidth', 2);
+hold
+a = axis;
+axis([a(1) a(2) a(3) 0]);
+set(semilogx([f(1) fpm], [ph(ipm) ph(ipm)], 'r--'), 'LineWidth', 2);
+set(semilogx([fpm fpm], [ph(ipm) 0], 'r--'), 'LineWidth', 2);
+if ~isempty(igm)
+  set(semilogx([fgm fgm], [ph(igm) 0], 'r--'), 'LineWidth', 2);
+end
+grid;
+ylabel('Phase (dB)');
+xlabel('Frequency (Hz)');
+

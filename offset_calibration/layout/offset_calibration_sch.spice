@@ -1,0 +1,32 @@
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/offset_calibration/offset_calibration.sch
+
+.include /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+.subckt offset_calibration VDD CAL_RESULT EN_COMP CAL_P CAL_N EN VSS CAL_CYCLE
+*.PININFO EN_COMP:I CAL_N:O CAL_P:O VDD:I VSS:I EN:I CAL_RESULT:I CAL_CYCLE:I
+XM26 net2 EN_COMPi net1 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM27 net1 CAL_RESULTi VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM28 net2 EN_COMP_Z net3 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM29 net3 CAL_RESULTi VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM30 net2 LOAD_CALi CAL_P VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM31 net2 LOAD_CAL_Z CAL_P VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+x22 EN net8 net7 VSS VSS VDD VDD LOAD_CAL_Z sky130_fd_sc_hd__nand3_1
+x3 LOAD_CAL_Z VSS VSS VDD VDD LOAD_CALi sky130_fd_sc_hd__inv_1
+XM32 net5 LOAD_CAL_Z CAL_N VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM33 net5 LOAD_CALi CAL_N VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM34 net5 EN_COMP_Z net6 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM35 net6 CAL_RESULT_Z VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM36 net5 EN_COMPi net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM37 net4 CAL_RESULT_Z VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM24 VDD CAL_N VDD VDD sky130_fd_pr__pfet_01v8_lvt L=10 W=10 nf=1 m=3
+XM25 VDD CAL_P VDD VDD sky130_fd_pr__pfet_01v8_lvt L=10 W=10 nf=1 m=3
+XM1 CAL_N EN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM2 CAL_P EN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+x1 CAL_RESULT CAL_CYCLE VSS VSS VDD VDD CAL_RESULT_Z sky130_fd_sc_hd__nand2_1
+x4 CAL_RESULT_Z VSS VSS VDD VDD CAL_RESULTi sky130_fd_sc_hd__inv_1
+x2 EN_COMP CAL_CYCLE VSS VSS VDD VDD EN_COMP_Z sky130_fd_sc_hd__nand2_1
+x5 EN_COMP_Z VSS VSS VDD VDD EN_COMPi sky130_fd_sc_hd__inv_1
+x6 EN_COMPi VSS VSS VDD VDD net8 sky130_fd_sc_hd__inv_1
+x7 CAL_CYCLE VSS VSS VDD VDD net7 sky130_fd_sc_hd__inv_1
+.ends
+.end

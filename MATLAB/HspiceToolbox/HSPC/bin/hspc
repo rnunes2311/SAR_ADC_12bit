@@ -1,0 +1,21 @@
+#! /bin/sh
+
+cppsim_root=$CPPSIMSHAREDHOME
+ARCH=`arch`
+
+if [ "$ARCH" = "i686" ] 
+   then
+   ${cppsim_root}/HspiceToolbox/HSPC/bin/glnx86/hspc $1 $2 $3
+else
+if [ "$ARCH" = "x86_64" ] 
+   then
+   ${cppsim_root}/HspiceToolbox/HSPC/bin/glnxa64/hspc $1 $2 $3
+else
+if [ "$ARCH" = "sun4" ] 
+   then
+   ${cppsim_root}/HspiceToolbox/HSPC/bin/sol64/hspc $1 $2 $3
+else
+   echo "Error: architecture $ARCH unknown"
+fi
+fi
+fi

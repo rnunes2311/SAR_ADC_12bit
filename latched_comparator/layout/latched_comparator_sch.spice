@@ -1,0 +1,26 @@
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/latched_comparator/latched_comparator.sch
+
+.include /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+.subckt latched_comparator VDD VIN_P VIN_N EN OUT_P OUT_N VSS
+*.PININFO VIN_P:I VIN_N:I VDD:I VSS:I EN:I OUT_N:O OUT_P:O
+x1 EN VSS VSS VDD VDD ENi sky130_fd_sc_hd__buf_4
+XM10 net2 ENi VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM5 OUT_Ni ENi VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM6 OUT_Ni OUT_Pi VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 m=1
+XM9 OUT_Pi OUT_Ni VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 m=1
+XM3 OUT_Ni OUT_Pi net2 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM4 OUT_Pi OUT_Ni net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM18 net1 ENi VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 m=2
+XM16 net3 VIN_N net1 VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=1 nf=1 m=1
+XM1 net2 VIN_P net1 VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=1 nf=1 m=1
+XM11 OUT_Pi ENi VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM12 net3 ENi VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+x4 OUT_Pi VSS VSS VDD VDD net4 sky130_fd_sc_hd__inv_1
+x5 OUT_Ni VSS VSS VDD VDD net5 sky130_fd_sc_hd__inv_1
+x6 net5 VSS VSS VDD VDD OUT_N sky130_fd_sc_hd__inv_4
+x7 net4 VSS VSS VDD VDD OUT_P sky130_fd_sc_hd__inv_4
+XM2 net1 net1 net1 VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=1 nf=1 m=2
+.ends
+.end

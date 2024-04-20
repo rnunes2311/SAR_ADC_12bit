@@ -1,0 +1,611 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: RST_Z (input port clocked by __VIRTUAL_CLK__)
+Endpoint: DEBUG_OUT (output port clocked by __VIRTUAL_CLK__)
+Path Group: __VIRTUAL_CLK__
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  2.000000    2.000000 ^ input external delay
+     1    0.009408    0.050043    0.032050    2.032050 ^ RST_Z (in)
+                                                         RST_Z (net)
+                      0.050043    0.000000    2.032050 ^ x5/A (sky130_fd_sc_hd__inv_4)
+     5    0.019408    0.030041    0.043432    2.075482 v x5/Y (sky130_fd_sc_hd__inv_4)
+                                                         RSTi (net)
+                      0.030041    0.000000    2.075482 v x3/B (sky130_fd_sc_hd__nor2_1)
+     1    0.002375    0.071294    0.070859    2.146341 ^ x3/Y (sky130_fd_sc_hd__nor2_1)
+                                                         S_IDLE_Z (net)
+                      0.071294    0.000000    2.146341 ^ x1/A (sky130_fd_sc_hd__nand2_1)
+     5    0.010298    0.081938    0.092006    2.238346 v x1/Y (sky130_fd_sc_hd__nand2_1)
+                                                         IDLE (net)
+                      0.081938    0.000000    2.238346 v x10/B (sky130_fd_sc_hd__nand2_1)
+     1    0.002375    0.045632    0.074456    2.312803 ^ x10/Y (sky130_fd_sc_hd__nand2_1)
+                                                         S_SAMPLE_Z (net)
+                      0.045632    0.000000    2.312803 ^ x8/A (sky130_fd_sc_hd__nand2_1)
+     1    0.002254    0.028683    0.041237    2.354040 v x8/Y (sky130_fd_sc_hd__nand2_1)
+                                                         net4 (net)
+                      0.028683    0.000000    2.354040 v x9/A (sky130_fd_sc_hd__nand2_1)
+     2    0.007070    0.075584    0.073837    2.427877 ^ x9/Y (sky130_fd_sc_hd__nand2_1)
+                                                         net3 (net)
+                      0.075584    0.000000    2.427877 ^ x11/A (sky130_fd_sc_hd__inv_2)
+     7    0.017893    0.048280    0.063750    2.491627 v x11/Y (sky130_fd_sc_hd__inv_2)
+                                                         SAMPLE (net)
+                      0.048280    0.000000    2.491627 v x18/A (sky130_fd_sc_hd__nand2_1)
+     1    0.002375    0.040564    0.052315    2.543942 ^ x18/Y (sky130_fd_sc_hd__nand2_1)
+                                                         S_CONVERT_Z (net)
+                      0.040564    0.000000    2.543942 ^ x14/A (sky130_fd_sc_hd__nand2_1)
+     1    0.002254    0.028137    0.039591    2.583534 v x14/Y (sky130_fd_sc_hd__nand2_1)
+                                                         net7 (net)
+                      0.028137    0.000000    2.583534 v x15/A (sky130_fd_sc_hd__nand2_1)
+     2    0.007070    0.081431    0.073609    2.657143 ^ x15/Y (sky130_fd_sc_hd__nand2_1)
+                                                         net6 (net)
+                      0.081431    0.000000    2.657143 ^ x16/A (sky130_fd_sc_hd__inv_2)
+    18    0.051714    0.115739    0.122030    2.779173 v x16/Y (sky130_fd_sc_hd__inv_2)
+                                                         CONVERT (net)
+                      0.115739    0.000000    2.779173 v x23/B (sky130_fd_sc_hd__and2b_1)
+     2    0.101438    0.464407    0.528589    3.307762 v x23/X (sky130_fd_sc_hd__and2b_1)
+                                                         DAC_SETTLE (net)
+                      0.464407    0.000000    3.307762 v x34/A3 (sky130_fd_sc_hd__mux4_1)
+     1    0.001690    0.078614    0.605513    3.913275 v x34/X (sky130_fd_sc_hd__mux4_1)
+                                                         net18 (net)
+                      0.078614    0.000000    3.913275 v x42/A1 (sky130_fd_sc_hd__mux4_4)
+     1    0.016840    0.142369    0.645919    4.559194 v x42/X (sky130_fd_sc_hd__mux4_4)
+                                                         net19 (net)
+                      0.142369    0.000000    4.559194 v x63/A (sky130_fd_sc_hd__inv_8)
+     1    0.034999    0.073935    0.113927    4.673120 ^ x63/Y (sky130_fd_sc_hd__inv_8)
+                                                         net25 (net)
+                      0.073935    0.000000    4.673120 ^ x64/A (sky130_fd_sc_hd__inv_16)
+     1    0.100000    0.050036    0.063351    4.736471 v x64/Y (sky130_fd_sc_hd__inv_16)
+                                                         DEBUG_OUT (net)
+                      0.050036    0.000000    4.736471 v DEBUG_OUT (out)
+                                              4.736471   data arrival time
+
+                      0.000000   10.000000   10.000000   clock __VIRTUAL_CLK__ (rise edge)
+                                  0.000000   10.000000   clock network delay (ideal)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -4.736471   data arrival time
+---------------------------------------------------------------------------------------------
+                                              3.013529   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+max slew
+
+Pin                                        Limit        Slew       Slack
+------------------------------------------------------------------------
+DAC_SETTLE                              0.750000    0.907202   -0.157202 (VIOLATED)
+x23/X                                   0.750000    0.907202   -0.157202 (VIOLATED)
+x34/A3                                  0.750000    0.907202   -0.157202 (VIOLATED)
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+x22/Y                                    10     26    -16 (VIOLATED)
+x16/Y                                    10     18     -8 (VIOLATED)
+COMP_P                                   10     14     -4 (VIOLATED)
+x36/X                                    10     12     -2 (VIOLATED)
+x62/Y                                    10     12     -2 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 324 unannotated drivers.
+ COMP_N
+ COMP_P
+ DAC_SETTLE_D
+ DEBUG_MUX[0]
+ DEBUG_MUX[1]
+ DEBUG_MUX[2]
+ DEBUG_MUX[3]
+ EN_OFFSET_CAL
+ RST_Z
+ SAMPLE_D
+ START
+ VIN_N_SW_ON
+ VIN_P_SW_ON
+ x1/Y
+ x10/Y
+ x10_0/Y
+ x10_1/Y
+ x10_10/Y
+ x10_2/Y
+ x10_3/Y
+ x10_4/Y
+ x10_5/Y
+ x10_6/Y
+ x10_7/Y
+ x10_8/Y
+ x10_9/Y
+ x11/Y
+ x11_0/Y
+ x11_1/Y
+ x11_10/Y
+ x11_2/Y
+ x11_3/Y
+ x11_4/Y
+ x11_5/Y
+ x11_6/Y
+ x11_7/Y
+ x11_8/Y
+ x11_9/Y
+ x12/Y
+ x12_0/Y
+ x12_1/Y
+ x12_10/Y
+ x12_2/Y
+ x12_3/Y
+ x12_4/Y
+ x12_5/Y
+ x12_6/Y
+ x12_7/Y
+ x12_8/Y
+ x12_9/Y
+ x13/X
+ x13_0/X
+ x13_1/X
+ x13_2/X
+ x13_3/X
+ x13_4/X
+ x13_5/X
+ x14/Y
+ x14_0/Y
+ x14_1/Y
+ x14_2/Y
+ x14_3/Y
+ x14_4/Y
+ x14_5/Y
+ x15/Y
+ x16/Y
+ x17/Y
+ x18/Y
+ x19/Y
+ x1_0/Q
+ x1_1/Q
+ x1_10/Q
+ x1_11/Q
+ x1_2/Q
+ x1_3/Q
+ x1_4/Q
+ x1_5/Q
+ x1_6/Q
+ x1_7/Q
+ x1_8/Q
+ x1_9/Q
+ x2/Y
+ x20/HI
+ x20/LO
+ x21/Y
+ x21_0/Y
+ x21_1/Y
+ x21_10/Y
+ x21_2/Y
+ x21_3/Y
+ x21_4/Y
+ x21_5/Y
+ x21_6/Y
+ x21_7/Y
+ x21_8/Y
+ x21_9/Y
+ x22/Y
+ x23/X
+ x24/Y
+ x25/Y
+ x26/Y
+ x27/Y
+ x28/Y
+ x29/X
+ x2_0/Y
+ x2_1/Y
+ x2_10/Y
+ x2_2/Y
+ x2_3/Y
+ x2_4/Y
+ x2_5/Y
+ x2_6/Y
+ x2_7/Y
+ x2_8/Y
+ x2_9/Y
+ x3/Y
+ x30/Y
+ x31/X
+ x32/X
+ x33/X
+ x34/X
+ x35/Y
+ x36/X
+ x37/Y
+ x38/Y
+ x38_0/Y
+ x38_1/Y
+ x38_10/Y
+ x38_2/Y
+ x38_3/Y
+ x38_4/Y
+ x38_5/Y
+ x38_6/Y
+ x38_7/Y
+ x38_8/Y
+ x38_9/Y
+ x39/Y
+ x3_0/Y
+ x3_1/Y
+ x3_10/Y
+ x3_2/Y
+ x3_3/Y
+ x3_4/Y
+ x3_5/Y
+ x3_6/Y
+ x3_7/Y
+ x3_8/Y
+ x3_9/Y
+ x4/Y
+ x40/Y
+ x41/Y
+ x41_0/X
+ x41_1/X
+ x41_10/X
+ x41_11/X
+ x41_2/X
+ x41_3/X
+ x41_4/X
+ x41_5/X
+ x41_6/X
+ x41_7/X
+ x41_8/X
+ x41_9/X
+ x42/X
+ x42_0/Y
+ x42_1/Y
+ x42_10/Y
+ x42_2/Y
+ x42_3/Y
+ x42_4/Y
+ x42_5/Y
+ x42_6/Y
+ x42_7/Y
+ x42_8/Y
+ x42_9/Y
+ x43/X
+ x43_0/Y
+ x43_1/Y
+ x43_10/Y
+ x43_2/Y
+ x43_3/Y
+ x43_4/Y
+ x43_5/Y
+ x43_6/Y
+ x43_7/Y
+ x43_8/Y
+ x43_9/Y
+ x44/Q
+ x44_0/Y
+ x44_1/Y
+ x44_10/Y
+ x44_2/Y
+ x44_3/Y
+ x44_4/Y
+ x44_5/Y
+ x44_6/Y
+ x44_7/Y
+ x44_8/Y
+ x44_9/Y
+ x45/Y
+ x45_0/Y
+ x45_1/Y
+ x45_10/Y
+ x45_11/Y
+ x45_2/Y
+ x45_3/Y
+ x45_4/Y
+ x45_5/Y
+ x45_6/Y
+ x45_7/Y
+ x45_8/Y
+ x45_9/Y
+ x46/Y
+ x46_0/X
+ x46_1/X
+ x46_10/X
+ x46_11/X
+ x46_2/X
+ x46_3/X
+ x46_4/X
+ x46_5/X
+ x46_6/X
+ x46_7/X
+ x46_8/X
+ x46_9/X
+ x47/Y
+ x48/X
+ x49/Y
+ x4_0/Y
+ x4_1/Y
+ x4_10/Y
+ x4_2/Y
+ x4_3/Y
+ x4_4/Y
+ x4_5/Y
+ x4_6/Y
+ x4_7/Y
+ x4_8/Y
+ x4_9/Y
+ x5/Y
+ x50/X
+ x51/Y
+ x52/Y
+ x53/Y
+ x54/Y
+ x55/Y
+ x56/Y
+ x57/Y
+ x58/Y
+ x59/X
+ x5_0/Q
+ x5_1/Q
+ x5_10/Q
+ x5_11/Q
+ x5_2/Q
+ x5_3/Q
+ x5_4/Q
+ x5_5/Q
+ x5_6/Q
+ x5_7/Q
+ x5_8/Q
+ x5_9/Q
+ x6/Y
+ x60/X
+ x60_0/Y
+ x60_1/Y
+ x60_2/Y
+ x60_3/Y
+ x60_4/Y
+ x60_5/Y
+ x61/Y
+ x61_0/Y
+ x61_1/Y
+ x61_2/Y
+ x61_3/Y
+ x61_4/Y
+ x61_5/Y
+ x62/Y
+ x63/Y
+ x64/Y
+ x65/Y
+ x66/Y
+ x6_0/Y
+ x6_1/Y
+ x6_2/Y
+ x6_3/Y
+ x6_4/Y
+ x6_5/Y
+ x7/X
+ x7_0/Y
+ x7_1/Y
+ x7_10/Y
+ x7_2/Y
+ x7_3/Y
+ x7_4/Y
+ x7_5/Y
+ x7_6/Y
+ x7_7/Y
+ x7_8/Y
+ x7_9/Y
+ x8/Y
+ x8_0/Y
+ x8_1/Y
+ x8_10/Y
+ x8_2/Y
+ x8_3/Y
+ x8_4/Y
+ x8_5/Y
+ x8_6/Y
+ x8_7/Y
+ x8_8/Y
+ x8_9/Y
+ x9/Y
+ x9_0/Y
+ x9_1/Y
+ x9_10/Y
+ x9_2/Y
+ x9_3/Y
+ x9_4/Y
+ x9_5/Y
+ x9_6/Y
+ x9_7/Y
+ x9_8/Y
+ x9_9/Y
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 3
+max fanout violation count 5
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 25 unclocked register/latch pins.
+  x1_0/CLK
+  x1_1/CLK
+  x1_10/CLK
+  x1_11/CLK
+  x1_2/CLK
+  x1_3/CLK
+  x1_4/CLK
+  x1_5/CLK
+  x1_6/CLK
+  x1_7/CLK
+  x1_8/CLK
+  x1_9/CLK
+  x44/CLK
+  x5_0/CLK
+  x5_1/CLK
+  x5_10/CLK
+  x5_11/CLK
+  x5_2/CLK
+  x5_3/CLK
+  x5_4/CLK
+  x5_5/CLK
+  x5_6/CLK
+  x5_7/CLK
+  x5_8/CLK
+  x5_9/CLK
+Warning: There are 34 unconstrained endpoints.
+  CLK_DATA
+  DATA[0]
+  DATA[1]
+  DATA[2]
+  DATA[3]
+  DATA[4]
+  DATA[5]
+  HI
+  LO
+  x1_0/D
+  x1_1/D
+  x1_10/D
+  x1_11/D
+  x1_2/D
+  x1_3/D
+  x1_4/D
+  x1_5/D
+  x1_6/D
+  x1_7/D
+  x1_8/D
+  x1_9/D
+  x44/D
+  x5_0/D
+  x5_1/D
+  x5_10/D
+  x5_11/D
+  x5_2/D
+  x5_3/D
+  x5_4/D
+  x5_5/D
+  x5_6/D
+  x5_7/D
+  x5_8/D
+  x5_9/D
+Warning: There are 7 combinational loops in the design.
+  x25/Y
+  x24/B
+  x24/Y
+  x25/A
+  | loop cut point
+  x25/Y
+  --------------------------------
+  x14/Y
+  x15/A
+  x15/Y
+  x14/B
+  | loop cut point
+  x14/Y
+  --------------------------------
+  x9/Y
+  x11/A
+  x11/Y
+  x18/A
+  x18/Y
+  x14/A
+  x14/Y
+  x15/A
+  x15/Y
+  x16/A
+  x16/Y
+  x13/A
+  x13/X
+  x12/A
+  x12/Y
+  x9/B
+  | loop cut point
+  x9/Y
+  --------------------------------
+  x7/X
+  x3/A
+  x3/Y
+  x1/A
+  x1/Y
+  x10/B
+  x10/Y
+  x8/A
+  x8/Y
+  x9/A
+  x9/Y
+  x11/A
+  x11/Y
+  x18/A
+  x18/Y
+  x14/A
+  x14/Y
+  x15/A
+  x15/Y
+  x16/A
+  x16/Y
+  x7/A
+  | loop cut point
+  x7/X
+  --------------------------------
+  x1/Y
+  x10/B
+  x10/Y
+  x8/A
+  x8/Y
+  x9/A
+  x9/Y
+  x11/A
+  x11/Y
+  x4/A
+  x4/Y
+  x2/B
+  x2/Y
+  x1/B
+  | loop cut point
+  x1/Y
+  --------------------------------
+  x8/Y
+  x9/A
+  x9/Y
+  x8/B
+  | loop cut point
+  x8/Y
+  --------------------------------
+  x29/X
+  x28/A
+  x28/Y
+  x25/B
+  x25/Y
+  x26/A
+  x26/Y
+  x29/B
+  | loop cut point
+  x29/X
+  --------------------------------

@@ -1,0 +1,190 @@
+%% $Header: /home/sdw/words/isscc00/RCS/sdwfig.sty,v 1.4 1999/09/14 14:49:04 sdw Exp $
+%% Custom PostScript figure placement _now_ based on graphicsx.sty
+%% (Same as in sdwbk.sty with \narrow style removed)
+%% s.d.willingham, 13 September 1999 
+
+% Packages & Options:
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sdwfig}[1999/09/13 sdw's figure macros]
+\DeclareOption{dvips}{%
+    \PassOptionsToPackage{dvips}{graphicsx}
+    \AtEndOfPackage{\DeclareGraphicsExtensions{.eps}}}
+\DeclareOption{dvipdfm}{%
+    \PassOptionsToPackage{dvipdfm}{graphicsx}
+    \AtEndOfPackage{\DeclareGraphicsExtensions{.pdf,.eps}}}
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{graphicx}}
+\ProcessOptions\relax
+\RequirePackage{graphicx}
+
+\@ifundefined{captionfont}{\def\captionfont{\sf}\def\captionlabelfont{\sf}}{}
+
+\graphicspath{{./figures/}}
+\DeclareGraphicsRule{.pdf}{pdf}{.eps}{}
+\setkeys{Gin}{keepaspectratio=true}
+
+% ------------------------------------------------------------------------
+% Modifications to standard \includegraphics
+%   - Width parameter bounds the figure.  That is, if the
+%     figure's natural width is less than parameter width,
+%     don't magnify.
+%
+\let\orig@Gin@esetsize=\Gin@esetsize
+\def\Gin@esetsize{\orig@Gin@esetsize
+    \let\orig@Gin@req@sizes=\Gin@req@sizes
+    \def\Gin@req@sizes{%
+	\ifdim\Gin@nat@width<\Gin@@ewidth
+	    \let\Gin@@ewidth\Gin@nat@width \else \relax \fi
+	\orig@Gin@req@sizes}}
+
+% ------------------------------------------------------------------------
+
+%    ************************
+%    *  PostScript Figures  *
+%    ************************
+%
+% PostScript placement (using \includegraphics{} macros)
+%
+% usage: \epsfigure(height){name}[shortcap]{caption}
+%   Sets the EPS file name.eps in a centered \figure environment, with
+%   the given caption and \label'ed by `fig:name'.  An optional parameter
+%   'height' is passed to \includegraphics and an optional short caption
+%   can be given for the list of figures.
+
+\newdimen\dimen@sdwfig
+
+\def\epsfigure{\@ifnextchar({\@epsfigure}{\@epsfigure()}}
+\def\@epsfigure(#1)#2{\@ifnextchar[%
+  {\@@epsmathfigure(#1){#2}{}}{\@@epsmathfigure(#1){#2}{}[]}}
+
+
+% usage: \epsmathfigure(height){name}{math_stuff}[shortcap]{caption}
+% Like \epsfigure, but sets math_stuff as centered math display below
+% the figure.
+\def\epsmathfigure{\@ifnextchar({\@epsmathfigure}{\@epsmathfigure()}}
+\def\@epsmathfigure(#1)#2#3{\@ifnextchar[%
+  {\@@epsmathfigure(#1){#2}{#3}}{\@@epsmathfigure(#1){#2}{#3}[]}}
+
+\def\if@arg@empty#1{\def\arG{#1}\def\emptY{}\ifx\arG\emptY}
+
+% usage: \@@epsmathfigure(height){name}{math_stuff}[shortcap]{caption}
+\def\@@epsmathfigure(#1)#2#3[#4]#5{%
+  \begin{figure}[t]
+    \dimen@sdwfig=\linewidth
+    \setbox0=\hbox{%
+      \if@arg@empty{#1}%
+        \includegraphics*[width=\dimen@sdwfig]{#2}%
+      \else
+        \includegraphics*[width=\dimen@sdwfig, height=#1]{#2}%
+      \fi}
+    \dimen1=\linewidth \centerline{\box0}
+    \if@arg@empty{#3}\else
+      \vskip\abovedisplayskip
+      \vbox{\hbox to \dimen1{\hss$\displaystyle #3$\hss}}\fi
+    \if@arg@empty{#4}
+      \caption{#5}\label{fig:#2}
+    \else
+      \caption[#4]{#5}\label{fig:#2}
+    \fi
+  \end{figure}
+}
+
+\def\epstable{\@ifnextchar({\@epstable}{\@epstable()}}
+\def\@epstable(#1)#2{\@ifnextchar[%
+  {\@@epsmathtable(#1){#2}{}}{\@@epsmathtable(#1){#2}{}[]}}
+
+% usage: \epsmathtable(height){name}{math_stuff}[shortcap]{caption}
+% Like \epstable, but sets math_stuff as centered math display below
+% the figure.
+\def\epsmathtable{\@ifnextchar({\@epsmathtable}{\@epsmathtable()}}
+\def\@epsmathtable(#1)#2#3{\@ifnextchar[%
+  {\@@epsmathtable(#1){#2}{#3}}{\@@epsmathtable(#1){#2}{#3}[]}}
+
+\def\if@arg@empty#1{\def\arG{#1}\def\emptY{}\ifx\arG\emptY}
+
+% usage: \@@epsmathtable(height){name}{math_stuff}[shortcap]{caption}
+\def\@@epsmathtable(#1)#2#3[#4]#5{%
+  \begin{table}
+    \dimen@sdwfig=\linewidth
+    \setbox0=\hbox{%
+      \if@arg@empty{#1}%
+        \includegraphics*[width=\dimen@sdwfig]{#2}%
+      \else
+        \includegraphics*[width=\dimen@sdwfig, height=#1]{#2}%
+      \fi}
+    \dimen1=\linewidth \centerline{\box0}
+    \if@arg@empty{#3}\else
+      \vskip\abovedisplayskip
+      \vbox{\hbox to \dimen1{\hss$\displaystyle #3$\hss}}\fi
+    \if@arg@empty{#4}
+      \caption{#5}\label{fig:#2}
+    \else
+      \caption[#4]{#5}\label{fig:#2}
+    \fi
+  \end{table}
+}
+
+% Redefine captions so that we can set fonts easily:
+% 9/8/99: and singlespace!
+
+\long\def\@makecaption#1#2{\xdef\currcaptype{\@captype}%
+  \ifx\@captype\xtable\vskip\belowtableskip\relax\fi
+  \vskip12pt
+  \setbox0=\hbox{\footnotesize\captionfont Figure x.x\quad #2}%
+  \ifdim\wd0>.6\linewidth
+  \hbox to\linewidth{\hss\vtop{\hsize=.85\linewidth 
+    \def\baselinestretch{1}%
+    \parskip=6pt\footnotesize
+    \leavevmode\hbox{\captionlabelfont #1}\quad\captionfont #2}\hss}%
+  \else\hbox to\linewidth{%
+    \def\baselinestretch{1}%
+    \hss\hbox{\footnotesize\captionlabelfont #1\quad\captionfont #2}\hss}\fi
+%
+  \xdef\@currentlabel{\expandafter\csname p@\@captype\endcsname%
+  \expandafter\csname the\@captype\endcsname}%
+%
+  \ifx\@captype\xtable\vskip\abovetableskip\relax\fi}
+
+% Place a double figure (two LR boxes side-by-side) with letters
+% (a) and (b) in \footnotesize beneath each.
+
+% usage: \figuretwo{stuff1}{stuff2}[shortcap]{caption}{label}
+\def\figuretwo#1#2{\@ifnextchar[%
+  {\@figuretwo{#1}{#2}}{\@figuretwo{#1}{#2}[]}}
+
+\def\@figuretwo#1#2[#3]#4#5{%
+  \begin{figure}[hbt]
+    \def\arraystretch{1.5}%
+    \centerline{\footnotesize\captionfont $
+      \begin{array}{@{}cc@{}}
+        \vcenter{\hbox{#1}} & \vcenter{\hbox{#2}} \\
+        \hbox{(a)} & \hbox{(b)}
+      \end{array}$}
+    \if@arg@empty{#3}
+      \caption{#4}\label{fig:#5}
+    \else
+      \caption[#3]{#4}\label{fig:#5}
+    \fi
+  \end{figure}
+}
+
+% usage: \epsfiguretwo(height){name1}{name2}[shortcap]{caption}
+% Like \epsfigure, but sets two subfigures side by side:
+% \label is formed from name1 -> `fig:name1'.
+
+\def\epsfiguretwo{\@ifnextchar({\@epsfiguretwo}{\@epsfiguretwo()}}
+\def\@epsfiguretwo(#1)#2#3{\@ifnextchar[%
+  {\@@epsfiguretwo(#1){#2}{#3}}{\@@epsfiguretwo(#1){#2}{#3}[]}}
+
+% usage: \@@epsfiguretwo(height){name1}{name2}[shortcap]{caption}
+\def\@@epsfiguretwo(#1)#2#3[#4]#5{%
+  % compute figure widths:
+  \dimen@sdwfig=\linewidth \divide\dimen@sdwfig by 2
+  \advance\dimen@sdwfig by -\arraycolsep
+  \if@arg@empty{#1}
+    \figuretwo{\includegraphics*[width=\dimen@sdwfig]{#2}}%
+	      {\includegraphics*[width=\dimen@sdwfig]{#3}}[#4]{#5}{#2}
+  \else
+    \figuretwo{\includegraphics*[width=\dimen@sdwfig, height=#1]{#2}}%
+	  {\includegraphics*[width=\dimen@sdwfig, height=#1]{#3}}[#4]{#5}{#2}
+  \fi
+}
