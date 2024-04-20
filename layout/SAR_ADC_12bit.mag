@@ -1,7 +1,20 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713644118
+timestamp 1713644818
+<< error_s >>
+rect -2192 40961 -2168 40992
+rect -2198 40927 -2168 40961
+rect -2192 40896 -2168 40927
+rect -2164 40973 -2140 41004
+rect -2164 40908 -2134 40973
+rect -2145 40897 -2134 40908
+rect -2192 40417 -2168 40448
+rect -2198 40383 -2168 40417
+rect -2192 40352 -2168 40383
+rect -2164 40429 -2140 40460
+rect -2164 40395 -2134 40429
+rect -2164 40364 -2140 40395
 << metal1 >>
 rect 10980 48530 10990 48590
 rect 11050 48568 11060 48590
@@ -1553,6 +1566,14 @@ use preamplifier  preamplifier_0 ~/Desktop/SAR_ADC_12b/SAR_ADC_12bit/preamplifie
 timestamp 1711972782
 transform -1 0 11136 0 1 30538
 box -3630 6580 7680 9930
+use sky130_fd_sc_hd__and2_4  sky130_fd_sc_hd__and2_4_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1710522493
+transform 1 0 -2164 0 1 40412
+box -38 -48 682 592
+use sky130_fd_sc_hd__or2_4  sky130_fd_sc_hd__or2_4_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1710522493
+transform 1 0 -2812 0 1 40400
+box -38 -48 682 592
 use state_machine  state_machine_0 ~/Desktop/SAR_ADC_12b/SAR_ADC_12bit/state_machine/layout
 timestamp 1713020991
 transform 1 0 -4300 0 1 40495
