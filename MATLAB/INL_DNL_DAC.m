@@ -1,6 +1,28 @@
 clear all
 close all
 
+%% Function to convert input signal to digital
+function result = ADC_Convert(input,reference,weights)
+    result = zeros(1,length(input));
+    for k=1:length(input)
+        ref_signal = 0;
+        for i=(length(weights)+1):-1:1
+            % Compare input with reference
+            if input(k) > ref_signal
+                result(k) = result(k) + 2^(i-1);
+                if i > 1
+                    ref_signal = ref_signal + weights(i-1)*reference;
+                end
+            else
+                if i > 1
+                    ref_signal = ref_signal - weights(i-1)*reference;
+                end
+            end
+        end
+    end
+end
+
+
 %% DAC Capacitor values
 Cu = 2e-15;
 C(1) = (2^0)*Cu + 0.251031e-15;
@@ -58,23 +80,4 @@ ENOB_output = (SNDR_output - 1.76)/6.02 % bit
 SFDR_output = sfdr(FFT_output',freq','power')
 THD_output = thd(FFT_output',freq,5,'psd')
 
-%% Function to convert input signal to digital
-function result = ADC_Convert(input,reference,weights)
-    result = zeros(1,length(input));
-    for k=1:length(input)
-        ref_signal = 0;
-        for i=(length(weights)+1):-1:1
-            % Compare input with reference
-            if input(k) > ref_signal
-                result(k) = result(k) + 2^(i-1);
-                if i > 1
-                    ref_signal = ref_signal + weights(i-1)*reference;
-                end
-            else
-                if i > 1
-                    ref_signal = ref_signal - weights(i-1)*reference;
-                end
-            end
-        end
-    end
-end
+
