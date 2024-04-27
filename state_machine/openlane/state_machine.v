@@ -6,7 +6,7 @@ module state_machine(
 	input en_offset_cal,
 	input comp_p, comp_n,
 	input vin_p_sw_on, vin_n_sw_on,
-	input [3:0] debug_mux,
+	input [2:0] debug_mux,
 	input en_vcm_sw_o_i,
 	input [10:0] vcm_o_i,
 	
@@ -129,29 +129,29 @@ assign sample_o = ((state == sample) | en_vcm_sw_o_i) & ~counter[11] & (state !=
 
 always @(*)
 begin
-	en_offset_cal_o <= rst_z & en_offset_cal;
-	allow_vcm_sw <= ~(vin_p_sw_on | vin_n_sw_on);
-	vcm_dummy_o <= (state == convert) & allow_vcm_sw;
+	en_offset_cal_o = rst_z & en_offset_cal;
+	allow_vcm_sw = ~(vin_p_sw_on | vin_n_sw_on);
+	vcm_dummy_o = (state == convert) & allow_vcm_sw;
 	if (single_ended_reg) begin
-		en_comp <= ~clk & (state == convert) & ~(~ en_offset_cal & counter[1]);
-		offset_cal_cycle <= counter[1] & en_offset_cal;
-		vcm_o <= 'd0;
-		vref_z_p_o <= result[10:0] | (~ allow_vref_sw);
-		vref_z_n_o <= 'b11111111111;
-		vss_p_o <= (result[10:0] | (~ allow_vref_sw)) & {11 {(state == convert) & allow_vcm_sw}};
-		vss_n_o <= {11 {(state == convert) & allow_vcm_sw}};
-		en_vcm_sw_o <= (counter[1] & (state == convert)) | (state == sample);
-		allow_vref_sw <= {11 {(state == convert) & allow_vcm_sw}} & {1'b1,counter[11:2]};
+		en_comp = ~clk & (state == convert) & ~(~ en_offset_cal & counter[1]);
+		offset_cal_cycle = counter[1] & en_offset_cal;
+		vcm_o = 'd0;
+		vref_z_p_o = result[10:0] | (~ allow_vref_sw);
+		vref_z_n_o = 'b11111111111;
+		vss_p_o = (result[10:0] | (~ allow_vref_sw)) & {11 {(state == convert) & allow_vcm_sw}};
+		vss_n_o = {11 {(state == convert) & allow_vcm_sw}};
+		en_vcm_sw_o = (counter[1] & (state == convert)) | (state == sample);
+		allow_vref_sw = {11 {(state == convert) & allow_vcm_sw}} & {1'b1,counter[11:2]};
 	end else begin
-		en_comp <= ~clk & (state == convert) & ~(~ en_offset_cal & counter[0]);
-		offset_cal_cycle <= counter[0] & en_offset_cal;
-		vcm_o <= ~(counter[11:1] | {11 {~((state == convert) & allow_vcm_sw)}});
-		vref_z_p_o <= result[11:1] | (~ allow_vref_sw);
-		vref_z_n_o <= (~result[11:1]) | (~ allow_vref_sw);
-		vss_p_o <= result[11:1] & allow_vref_sw;
-		vss_n_o <= (~result[11:1]) & allow_vref_sw;
-		en_vcm_sw_o <= (counter[0] & (state == convert)) | (state == sample);
-		allow_vref_sw <= (~ vcm_o_i) & counter[11:1];
+		en_comp = ~clk & (state == convert) & ~(~ en_offset_cal & counter[0]);
+		offset_cal_cycle = counter[0] & en_offset_cal;
+		vcm_o = ~(counter[11:1] | {11 {~((state == convert) & allow_vcm_sw)}});
+		vref_z_p_o = result[11:1] | (~ allow_vref_sw);
+		vref_z_n_o = (~result[11:1]) | (~ allow_vref_sw);
+		vss_p_o = result[11:1] & allow_vref_sw;
+		vss_n_o = (~result[11:1]) & allow_vref_sw;
+		en_vcm_sw_o = (counter[0] & (state == convert)) | (state == sample);
+		allow_vref_sw = (~ vcm_o_i) & counter[11:1];
 	end
 end
 
@@ -163,18 +163,19 @@ begin
 		'd1: debug_out = (state == sample);
 		'd2: debug_out = (state == convert);
 		'd3: debug_out = en_comp;
-		'd4: debug_out = comp_p | comp_n;
-		'd5: debug_out = comp_p;
-		'd6: debug_out = comp_n;
+		//'d4: debug_out = comp_p | comp_n;
+		'd4: debug_out = comp_p;
+		'd5: debug_out = comp_n;
+		'd6: debug_out = counter[0];
 		'd7: debug_out = counter[11];
-		'd8: debug_out = counter[10];
+		/*'d8: debug_out = counter[10];
 		'd9: debug_out = counter[9];
 		'd10: debug_out = counter[8];
 		'd11: debug_out = counter[7];
 		'd12: debug_out = counter[6];
 		'd13: debug_out = counter[4];
 		'd14: debug_out = counter[2];
-		'd15: debug_out = counter[0];
+		'd15: debug_out = counter[0];*/
 	endcase
 end
 

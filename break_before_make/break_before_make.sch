@@ -41,3 +41,5 @@ C {devices/ipin.sym} -40 -260 0 0 {name=p3 lab=VDD}
 C {devices/ipin.sym} -40 -240 0 0 {name=p4 lab=VSS}
 C {devices/opin.sym} 400 -240 0 0 {name=p5 lab=EN_VSS_O[10:0]}
 C {devices/opin.sym} 400 -40 0 0 {name=p6 lab=EN_VREF_Z_O[10:0]}
+C {sky130_stdcells/decap_12.sym} -10 -150 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/decap_3.sym} -10 -110 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
