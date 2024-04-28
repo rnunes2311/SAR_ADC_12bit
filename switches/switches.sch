@@ -12,7 +12,7 @@ lab=VIN}
 N -2660 -320 -2400 -320 {
 lab=VREF}
 N -2660 -340 -2360 -340 {
-lab=VSS}
+lab=VREF_GND}
 N -2320 -360 -2320 -240 {
 lab=VCM}
 N -2660 -360 -2320 -360 {
@@ -26,9 +26,9 @@ lab=VREF}
 N -2060 -320 -2060 -240 {
 lab=VREF}
 N -2020 -340 -2020 -240 {
-lab=VSS}
+lab=VREF_GND}
 N -2360 -340 -2020 -340 {
-lab=VSS}
+lab=VREF_GND}
 N -1980 -360 -1980 -240 {
 lab=VCM}
 N -2320 -360 -1980 -360 {
@@ -42,9 +42,9 @@ lab=VREF}
 N -1720 -320 -1720 -240 {
 lab=VREF}
 N -1680 -340 -1680 -240 {
-lab=VSS}
+lab=VREF_GND}
 N -2020 -340 -1680 -340 {
-lab=VSS}
+lab=VREF_GND}
 N -1640 -360 -1640 -240 {
 lab=VCM}
 N -1980 -360 -1640 -360 {
@@ -58,9 +58,9 @@ lab=VREF}
 N -1380 -320 -1380 -240 {
 lab=VREF}
 N -1340 -340 -1340 -240 {
-lab=VSS}
+lab=VREF_GND}
 N -1680 -340 -1340 -340 {
-lab=VSS}
+lab=VREF_GND}
 N -1300 -360 -1300 -240 {
 lab=VCM}
 N -1640 -360 -1300 -360 {
@@ -74,9 +74,9 @@ lab=VREF}
 N -1040 -320 -1040 -240 {
 lab=VREF}
 N -1000 -340 -1000 -240 {
-lab=VSS}
+lab=VREF_GND}
 N -1340 -340 -1000 -340 {
-lab=VSS}
+lab=VREF_GND}
 N -960 -360 -960 -240 {
 lab=VCM}
 N -1300 -360 -960 -360 {
@@ -90,9 +90,9 @@ lab=VREF}
 N -700 -320 -700 -240 {
 lab=VREF}
 N -660 -340 -660 -240 {
-lab=VSS}
+lab=VREF_GND}
 N -1000 -340 -660 -340 {
-lab=VSS}
+lab=VREF_GND}
 N -620 -360 -620 -240 {
 lab=VCM}
 N -960 -360 -620 -360 {
@@ -106,9 +106,9 @@ lab=VREF}
 N -360 -320 -360 -240 {
 lab=VREF}
 N -320 -340 -320 -240 {
-lab=VSS}
+lab=VREF_GND}
 N -660 -340 -320 -340 {
-lab=VSS}
+lab=VREF_GND}
 N -280 -360 -280 -240 {
 lab=VCM}
 N -620 -360 -280 -360 {
@@ -122,9 +122,9 @@ lab=VREF}
 N -20 -320 -20 -240 {
 lab=VREF}
 N 20 -340 20 -240 {
-lab=VSS}
+lab=VREF_GND}
 N -320 -340 20 -340 {
-lab=VSS}
+lab=VREF_GND}
 N 60 -360 60 -240 {
 lab=VCM}
 N -280 -360 60 -360 {
@@ -138,9 +138,9 @@ lab=VREF}
 N 320 -320 320 -240 {
 lab=VREF}
 N 360 -340 360 -240 {
-lab=VSS}
+lab=VREF_GND}
 N 20 -340 360 -340 {
-lab=VSS}
+lab=VREF_GND}
 N 400 -360 400 -240 {
 lab=VCM}
 N 60 -360 400 -360 {
@@ -154,9 +154,9 @@ lab=VREF}
 N 660 -320 660 -240 {
 lab=VREF}
 N 700 -340 700 -240 {
-lab=VSS}
+lab=VREF_GND}
 N 360 -340 700 -340 {
-lab=VSS}
+lab=VREF_GND}
 N 740 -360 740 -240 {
 lab=VCM}
 N 400 -360 740 -360 {
@@ -170,9 +170,9 @@ lab=VREF}
 N 1000 -320 1000 -240 {
 lab=VREF}
 N 1040 -340 1040 -240 {
-lab=VSS}
+lab=VREF_GND}
 N 700 -340 1040 -340 {
-lab=VSS}
+lab=VREF_GND}
 N 1080 -360 1080 -240 {
 lab=VCM}
 N 740 -360 1080 -360 {
@@ -186,17 +186,13 @@ lab=VREF}
 N 1340 -320 1340 -240 {
 lab=VREF}
 N 1380 -340 1380 -240 {
-lab=VSS}
+lab=VREF_GND}
 N 1040 -340 1380 -340 {
-lab=VSS}
+lab=VREF_GND}
 N 1420 -360 1420 -240 {
 lab=VCM}
 N 1080 -360 1420 -360 {
 lab=VCM}
-N 1380 -340 1720 -340 {
-lab=VSS}
-N 1720 -340 1720 -240 {
-lab=VSS}
 N 1760 -360 1760 -240 {
 lab=VCM}
 N 1420 -360 1760 -360 {
@@ -279,10 +275,8 @@ N 1640 -100 1640 100 {
 lab=VDD}
 N 1300 100 1640 100 {
 lab=VDD}
-N -2360 -340 -2360 -240 {
-lab=VSS}
 C {devices/ipin.sym} -2660 -360 0 0 {name=p1 lab=VCM}
-C {devices/ipin.sym} -2660 -340 0 0 {name=p2 lab=VSS}
+C {devices/ipin.sym} -2660 -340 0 0 {name=p2 lab=VREF_GND}
 C {devices/ipin.sym} -2660 -320 0 0 {name=p3 lab=VREF}
 C {devices/ipin.sym} -2660 -300 0 0 {name=p4 lab=VIN}
 C {devices/ipin.sym} -2660 100 0 0 {name=p5 lab=VDD}
@@ -363,3 +357,17 @@ C {individual_switches/switch_C5.sym} -1360 -160 2 1 {name=x10}
 C {individual_switches/switch_C5.sym} -1700 -160 2 1 {name=x11}
 C {individual_switches/switch_C5.sym} -2040 -160 2 1 {name=x12}
 C {individual_switches/switch_C0_dummy.sym} -2380 -160 2 1 {name=x13}
+C {devices/ipin.sym} -2660 120 0 0 {name=p24 lab=VSS}
+C {devices/lab_pin.sym} 1440 -200 0 1 {name=p26 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1780 -200 0 1 {name=p72 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1100 -200 0 1 {name=p73 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 760 -200 0 1 {name=p74 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 420 -200 0 1 {name=p75 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 80 -200 0 1 {name=p76 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -260 -200 0 1 {name=p77 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -600 -200 0 1 {name=p78 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -940 -200 0 1 {name=p79 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -1280 -200 0 1 {name=p80 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -1620 -200 0 1 {name=p81 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -1960 -200 0 1 {name=p82 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -2300 -200 0 1 {name=p83 sig_type=std_logic lab=VSS}

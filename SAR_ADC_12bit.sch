@@ -127,20 +127,18 @@ N -2440 630 -2420 630 {
 lab=CLK_DATA}
 N -2440 610 -2420 610 {
 lab=DATA[5:0]}
-N -2760 910 -2740 910 {
-lab=DEBUG_MUX[3:0]}
-N -2440 1050 -2420 1050 {
-lab=DEBUG_OUT}
 N -2760 650 -2740 650 {
 lab=EN_OFFSET_CAL}
 N -2760 950 -2740 950 {
 lab=CLK}
+N -2760 670 -2740 670 {
+lab=SINGLE_ENDED}
 C {devices/ipin.sym} -3340 -520 0 0 {name=p73 lab=VIN_P}
 C {devices/lab_wire.sym} 980 -180 0 1 {name=p75 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} -3340 -620 0 0 {name=p77 lab=VDD}
 C {devices/ipin.sym} -3340 -580 0 0 {name=p78 lab=VREF}
 C {devices/ipin.sym} -3340 -600 0 0 {name=p79 lab=VCM}
-C {devices/ipin.sym} -3340 -560 0 0 {name=p80 lab=VSS}
+C {devices/ipin.sym} -3340 -460 0 0 {name=p80 lab=VSS}
 C {devices/lab_wire.sym} 1280 -120 0 1 {name=p81 sig_type=std_logic lab=VDAC_P}
 C {devices/ipin.sym} -3340 -500 2 1 {name=p153 lab=VIN_N}
 C {devices/lab_wire.sym} 980 20 2 0 {name=p154 sig_type=std_logic lab=VSS}
@@ -162,7 +160,6 @@ C {devices/lab_pin.sym} -3020 850 0 1 {name=p170 sig_type=std_logic lab=EN_VIN_B
 C {devices/lab_pin.sym} 2020 -100 0 1 {name=p175 sig_type=std_logic lab=COMP_P}
 C {devices/lab_pin.sym} 2020 -60 0 1 {name=p176 sig_type=std_logic lab=COMP_N}
 C {devices/lab_pin.sym} -2740 710 0 0 {name=p177 sig_type=std_logic lab=COMP_P}
-C {devices/lab_pin.sym} -2740 730 0 0 {name=p178 sig_type=std_logic lab=COMP_N}
 C {devices/lab_pin.sym} -2440 730 0 1 {name=p181 sig_type=std_logic lab=EN_VCM[10:0]}
 C {devices/lab_pin.sym} -2440 950 0 1 {name=p189 sig_type=std_logic lab=EN_COMP}
 C {devices/lab_pin.sym} -2440 690 0 1 {name=p191 sig_type=std_logic lab=SMPL}
@@ -223,8 +220,8 @@ C {devices/lab_pin.sym} -2440 770 0 1 {name=p132 sig_type=std_logic lab=EN_VCM_S
 C {devices/lab_pin.sym} -2440 750 0 1 {name=p131 sig_type=std_logic lab=EN_VCM_DUMMY}
 C {devices/lab_pin.sym} -2440 870 0 1 {name=p134 lab=EN_VSS_N[10:0]}
 C {devices/lab_pin.sym} -2440 850 0 1 {name=p135 lab=EN_REF_Z_N[10:0]}
-C {devices/lab_pin.sym} -2440 830 0 1 {name=p136 lab=EN_VSS_P[10:0]}
-C {devices/lab_pin.sym} -2440 810 0 1 {name=p137 lab=EN_REF_Z_P[10:0]}
+C {devices/lab_pin.sym} -1760 610 0 1 {name=p136 lab=EN_VSS_P[10:0]}
+C {devices/lab_pin.sym} -1760 630 0 1 {name=p137 lab=EN_REF_Z_P[10:0]}
 C {devices/lab_wire.sym} -3020 -260 2 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -3060 240 2 1 {name=p2 sig_type=std_logic lab=EN_VCM_DUMMY}
 C {devices/lab_pin.sym} -3060 220 2 1 {name=p3 sig_type=std_logic lab=EN_VCM_SW}
@@ -233,14 +230,10 @@ C {devices/lab_pin.sym} -3060 200 0 0 {name=p6 lab=EN_VSS_N[10:0]}
 C {devices/lab_pin.sym} -3060 180 0 0 {name=p7 lab=EN_REF_Z_N[10:0]}
 C {devices/lab_pin.sym} -3060 140 0 0 {name=p8 lab=EN_VIN_BSTR_N}
 C {devices/lab_wire.sym} -3020 100 0 1 {name=p12 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} -3000 320 2 0 {name=p13 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} -2960 320 2 0 {name=p14 sig_type=std_logic lab=VREF}
-C {devices/lab_wire.sym} -2920 320 2 0 {name=p16 sig_type=std_logic lab=VIN_N}
-C {devices/lab_wire.sym} -2880 320 2 0 {name=p17 sig_type=std_logic lab=VCM}
-C {devices/lab_wire.sym} -3000 -480 0 1 {name=p18 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} -2960 -480 0 1 {name=p19 sig_type=std_logic lab=VREF}
-C {devices/lab_wire.sym} -2920 -480 0 1 {name=p20 sig_type=std_logic lab=VIN_P}
-C {devices/lab_wire.sym} -2880 -480 0 1 {name=p22 sig_type=std_logic lab=VCM}
+C {devices/lab_wire.sym} -3000 320 2 1 {name=p13 sig_type=std_logic lab=VREF_GND}
+C {devices/lab_wire.sym} -2960 320 2 1 {name=p14 sig_type=std_logic lab=VREF}
+C {devices/lab_wire.sym} -2920 320 2 1 {name=p16 sig_type=std_logic lab=VIN_N}
+C {devices/lab_wire.sym} -2880 320 2 1 {name=p17 sig_type=std_logic lab=VCM}
 C {CDAC/CDAC_12bit.sym} 300 90 0 0 {name=x1}
 C {CDAC/CDAC_12bit.sym} 300 -250 2 1 {name=x2}
 C {switches/switches.sym} -3100 -540 2 1 {name=x3}
@@ -251,10 +244,22 @@ C {offset_calibration/offset_calibration.sym} 1660 -320 0 1 {name=x7}
 C {state_machine/state_machine.sym} -2590 670 0 0 {name=x8}
 C {bootstrap/bootstrap.sym} -3100 660 0 0 {name=x11}
 C {bootstrap/bootstrap.sym} -3100 850 0 0 {name=x12}
-C {devices/ipin.sym} -2760 910 0 0 {name=p9 lab=DEBUG_MUX[3:0]}
-C {devices/opin.sym} -2420 1050 0 0 {name=p10 lab=DEBUG_OUT}
 C {devices/ipin.sym} -2760 650 0 0 {name=p11 lab=EN_OFFSET_CAL}
 C {devices/ipin.sym} -2760 950 0 0 {name=p15 lab=CLK}
 C {devices/lab_pin.sym} -2740 1010 0 0 {name=p23 sig_type=std_logic lab=EN_VCM_SW}
 C {devices/lab_pin.sym} -2740 1030 0 0 {name=p24 sig_type=std_logic lab=EN_VCM[10:0]}
-C {devices/lab_pin.sym} -2740 670 0 0 {name=p25 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} -2840 320 2 1 {name=p26 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -3000 -480 0 0 {name=p18 sig_type=std_logic lab=VREF_GND}
+C {devices/lab_wire.sym} -2960 -480 0 0 {name=p19 sig_type=std_logic lab=VREF}
+C {devices/lab_wire.sym} -2920 -480 0 0 {name=p20 sig_type=std_logic lab=VIN_P}
+C {devices/lab_wire.sym} -2880 -480 0 0 {name=p22 sig_type=std_logic lab=VCM}
+C {devices/lab_wire.sym} -2840 -480 0 0 {name=p27 sig_type=std_logic lab=VSS}
+C {devices/ipin.sym} -3340 -560 0 0 {name=p28 lab=VREF_GND}
+C {break_before_make/break_before_make.sym} -1910 620 0 0 {name=x9}
+C {devices/lab_wire.sym} -1910 580 0 1 {name=p29 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} -1910 660 2 0 {name=p30 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -2440 830 0 1 {name=p31 lab=EN_VSS_P_BBM[10:0]}
+C {devices/lab_pin.sym} -2440 810 0 1 {name=p32 lab=EN_REF_Z_P_BBM[10:0]}
+C {devices/lab_pin.sym} -2060 630 0 0 {name=p33 lab=EN_REF_Z_P_BBM[10:0]}
+C {devices/lab_pin.sym} -2060 610 0 0 {name=p34 lab=EN_VSS_P_BBM[10:0]}
+C {devices/ipin.sym} -2760 670 0 0 {name=p9 lab=SINGLE_ENDED}

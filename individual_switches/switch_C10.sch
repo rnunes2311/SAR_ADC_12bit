@@ -18,9 +18,9 @@ lab=Cbtm}
 N 460 -150 460 -60 {
 lab=Cbtm}
 N 440 -260 460 -260 {
-lab=VSS}
+lab=VREF_GND}
 N 460 -260 460 -210 {
-lab=VSS}
+lab=VREF_GND}
 N 680 -260 700 -260 {
 lab=VREF}
 N 700 -260 700 -210 {
@@ -79,7 +79,7 @@ spiceprefix=X
 }
 C {devices/ipin.sym} 200 -260 0 0 {name=p1 lab=VIN}
 C {devices/ipin.sym} 160 -180 0 0 {name=p2 lab=EN_VIN}
-C {devices/ipin.sym} 440 -260 0 0 {name=p3 lab=VSS}
+C {devices/ipin.sym} 440 -260 0 0 {name=p3 lab=VREF_GND}
 C {devices/ipin.sym} 680 -260 0 0 {name=p4 lab=VREF}
 C {devices/lab_pin.sym} 460 -180 0 1 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 920 -260 0 0 {name=p6 lab=VCM}
@@ -119,3 +119,4 @@ spiceprefix=X
 }
 C {devices/ipin.sym} 420 -180 0 0 {name=p5 lab=EN_VSS}
 C {devices/ipin.sym} 660 -180 0 0 {name=p15 lab=EN_VREF_Z}
+C {devices/ipin.sym} 200 -300 0 0 {name=p8 lab=VSS}

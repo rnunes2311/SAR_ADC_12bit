@@ -5,19 +5,17 @@
 
 * pin order for ef_sc_hd_decap_12 cell is different in the openlane generated netlist vs magic generated netlist, modified openlane generated netlist manually to match
 
-.subckt state_machine VDD VSS clk clk_data comp_p data[0] data[1] data[2] data[3]
-+ data[4] data[5] en_comp en_offset_cal en_offset_cal_o en_vcm_sw_o en_vcm_sw_o_i
-+ offset_cal_cycle rst_z sample_o single_ended start vcm_dummy_o vcm_o[0] vcm_o[10]
-+ vcm_o[1] vcm_o[2] vcm_o[3] vcm_o[4] vcm_o[5] vcm_o[6] vcm_o[7] vcm_o[8] vcm_o[9]
-+ vcm_o_i[0] vcm_o_i[10] vcm_o_i[1] vcm_o_i[2] vcm_o_i[3] vcm_o_i[4] vcm_o_i[5] vcm_o_i[6]
-+ vcm_o_i[7] vcm_o_i[8] vcm_o_i[9] vin_n_sw_on vin_p_sw_on vref_z_n_o[0] vref_z_n_o[10]
-+ vref_z_n_o[1] vref_z_n_o[2] vref_z_n_o[3] vref_z_n_o[4] vref_z_n_o[5] vref_z_n_o[6]
-+ vref_z_n_o[7] vref_z_n_o[8] vref_z_n_o[9] vref_z_p_o[0] vref_z_p_o[10] vref_z_p_o[1]
-+ vref_z_p_o[2] vref_z_p_o[3] vref_z_p_o[4] vref_z_p_o[5] vref_z_p_o[6] vref_z_p_o[7]
-+ vref_z_p_o[8] vref_z_p_o[9] vss_n_o[0] vss_n_o[10] vss_n_o[1] vss_n_o[2] vss_n_o[3]
-+ vss_n_o[4] vss_n_o[5] vss_n_o[6] vss_n_o[7] vss_n_o[8] vss_n_o[9] vss_p_o[0] vss_p_o[10]
-+ vss_p_o[1] vss_p_o[2] vss_p_o[3] vss_p_o[4] vss_p_o[5] vss_p_o[6] vss_p_o[7] vss_p_o[8]
-+ vss_p_o[9]
+* subckt definition copied from schematic generated netlist to match pin order
+
+.subckt state_machine VDD VSS RST_Z START COMP_P SAMPLE_O VCM_O[10] VCM_O[9] VCM_O[8] VCM_O[7] VCM_O[6] VCM_O[5] VCM_O[4] VCM_O[3] VCM_O[2] VCM_O[1]
++ VCM_O[0] EN_COMP VIN_P_SW_ON VIN_N_SW_ON VCM_DUMMY_O EN_VCM_SW_O EN_OFFSET_CAL OFFSET_CAL_CYCLE EN_OFFSET_CAL_O CLK_DATA DATA[5] DATA[4]
++ DATA[3] DATA[2] DATA[1] DATA[0] VSS_N_O[10] VSS_N_O[9] VSS_N_O[8] VSS_N_O[7] VSS_N_O[6] VSS_N_O[5] VSS_N_O[4] VSS_N_O[3] VSS_N_O[2]
++ VSS_N_O[1] VSS_N_O[0] VREF_Z_N_O[10] VREF_Z_N_O[9] VREF_Z_N_O[8] VREF_Z_N_O[7] VREF_Z_N_O[6] VREF_Z_N_O[5] VREF_Z_N_O[4] VREF_Z_N_O[3]
++ VREF_Z_N_O[2] VREF_Z_N_O[1] VREF_Z_N_O[0] VSS_P_O[10] VSS_P_O[9] VSS_P_O[8] VSS_P_O[7] VSS_P_O[6] VSS_P_O[5] VSS_P_O[4] VSS_P_O[3] VSS_P_O[2]
++ VSS_P_O[1] VSS_P_O[0] VREF_Z_P_O[10] VREF_Z_P_O[9] VREF_Z_P_O[8] VREF_Z_P_O[7] VREF_Z_P_O[6] VREF_Z_P_O[5] VREF_Z_P_O[4] VREF_Z_P_O[3]
++ VREF_Z_P_O[2] VREF_Z_P_O[1] VREF_Z_P_O[0] CLK EN_VCM_SW_O_I VCM_O_I[10] VCM_O_I[9] VCM_O_I[8] VCM_O_I[7] VCM_O_I[6] VCM_O_I[5] VCM_O_I[4]
++ VCM_O_I[3] VCM_O_I[2] VCM_O_I[1] VCM_O_I[0] SINGLE_ENDED
+
 XFILLER_0_2_7 VSS VSS VDD VDD sky130_fd_sc_hd__fill_1
 X_294_ counter\[9\] _103_ VSS VSS VDD VDD net42 sky130_fd_sc_hd__nor2_1
 X_363_ _026_ net107 net117 VSS VSS VDD VDD _020_ sky130_fd_sc_hd__o21a_1

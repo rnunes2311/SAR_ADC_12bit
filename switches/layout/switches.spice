@@ -21,18 +21,18 @@ X13 a_n561_n800# a_n687_n826# a_n657_n800# a_n851_n904# sky130_fd_pr__nfet_01v8 
 X14 a_111_n800# a_81_n826# a_15_n800# a_n851_n904# sky130_fd_pr__nfet_01v8 ad=1.32 pd=8.33 as=1.32 ps=8.33 w=8 l=0.15
 .ends
 
-.subckt sky130_fd_pr__nfet_01v8_BG2JC8 a_15_n200# a_111_n200# a_n111_n226# a_n81_n200#
-+ a_81_n226# a_n173_n200# VSUBS
-X0 a_n81_n200# a_n111_n226# a_n173_n200# VSUBS sky130_fd_pr__nfet_01v8 ad=0.33 pd=2.33 as=0.62 ps=4.62 w=2 l=0.15
-X1 a_15_n200# a_n111_n226# a_n81_n200# VSUBS sky130_fd_pr__nfet_01v8 ad=0.33 pd=2.33 as=0.33 ps=2.33 w=2 l=0.15
-X2 a_111_n200# a_81_n226# a_15_n200# VSUBS sky130_fd_pr__nfet_01v8 ad=0.62 pd=4.62 as=0.33 ps=2.33 w=2 l=0.15
-.ends
-
 .subckt sky130_fd_pr__nfet_01v8_CA2JC5 a_15_n800# a_111_n800# a_n111_n826# a_n81_n800#
 + a_81_n826# a_n173_n800# VSUBS
 X0 a_n81_n800# a_n111_n826# a_n173_n800# VSUBS sky130_fd_pr__nfet_01v8 ad=1.32 pd=8.33 as=2.48 ps=16.62 w=8 l=0.15
 X1 a_15_n800# a_n111_n826# a_n81_n800# VSUBS sky130_fd_pr__nfet_01v8 ad=1.32 pd=8.33 as=1.32 ps=8.33 w=8 l=0.15
 X2 a_111_n800# a_81_n826# a_15_n800# VSUBS sky130_fd_pr__nfet_01v8 ad=2.48 pd=16.62 as=1.32 ps=8.33 w=8 l=0.15
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_BG2JC8 a_15_n200# a_111_n200# a_n111_n226# a_n81_n200#
++ a_81_n226# a_n173_n200# VSUBS
+X0 a_n81_n200# a_n111_n226# a_n173_n200# VSUBS sky130_fd_pr__nfet_01v8 ad=0.33 pd=2.33 as=0.62 ps=4.62 w=2 l=0.15
+X1 a_15_n200# a_n111_n226# a_n81_n200# VSUBS sky130_fd_pr__nfet_01v8 ad=0.33 pd=2.33 as=0.33 ps=2.33 w=2 l=0.15
+X2 a_111_n200# a_81_n226# a_15_n200# VSUBS sky130_fd_pr__nfet_01v8 ad=0.62 pd=4.62 as=0.33 ps=2.33 w=2 l=0.15
 .ends
 
 .subckt sky130_fd_pr__nfet_01v8_lvt_HYT5PW a_15_n200# a_111_n200# a_n111_n226# a_n81_n200#
@@ -166,18 +166,19 @@ X4 a_n90_n200# a_n139_222# a_n182_n200# VSUBS sky130_fd_pr__nfet_01v8 ad=0.62 pd
 .subckt switches EN_VREF_Z[10] EN_VREF_Z[9] EN_VREF_Z[8] EN_VREF_Z[7] EN_VREF_Z[6]
 + EN_VREF_Z[5] EN_VREF_Z[4] EN_VREF_Z[3] EN_VREF_Z[2] EN_VREF_Z[1] EN_VREF_Z[0] Cbtm_0_dummy
 + Cbtm_0 Cbtm_1 Cbtm_2 Cbtm_3 Cbtm_4 Cbtm_5 Cbtm_6 Cbtm_7 Cbtm_8 Cbtm_9 Cbtm_10 VIN
-+ VSS VREF VCM EN_VSS[10] EN_VSS[9] EN_VSS[8] EN_VSS[7] EN_VIN EN_VCM_SW EN_VCM[10]
-+ EN_VCM[9] EN_VCM[8] EN_VCM[7] EN_VSS[6] EN_VSS[5] EN_VSS[4] EN_VSS[3] EN_VSS[2]
-+ EN_VSS[1] EN_VSS[0] EN_VCM[0] EN_VCM_DUMMY EN_VCM[1] EN_VCM[4] EN_VCM[2] EN_VCM[5]
-+ EN_VCM[3] EN_VCM[6] VDD VDAC
-Xsky130_fd_pr__nfet_01v8_D6PFL8_0 VSS VSS VSS Cbtm_9 EN_VSS[7] Cbtm_10 VSS Cbtm_7
-+ EN_VSS[8] EN_VSS[10] VSS Cbtm_10 Cbtm_8 VSS Cbtm_10 VSS VSS VSS Cbtm_9 EN_VSS[9]
-+ Cbtm_10 sky130_fd_pr__nfet_01v8_D6PFL8
-Xsky130_fd_pr__nfet_01v8_BG2JC8_0 VIN Cbtm_7 EN_VIN Cbtm_8 EN_VIN VIN VSS sky130_fd_pr__nfet_01v8_BG2JC8
++ VREF VCM EN_VSS[10] EN_VSS[9] EN_VSS[8] EN_VSS[7] EN_VIN EN_VCM_SW EN_VCM[10] EN_VCM[9]
++ EN_VCM[8] EN_VCM[7] EN_VSS[6] EN_VSS[5] EN_VSS[4] EN_VSS[3] EN_VSS[2] EN_VSS[1]
++ EN_VSS[0] EN_VCM[0] EN_VCM_DUMMY EN_VCM[1] EN_VCM[4] EN_VCM[2] EN_VCM[5] EN_VCM[3]
++ EN_VCM[6] VDD VDAC VREF_GND VSS
+Xsky130_fd_pr__nfet_01v8_D6PFL8_0 VREF_GND VREF_GND VREF_GND Cbtm_9 EN_VSS[7] Cbtm_10
++ VREF_GND Cbtm_7 EN_VSS[8] EN_VSS[10] VREF_GND Cbtm_10 Cbtm_8 VREF_GND Cbtm_10 VREF_GND
++ VSS VREF_GND Cbtm_9 EN_VSS[9] Cbtm_10 sky130_fd_pr__nfet_01v8_D6PFL8
 Xsky130_fd_pr__nfet_01v8_CA2JC5_0 VIN Cbtm_9 EN_VIN Cbtm_10 EN_VIN VIN VSS sky130_fd_pr__nfet_01v8_CA2JC5
+Xsky130_fd_pr__nfet_01v8_BG2JC8_0 VIN Cbtm_7 EN_VIN Cbtm_8 EN_VIN VIN VSS sky130_fd_pr__nfet_01v8_BG2JC8
 Xsky130_fd_pr__nfet_01v8_lvt_HYT5PW_0 VCM Cbtm_5 EN_VCM[6] Cbtm_6 EN_VCM[5] VCM VSS
 + sky130_fd_pr__nfet_01v8_lvt_HYT5PW
-Xsky130_fd_pr__nfet_01v8_BG2JC8_1 VSS Cbtm_5 EN_VSS[6] Cbtm_6 EN_VSS[5] VSS VSS sky130_fd_pr__nfet_01v8_BG2JC8
+Xsky130_fd_pr__nfet_01v8_BG2JC8_1 VREF_GND Cbtm_5 EN_VSS[6] Cbtm_6 EN_VSS[5] VREF_GND
++ VSS sky130_fd_pr__nfet_01v8_BG2JC8
 Xsky130_fd_pr__pfet_01v8_lvt_BA634A_0 EN_VREF_Z[3] VREF VREF VREF VREF EN_VREF_Z[5]
 + EN_VREF_Z[1] VREF VREF EN_VREF_Z[2] Cbtm_1 Cbtm_4 VDD Cbtm_2 EN_VREF_Z[0] Cbtm_3
 + EN_VREF_Z[4] Cbtm_0 Cbtm_5 sky130_fd_pr__pfet_01v8_lvt_BA634A
@@ -199,7 +200,8 @@ Xsky130_fd_pr__pfet_01v8_lvt_D3D366_0 Cbtm_9 EN_VREF_Z[10] VREF EN_VREF_Z[10] Cb
 Xsky130_fd_pr__nfet_01v8_lvt_PPAFQT_0 VCM VCM VCM Cbtm_8 Cbtm_10 EN_VCM[7] Cbtm_10
 + VCM EN_VCM_SW Cbtm_7 Cbtm_9 EN_VCM[9] VCM VCM Cbtm_10 VDAC VDAC Cbtm_9 VCM VCM VDAC
 + VCM VCM VCM Cbtm_10 EN_VCM[8] EN_VCM[10] VDAC VCM VSS sky130_fd_pr__nfet_01v8_lvt_PPAFQT
-Xsky130_fd_pr__nfet_01v8_KJP4PL_0 VSS EN_VSS[1] Cbtm_0 VSS Cbtm_2 EN_VSS[0] VSS Cbtm_3
-+ EN_VSS[2] EN_VSS[4] VSS Cbtm_1 Cbtm_4 EN_VSS[3] VSS VSS sky130_fd_pr__nfet_01v8_KJP4PL
+Xsky130_fd_pr__nfet_01v8_KJP4PL_0 VREF_GND EN_VSS[1] Cbtm_0 VREF_GND Cbtm_2 EN_VSS[0]
++ VREF_GND Cbtm_3 EN_VSS[2] EN_VSS[4] VREF_GND Cbtm_1 Cbtm_4 EN_VSS[3] VREF_GND VSS
++ sky130_fd_pr__nfet_01v8_KJP4PL
 .ends
 

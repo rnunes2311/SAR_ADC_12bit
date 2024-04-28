@@ -44,8 +44,8 @@ Circuit 1: sky130_fd_pr__pfet_01v8_lvt     |Circuit 2: sky130_fd_pr__pfet_01v8_l
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__pfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt are equivalent.
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_D6PFL8 in circuit switches (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_BG2JC8 in circuit switches (0)(2 instances)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_CA2JC5 in circuit switches (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_BG2JC8 in circuit switches (0)(2 instances)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_HYT5PW in circuit switches (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_BA634A in circuit switches (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_KJGFCE in circuit switches (0)(1 instance)
@@ -70,7 +70,7 @@ sky130_fd_pr__nfet_01v8 (37->23)           |sky130_fd_pr__nfet_01v8 (23)
 sky130_fd_pr__nfet_01v8_lvt (32->13)       |sky130_fd_pr__nfet_01v8_lvt (13)           
 sky130_fd_pr__pfet_01v8_lvt (37->11)       |sky130_fd_pr__pfet_01v8_lvt (11)           
 Number of devices: 47                      |Number of devices: 47                      
-Number of nets: 54                         |Number of nets: 54                         
+Number of nets: 55                         |Number of nets: 55                         
 ---------------------------------------------------------------------------------------
 Resolving symmetries by property value.
 Resolving symmetries by pin name.
@@ -80,11 +80,10 @@ Subcircuit pins:
 Circuit 1: switches                        |Circuit 2: switches                        
 -------------------------------------------|-------------------------------------------
 Cbtm_0_dummy                               |Cbtm_0_dummy                               
-VDD                                        |VDD                                        
-VREF                                       |VREF                                       
 VCM                                        |VCM                                        
 VIN                                        |VIN                                        
 EN_VIN                                     |EN_VIN                                     
+VSS                                        |VSS                                        
 EN_VCM_SW                                  |EN_VCM_SW                                  
 VDAC                                       |VDAC                                       
 EN_VCM[10]                                 |EN_VCM[10]                                 
@@ -132,7 +131,9 @@ Cbtm_2                                     |Cbtm_2
 Cbtm_4                                     |Cbtm_4                                     
 Cbtm_1                                     |Cbtm_1                                     
 Cbtm_5                                     |Cbtm_5                                     
-VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+VREF_GND                                   |VREF_GND                                   
+VREF                                       |VREF                                       
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes switches and switches are equivalent.
