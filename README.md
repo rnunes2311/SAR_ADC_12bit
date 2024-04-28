@@ -42,11 +42,11 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 |SNDR with noise⁴𝄒⁵							|			|					|		|dB		|
 |SFDR⁴										|			|					|		|dB		|
 
-¹ Input signal is sampled for 2 clock cycles. Clock/sampling frequency is limited by the 500 Ω resistance from the pads to the circuit in the TinyTapeout IC.
-² Clock falling edge triggers the latched comparator, therefore clock low pulse width has to be larger than latched comparator propagation delay.
-³ Typical values for INL/DNL based on C extraction. Mismatch is not included.
-⁴ SNDR/ENOB do not include distortion introduced by TinyTapeout analog MUX.
-⁵ Noise estimated, not obtained directly from simulation.
+¹ Input signal is sampled for 2 clock cycles. Clock/sampling frequency is limited by the 500 Ω resistance from the pads to the circuit in the TinyTapeout IC.\
+² Clock falling edge triggers the latched comparator, therefore clock low pulse width has to be larger than latched comparator propagation delay.\
+³ Typical values for INL/DNL based on C extraction. Mismatch is not included.\
+⁴ SNDR/ENOB do not include distortion introduced by TinyTapeout analog MUX.\
+⁵ Noise estimated, not obtained directly from simulation.\
 
 
 **TODO**
