@@ -4,9 +4,8 @@ module state_machine(
 	input start,
 	input single_ended,
 	input en_offset_cal,
-	input comp_p, comp_n,
+	input comp_p,
 	input vin_p_sw_on, vin_n_sw_on,
-	input [2:0] debug_mux,
 	input en_vcm_sw_o_i,
 	input [10:0] vcm_o_i,
 	
@@ -22,8 +21,7 @@ module state_machine(
 	output reg en_vcm_sw_o,
 	output reg en_comp,
 	output reg offset_cal_cycle,
-	output reg en_offset_cal_o,
-	output reg debug_out);
+	output reg en_offset_cal_o);
 
 reg [1:0] state;
 reg [11:0] result;
@@ -155,7 +153,7 @@ begin
 	end
 end
 
-
+/*
 always @(*)
 begin
 	case (debug_mux)
@@ -168,17 +166,17 @@ begin
 		'd5: debug_out = comp_n;
 		'd6: debug_out = counter[0];
 		'd7: debug_out = counter[11];
-		/*'d8: debug_out = counter[10];
+		'd8: debug_out = counter[10];
 		'd9: debug_out = counter[9];
 		'd10: debug_out = counter[8];
 		'd11: debug_out = counter[7];
 		'd12: debug_out = counter[6];
 		'd13: debug_out = counter[4];
 		'd14: debug_out = counter[2];
-		'd15: debug_out = counter[0];*/
+		'd15: debug_out = counter[0];
 	endcase
 end
-
+*/
 assign clk_data = counter[5] & (state == convert);
 assign data = counter[4] ? ~result[5:0] : {~(result[11] | single_ended_reg),~result[10:6]};
 

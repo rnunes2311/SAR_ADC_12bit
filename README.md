@@ -25,6 +25,7 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 |Parameter									|Min		|Typical			|Max	|Unit	|
 |-------------------------------------------|-----------|-------------------|-------|-------|
 |Supply Voltage								|1.7		|1.8				|1.9	|V		|
+|Power Consumption							|			|					|		|µA		|
 |Temperature								|0			|27					|85		|ºC		|
 |Reference Voltage							|1.15		|1.2				|1.25	|V		|
 |Input Common Mode Voltage (differential)	|0.5		|0.6				|0.7	|V		|
@@ -46,7 +47,7 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 ² Clock falling edge triggers the latched comparator, therefore clock low pulse width has to be larger than latched comparator propagation delay.\
 ³ Typical values for INL/DNL based on C extraction. Mismatch is not included.\
 ⁴ SNDR/ENOB do not include distortion introduced by TinyTapeout analog MUX.\
-⁵ Noise estimated, not obtained directly from simulation.\
+⁵ Noise estimated, not obtained directly from simulation.
 
 
 **TODO**
