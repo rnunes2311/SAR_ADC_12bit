@@ -1,0 +1,114 @@
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/switches/switches.sch
+.subckt switches VCM VREF_GND VREF VIN EN_VIN EN_VREF_Z[10] EN_VREF_Z[9] EN_VREF_Z[8] EN_VREF_Z[7] EN_VREF_Z[6] EN_VREF_Z[5]
++ EN_VREF_Z[4] EN_VREF_Z[3] EN_VREF_Z[2] EN_VREF_Z[1] EN_VREF_Z[0] EN_VSS[10] EN_VSS[9] EN_VSS[8] EN_VSS[7] EN_VSS[6] EN_VSS[5] EN_VSS[4]
++ EN_VSS[3] EN_VSS[2] EN_VSS[1] EN_VSS[0] EN_VCM[10] EN_VCM[9] EN_VCM[8] EN_VCM[7] EN_VCM[6] EN_VCM[5] EN_VCM[4] EN_VCM[3] EN_VCM[2]
++ EN_VCM[1] EN_VCM[0] EN_VCM_SW EN_VCM_DUMMY Cbtm_8 Cbtm_7 Cbtm_0 Cbtm_6 Cbtm_5 Cbtm_0_dummy Cbtm_4 Cbtm_3 VDAC Cbtm_10 Cbtm_9 Cbtm_2 Cbtm_1
++ VDD VSS
+*.PININFO VCM:I VREF_GND:I VREF:I VIN:I VDD:I Cbtm_0_dummy:O Cbtm_0:O Cbtm_1:O Cbtm_2:O Cbtm_3:O Cbtm_4:O Cbtm_5:O Cbtm_6:O
+*+ Cbtm_7:O Cbtm_8:O Cbtm_9:O Cbtm_10:O VDAC:O EN_VIN:I EN_VREF_Z[10:0]:I EN_VSS[10:0]:I EN_VCM[10:0]:I EN_VCM_DUMMY:I EN_VCM_SW:I VSS:I
+x1 VCM EN_VCM_SW VDAC VDD VSS switch_VCM
+x2 VCM VREF_GND VIN VREF EN_VCM[10] EN_VREF_Z[10] Cbtm_10 VDD EN_VSS[10] EN_VIN VSS switch_C10
+x3 VCM VREF_GND VIN VREF EN_VCM[9] EN_VREF_Z[9] Cbtm_9 VDD EN_VSS[9] EN_VIN VSS switch_C9
+x4 VCM VREF_GND VIN VREF EN_VCM[8] EN_VREF_Z[8] Cbtm_8 VDD EN_VSS[8] EN_VIN VSS switch_C8
+x5 VCM VREF_GND VIN VREF EN_VCM[7] EN_VREF_Z[7] Cbtm_7 VDD EN_VSS[7] EN_VIN VSS switch_C7
+x6 VCM VREF_GND VIN VREF EN_VCM[6] EN_VREF_Z[6] Cbtm_6 VDD EN_VSS[6] EN_VIN VSS switch_C6
+x7 VCM VREF_GND VIN VREF EN_VCM[5] EN_VREF_Z[5] Cbtm_5 VDD EN_VSS[5] EN_VIN VSS switch_C5
+x8 VCM VREF_GND VIN VREF EN_VCM[4] EN_VREF_Z[4] Cbtm_4 VDD EN_VSS[4] EN_VIN VSS switch_C5
+x9 VCM VREF_GND VIN VREF EN_VCM[3] EN_VREF_Z[3] Cbtm_3 VDD EN_VSS[3] EN_VIN VSS switch_C5
+x10 VCM VREF_GND VIN VREF EN_VCM[2] EN_VREF_Z[2] Cbtm_2 VDD EN_VSS[2] EN_VIN VSS switch_C5
+x11 VCM VREF_GND VIN VREF EN_VCM[1] EN_VREF_Z[1] Cbtm_1 VDD EN_VSS[1] EN_VIN VSS switch_C5
+x12 VCM VREF_GND VIN VREF EN_VCM[0] EN_VREF_Z[0] Cbtm_0 VDD EN_VSS[0] EN_VIN VSS switch_C5
+x13 VCM VIN EN_VCM_DUMMY Cbtm_0_dummy EN_VIN VSS switch_C0_dummy
+.ends
+
+* expanding   symbol:  individual_switches/switch_VCM.sym # of pins=5
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_VCM.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_VCM.sch
+.subckt switch_VCM VCM EN_VCM Cbtm VDD VSS
+*.PININFO VCM:I EN_VCM:I Cbtm:O VSS:I VDD:I
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=64 nf=8 m=1
+.ends
+
+
+* expanding   symbol:  individual_switches/switch_C10.sym # of pins=11
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C10.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C10.sch
+.subckt switch_C10 VCM VREF_GND VIN VREF EN_VCM EN_VREF_Z Cbtm VDD EN_VSS EN_VIN VSS
+*.PININFO VIN:I EN_VIN:I VREF_GND:I VREF:I VCM:I EN_VCM:I Cbtm:O VDD:I EN_VSS:I EN_VREF_Z:I VSS:I
+XM1 VIN EN_VIN Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=16 nf=2 m=1
+XM2 VREF_GND EN_VSS Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=64 nf=8 m=1
+XM4 Cbtm EN_VREF_Z VREF VDD sky130_fd_pr__pfet_01v8_lvt L=0.35 W=128 nf=16 m=1
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=64 nf=8 m=1
+.ends
+
+
+* expanding   symbol:  individual_switches/switch_C9.sym # of pins=11
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C9.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C9.sch
+.subckt switch_C9 VCM VREF_GND VIN VREF EN_VCM EN_VREF_Z Cbtm VDD EN_VSS EN_VIN VSS
+*.PININFO VIN:I EN_VIN:I VREF_GND:I VREF:I VCM:I EN_VCM:I Cbtm:O VDD:I EN_VSS:I EN_VREF_Z:I VSS:I
+XM1 VIN EN_VIN Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=1 m=1
+XM2 VREF_GND EN_VSS Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=32 nf=4 m=1
+XM4 Cbtm EN_VREF_Z VREF VDD sky130_fd_pr__pfet_01v8_lvt L=0.35 W=64 nf=8 m=1
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=32 nf=4 m=1
+.ends
+
+
+* expanding   symbol:  individual_switches/switch_C8.sym # of pins=11
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C8.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C8.sch
+.subckt switch_C8 VCM VREF_GND VIN VREF EN_VCM EN_VREF_Z Cbtm VDD EN_VSS EN_VIN VSS
+*.PININFO VIN:I EN_VIN:I VREF_GND:I VREF:I VCM:I EN_VCM:I Cbtm:O VDD:I EN_VSS:I EN_VREF_Z:I VSS:I
+XM1 VIN EN_VIN Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=4 nf=1 m=1
+XM2 VREF_GND EN_VSS Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=16 nf=2 m=1
+XM4 Cbtm EN_VREF_Z VREF VDD sky130_fd_pr__pfet_01v8_lvt L=0.35 W=32 nf=4 m=1
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=16 nf=2 m=1
+.ends
+
+
+* expanding   symbol:  individual_switches/switch_C7.sym # of pins=11
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C7.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C7.sch
+.subckt switch_C7 VCM VREF_GND VIN VREF EN_VCM EN_VREF_Z Cbtm VDD EN_VSS EN_VIN VSS
+*.PININFO VIN:I EN_VIN:I VREF_GND:I VREF:I VCM:I EN_VCM:I Cbtm:O VDD:I EN_VSS:I EN_VREF_Z:I VSS:I
+XM1 VIN EN_VIN Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 m=1
+XM2 VREF_GND EN_VSS Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=1 m=1
+XM4 Cbtm EN_VREF_Z VREF VDD sky130_fd_pr__pfet_01v8_lvt L=0.35 W=16 nf=2 m=1
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=8 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  individual_switches/switch_C6.sym # of pins=11
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C6.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C6.sch
+.subckt switch_C6 VCM VREF_GND VIN VREF EN_VCM EN_VREF_Z Cbtm VDD EN_VSS EN_VIN VSS
+*.PININFO VIN:I EN_VIN:I VREF_GND:I VREF:I VCM:I EN_VCM:I Cbtm:O VDD:I EN_VSS:I EN_VREF_Z:I VSS:I
+XM1 VIN EN_VIN Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 VREF_GND EN_VSS Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=4 nf=1 m=1
+XM4 Cbtm EN_VREF_Z VREF VDD sky130_fd_pr__pfet_01v8_lvt L=0.35 W=8 nf=1 m=1
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=4 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  individual_switches/switch_C5.sym # of pins=11
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C5.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C5.sch
+.subckt switch_C5 VCM VREF_GND VIN VREF EN_VCM EN_VREF_Z Cbtm VDD EN_VSS EN_VIN VSS
+*.PININFO VIN:I EN_VIN:I VREF_GND:I VREF:I VCM:I EN_VCM:I Cbtm:O VDD:I EN_VSS:I EN_VREF_Z:I VSS:I
+XM1 VIN EN_VIN Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 VREF_GND EN_VSS Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 m=1
+XM4 Cbtm EN_VREF_Z VREF VDD sky130_fd_pr__pfet_01v8_lvt L=0.35 W=4 nf=1 m=1
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=2 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  individual_switches/switch_C0_dummy.sym # of pins=6
+** sym_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C0_dummy.sym
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/individual_switches/switch_C0_dummy.sch
+.subckt switch_C0_dummy VCM VIN EN_VCM Cbtm EN_VIN VSS
+*.PININFO VIN:I EN_VIN:I VCM:I EN_VCM:I Cbtm:O VSS:I
+XM1 VIN EN_VIN Cbtm VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM5 VCM EN_VCM Cbtm VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=2 nf=1 m=1
+.ends
+
+.end

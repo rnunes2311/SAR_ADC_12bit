@@ -5,7 +5,7 @@ This is a 12 bit SAR ADC designed using open source tools in the Skywater 130 nm
 The ADC can be configured as differential (12 bit) or single-ended (11 bit). The comparator has offset self-calibration implemented, which can be enabled using an input pin.
 
 
-![alt text](./layout/layout_picture.png "SAR ADC Layout")
+![alt text](./media/layout_picture.png "SAR ADC Layout")
 
 
 ## Current Status

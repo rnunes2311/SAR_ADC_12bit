@@ -1,0 +1,19 @@
+** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12b/SAR_ADC_12bit/bootstrap/bootstrap.sch
+
+.include /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+.subckt bootstrap VDD VSS VIN SW_ON EN VGATE
+*.PININFO VDD:I VSS:I VIN:I VGATE:O EN:I SW_ON:O
+XM1 VDD VGATE Vtop Vtop sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 VGATE EN_Z Vtop Vtop sky130_fd_pr__pfet_01v8 L=0.15 W=16 nf=4 m=1
+XM3 VGATE VDD Vd VSS sky130_fd_pr__nfet_05v0_nvt L=0.9 W=8 nf=2 m=1
+XM4 Vd EN_Z VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=2 m=1
+XM5 Vbottom EN_Z VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=2 m=1
+XM6 Vtop Vbottom Vtop Vtop sky130_fd_pr__pfet_01v8 L=15 W=15 nf=4 m=1
+x1 EN VSS VSS VDD VDD EN_Z sky130_fd_sc_hd__inv_4
+XM8 VIN VGATE Vbottom VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=2 m=1
+XM7 VGATE VDD VGATE_1V8 VSS sky130_fd_pr__nfet_05v0_nvt L=0.9 W=4 nf=1 m=1
+x2 VGATE_1V8 VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_2
+x3 net1 VSS VSS VDD VDD SW_ON sky130_fd_sc_hd__inv_4
+.ends
+.end

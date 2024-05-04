@@ -1,0 +1,148 @@
+* SPICE3 file created from latched_comparator_flat.ext - technology: sky130A
+
+.subckt latched_comparator VDD VIN_P VIN_N EN OUT_P OUT_N VSS
+X0 OUT_N a_7044_n101# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1 a_6336_n1376# a_5750_567# a_6017_n750# VSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+X2 a_5701_n950# a_7185_n671# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3 VSS a_7044_n101# OUT_N VSS sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4 a_5701_n950# a_7185_n671# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X5 a_7044_n101# a_5750_567# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X6 OUT_N a_7044_n101# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X7 a_7185_n671# EN VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X8 a_5750_567# a_5701_n950# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+X9 VDD a_7044_443# OUT_P VDD sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X10 a_7044_443# a_6017_n750# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X11 VSS a_7044_n101# OUT_N VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X12 a_5701_n950# a_7185_n671# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X13 a_5824_n1376# a_5824_n1376# a_5824_n1376# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.31 pd=2.62 as=2.44 ps=20.3 w=1 l=0.15
+X14 a_5750_567# a_6017_n750# a_5750_n33# VSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+X15 a_5824_n1376# a_5824_n1376# a_5824_n1376# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.31 pd=2.62 as=0 ps=0 w=1 l=0.15
+X16 OUT_P a_7044_443# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X17 VDD a_5701_n950# a_6336_n1376# VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+X18 a_5701_n950# a_7185_n671# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X19 VSS a_7185_n671# a_5701_n950# VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X20 OUT_N a_7044_n101# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X21 VDD a_7044_443# OUT_P VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X22 VDD a_5750_567# a_6017_n750# VDD sky130_fd_pr__pfet_01v8 ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=0.15
+X23 VSS a_7185_n671# a_5701_n950# VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X24 VSS a_7044_443# OUT_P VSS sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X25 OUT_P a_7044_443# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X26 a_7044_443# a_6017_n750# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X27 VDD a_7044_n101# OUT_N VDD sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X28 a_5750_567# a_6017_n750# VDD VDD sky130_fd_pr__pfet_01v8 ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=0.15
+X29 VDD a_7044_n101# OUT_N VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X30 OUT_P a_7044_443# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X31 VDD a_7185_n671# a_5701_n950# VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X32 VDD a_5701_n950# a_6017_n750# VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+X33 a_5749_n862# a_5701_n950# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+X34 VSS a_7044_443# OUT_P VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X35 VDD a_7185_n671# a_5701_n950# VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X36 a_6336_n1376# VIN_N a_5824_n1376# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.31 pd=2.62 as=0.31 ps=2.62 w=1 l=0.15
+X37 a_5824_n1376# VIN_P a_5750_n33# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.31 pd=2.62 as=0.31 ps=2.62 w=1 l=0.15
+X38 OUT_P a_7044_443# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X39 VSS a_5701_n950# a_5824_n1376# VSS sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+X40 a_5750_n33# a_5701_n950# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+X41 OUT_N a_7044_n101# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X42 a_7185_n671# EN VSS VSS sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X43 a_7044_n101# a_5750_567# VDD VDD sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+C0 a_5824_n1376# VDD 0.002817f
+C1 a_5749_n862# VDD 0.002086f
+C2 a_7185_n671# VDD 0.369731f
+C3 a_6336_n1376# VDD 0.28401f
+C4 a_5749_n862# a_5824_n1376# 0.011795f
+C5 a_7044_n101# VDD 0.502852f
+C6 a_7185_n671# a_5824_n1376# 1.06e-19
+C7 a_7185_n671# a_5749_n862# 1.51e-20
+C8 a_6336_n1376# a_5824_n1376# 0.478986f
+C9 a_7044_443# VDD 0.510422f
+C10 a_6336_n1376# a_5749_n862# 1.56e-19
+C11 a_6017_n750# VDD 3.09925f
+C12 a_6336_n1376# a_7185_n671# 3.38e-19
+C13 a_5750_n33# VDD 0.286006f
+C14 a_7044_n101# a_7185_n671# 0.031327f
+C15 a_5750_567# VDD 2.8707f
+C16 a_6017_n750# a_5824_n1376# 0.017018f
+C17 a_5701_n950# VDD 3.23064f
+C18 a_5750_n33# a_5824_n1376# 0.319625f
+C19 a_6017_n750# a_5749_n862# 0.083608f
+C20 a_7044_443# a_7185_n671# 3.88e-21
+C21 a_5750_n33# a_5749_n862# 0.121815f
+C22 a_5750_567# a_5824_n1376# 0.087626f
+C23 a_6017_n750# a_7185_n671# 0.001279f
+C24 a_5750_567# a_5749_n862# 0.001042f
+C25 a_5701_n950# a_5824_n1376# 0.18904f
+C26 a_5750_n33# a_7185_n671# 3.29e-20
+C27 a_6017_n750# a_6336_n1376# 0.269796f
+C28 a_7044_443# a_7044_n101# 0.054961f
+C29 VIN_P VIN_N 0.06568f
+C30 a_5701_n950# a_5749_n862# 0.136434f
+C31 a_5750_567# a_7185_n671# 2.61e-19
+C32 a_5750_n33# a_6336_n1376# 0.091415f
+C33 a_6017_n750# a_7044_n101# 0.036194f
+C34 a_6017_n750# a_7044_443# 0.105143f
+C35 a_5701_n950# a_7185_n671# 0.238422f
+C36 a_5750_567# a_6336_n1376# 0.554188f
+C37 a_5750_567# a_7044_n101# 0.08488f
+C38 a_5701_n950# a_6336_n1376# 0.22564f
+C39 a_5750_n33# a_6017_n750# 0.565517f
+C40 a_5701_n950# a_7044_n101# 0.01446f
+C41 OUT_N EN 0.024532f
+C42 a_5701_n950# a_7044_443# 0.011696f
+C43 a_5750_567# a_6017_n750# 1.92825f
+C44 OUT_P EN 1.35e-19
+C45 a_5750_567# a_5750_n33# 0.193802f
+C46 a_5701_n950# a_6017_n750# 0.289453f
+C47 OUT_P OUT_N 0.032037f
+C48 a_5701_n950# a_5750_n33# 0.224374f
+C49 a_5701_n950# a_5750_567# 0.310596f
+C50 VDD VIN_N 3.03e-19
+C51 VDD VIN_P 0.004398f
+C52 VDD EN 0.077195f
+C53 a_5824_n1376# VIN_N 0.310848f
+C54 VDD OUT_N 0.50067f
+C55 a_5824_n1376# VIN_P 0.10998f
+C56 a_5749_n862# VIN_N 2.91e-20
+C57 a_5749_n862# VIN_P 0.037749f
+C58 VDD OUT_P 0.50503f
+C59 a_6336_n1376# VIN_N 0.018166f
+C60 a_6336_n1376# VIN_P 0.010615f
+C61 a_7185_n671# EN 0.205546f
+C62 a_6336_n1376# EN 1.29e-20
+C63 a_7185_n671# OUT_N 0.003093f
+C64 a_6017_n750# VIN_N 5.34e-19
+C65 a_7044_n101# EN 0.007619f
+C66 a_5750_n33# VIN_N 0.004549f
+C67 a_7044_n101# OUT_N 0.3874f
+C68 a_6017_n750# VIN_P 0.009393f
+C69 a_5750_567# VIN_N 5.86e-19
+C70 a_7044_n101# OUT_P 0.001233f
+C71 a_5750_n33# VIN_P 0.134337f
+C72 a_6017_n750# EN 1.38e-19
+C73 a_7044_443# OUT_N 0.001233f
+C74 a_5701_n950# VIN_N 0.006197f
+C75 a_5750_567# VIN_P 0.001304f
+C76 a_6017_n750# OUT_N 0.004824f
+C77 a_7044_443# OUT_P 0.387825f
+C78 a_5701_n950# VIN_P 0.035744f
+C79 a_6017_n750# OUT_P 0.007074f
+C80 a_5701_n950# EN 0.026565f
+C81 a_5750_567# OUT_N 0.005064f
+C82 a_5701_n950# OUT_N 0.004961f
+C83 a_5701_n950# OUT_P 0.004398f
+C84 VIN_N VSS 0.632382f
+C85 VIN_P VSS 0.415444f
+C86 EN VSS 0.381551f
+C87 OUT_N VSS 0.554502f
+C88 OUT_P VSS 0.473669f
+C89 VDD VSS 10.411401f
+C90 a_5824_n1376# VSS 1.8646f
+C91 a_5749_n862# VSS 0.710916f
+C92 a_7185_n671# VSS 0.626749f
+C93 a_6336_n1376# VSS 0.409083f
+C94 a_7044_n101# VSS 0.608487f
+C95 a_7044_443# VSS 0.628916f
+C96 a_6017_n750# VSS 1.11811f
+C97 a_5750_n33# VSS 0.432779f
+C98 a_5750_567# VSS 0.895266f
+C99 a_5701_n950# VSS 3.53633f
+.ends

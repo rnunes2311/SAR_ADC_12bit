@@ -1,0 +1,40 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -80 -60 -80 60 {}
+L 4 80 -60 80 60 {}
+L 4 -100 40 -80 40 {}
+L 4 -100 20 -80 20 {}
+L 4 80 -10 100 -10 {}
+L 4 80 10 100 10 {}
+L 4 -100 -40 -80 -40 {}
+L 4 -80 -60 80 -60 {}
+L 4 -80 80 80 80 {}
+L 4 -100 0 -80 0 {}
+L 4 -80 60 -80 80 {}
+L 4 80 60 80 80 {}
+B 5 -2.5 -62.5 2.5 -57.5 {name=VDD dir=in}
+B 5 -102.5 37.5 -97.5 42.5 {name=CAL_RESULT dir=in}
+B 5 -102.5 17.5 -97.5 22.5 {name=EN_COMP dir=in}
+B 5 97.5 -12.5 102.5 -7.5 {name=CAL_P dir=out}
+B 5 97.5 7.5 102.5 12.5 {name=CAL_N dir=out}
+B 5 -102.5 -42.5 -97.5 -37.5 {name=EN dir=in}
+B 5 -2.5 77.5 2.5 82.5 {name=VSS dir=in}
+B 5 -102.5 -2.5 -97.5 2.5 {name=CAL_CYCLE dir=in}
+T {@symname} -69 -26 0 0 0.25 0.25 {}
+T {@name} 55 -72 0 0 0.2 0.2 {}
+T {VDD} -5 -54 0 0 0.2 0.2 {}
+T {CAL_RESULT} -75 36 0 0 0.2 0.2 {}
+T {EN_COMP} -75 16 0 0 0.2 0.2 {}
+T {CAL_P} 75 -14 0 1 0.2 0.2 {}
+T {CAL_N} 75 6 0 1 0.2 0.2 {}
+T {EN} -75 -44 0 0 0.2 0.2 {}
+T {VSS} -5 66 0 0 0.2 0.2 {}
+T {CAL_CYCLE} -75 -4 0 0 0.2 0.2 {}
