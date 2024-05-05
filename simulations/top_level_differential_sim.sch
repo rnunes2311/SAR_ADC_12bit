@@ -186,12 +186,12 @@ value="
 		write top_level_differential_sim.raw
 .endc
 "}
-C {devices/vsource.sym} 280 -90 0 0 {name=V5 value="pwl(0 0.3999 1u 0.3999
-+ 1.001u 0.7998 2u 0.7998
-+ 2.001u 0.9597 3u 0.9597
-+ 3.001u 0.2399 4u 0.2399
-+ 4.001u 0.0184 5u 0.0184
-+ 5.001u 1.1812 6u 1.1812)" savecurrent=false}
+C {devices/vsource.sym} 280 -90 0 0 {name=V5 value="pwl(0 0.4000 1u 0.4000
++ 1.001u 0.8000 2u 0.8000
++ 2.001u 0.9599 3u 0.9599
++ 3.001u 0.2401 4u 0.2401
++ 4.001u 0.0186 5u 0.0186
++ 5.001u 1.1814 6u 1.1814)" savecurrent=false}
 C {../schematic/SAR_ADC_12bit.sym} 720 -320 0 0 {name=x1}
 C {devices/res.sym} 360 -410 2 0 {name=R1
 value=500
@@ -213,12 +213,12 @@ C {devices/lab_pin.sym} 1000 -180 0 0 {name=p46 lab=SINGLE_ENDED}
 C {devices/lab_wire.sym} 1160 -140 2 1 {name=p33 sig_type=std_logic lab=VREF_GND}
 C {devices/lab_wire.sym} 1200 -320 0 0 {name=p8 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 1160 -320 0 0 {name=p9 sig_type=std_logic lab=VREF}
-C {devices/vsource.sym} 460 -90 0 0 {name=V6 value="pwl(0 0.8001 1u 0.8001
-+ 1.001u 0.4002 2u 0.4002
-+ 2.001u 0.2402 3u 0.2402
-+ 3.001u 0.9600 4u 0.9600
-+ 4.001u 1.1816 5u 1.1816
-+ 5.001u 0.0187 6u 0.0187)" savecurrent=false}
+C {devices/vsource.sym} 460 -90 0 0 {name=V6 value="pwl(0 0.8000 1u 0.8000
++ 1.001u 0.4000 2u 0.4000
++ 2.001u 0.2401 3u 0.2401
++ 3.001u 0.9599 4u 0.9599
++ 4.001u 1.1814 5u 1.1814
++ 5.001u 0.0186 6u 0.0186)" savecurrent=false}
 C {devices/vsource.sym} 520 -330 0 0 {name=V10 value=\{VREF_GND\} savecurrent=true}
 C {devices/lab_wire.sym} 520 -300 2 1 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 520 -440 0 0 {name=p10 sig_type=std_logic lab=VREF_GND}
