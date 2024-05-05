@@ -59,3 +59,6 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 **TODO**
 ## Validation Results
 **TODO**
+
+
+<meta name="google-site-verification" content="FUNnSyWVGmvIeec_sytaRmatiY5VtPVswIvpZIUq8Z8" />
