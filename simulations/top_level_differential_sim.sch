@@ -5,6 +5,89 @@ K {}
 V {}
 S {}
 E {}
+B 2 60 160 860 560 {flags=graph
+y1=-0.023
+y2=1.2
+ypos1=1.7
+ypos2=1.9
+divy=5
+subdivy=4
+unity=1
+x1=0
+x2=6e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+digital=0
+
+
+sim_type=tran
+
+
+color="4 5"
+node="x1.vdac_p
+x1.vdac_n"}
+B 2 890 160 1690 560 {flags=graph
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=6e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="clk_data
+result;data[5],data[4],data[3],data[2],data[1],data[0]
+start"
+color="8 6 7"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1}
+B 2 60 580 860 980 {flags=graph
+y1=0.01
+y2=1.5
+ypos1=1.7
+ypos2=1.9
+divy=5
+subdivy=4
+unity=1
+x1=0
+x2=6e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+digital=0
+
+
+sim_type=tran
+
+
+color="4 5"
+node="x1.vdac_pi
+x1.vdac_ni"}
 N 360 -380 360 -360 {
 lab=#net1}
 N 440 -380 440 -360 {
@@ -165,3 +248,7 @@ C {devices/vsource.sym} 280 -550 0 0 {name=V11 value="pwl(0 0 3u 0 3.001u 1.8)" 
 C {devices/lab_wire.sym} 520 -520 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 520 -580 0 0 {name=p6 sig_type=std_logic lab=SINGLE_ENDED}
 C {devices/vsource.sym} 520 -550 0 0 {name=V12 value=0 savecurrent=false}
+C {devices/launcher.sym} 130 120 0 0 {name=h5
+descr="Load Waveforms" 
+tclcommand="xschem raw_read $netlist_dir/top_level_differential_sim.raw tran"
+}

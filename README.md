@@ -22,6 +22,10 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 
 ## Theory
 **TODO**
+
+### Waveforms from Simulation
+![alt text](./media/waveforms.png "SAR ADC Layout")
+
 ## Specification
 
 |Parameter									|Min		|Typical			|Max	|Unit	|
