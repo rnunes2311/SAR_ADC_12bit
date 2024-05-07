@@ -5,7 +5,7 @@ import numpy as np
 from tabulate import tabulate
 
 # Change file name if needed
-LTR = RawRead("./simulation/top_level_differential_sim.raw")
+LTR = RawRead("./simulation/top_level_differential_sim_nom_1V8_0V6_27C.raw")
 
 fig, ax = plt.subplots(12, 1, height_ratios=[10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], sharex=True)
 

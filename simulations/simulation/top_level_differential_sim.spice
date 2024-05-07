@@ -1,11 +1,12 @@
 ** sch_path: /Users/ricardonunes/Desktop/SAR_ADC_12bit/simulations/top_level_differential_sim.sch
 
 * Skywater 130 nm PDK models
-.lib /opt/pdk/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+.lib /opt/pdk/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice ff
 
 * Models for diodes, resistors, capacitors
-.include /opt/pdk/share/pdk/sky130A/libs.tech/combined/continuous/models_diodes.spice
-.include /opt/pdk/share/pdk/sky130A/libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice
+*.include /opt/pdk/share/pdk/sky130A/libs.tech/combined/continuous/models_diodes.spice
+
+*.include /opt/pdk/share/pdk/sky130A/libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice
 
 * Models for standard digital cells
 .include /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
@@ -49,10 +50,10 @@ V12 SINGLE_ENDED VSS 0
 
 
 * Supply, common mode and reference voltage
-.param VDD = 1.8
+.param VDD = 1.7
 .param VREF = 1.2
 .param VREF_GND = 0
-.param VCM = 0.6
+.param VCM = 0.5
 
 *.save all
 
@@ -76,6 +77,8 @@ V12 SINGLE_ENDED VSS 0
 
 .option GMIN=1e-12 reltol=1e-5
 .control
+		set temp = 0
+		set tnom = 0
 		set num_threads=8
 		tran 10n 6u
 		write top_level_differential_sim.raw

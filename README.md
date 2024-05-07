@@ -26,6 +26,25 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 ### Waveforms from Simulation
 ![alt text](./media/waveforms.png "SAR ADC Layout")
 
+## Pinout
+
+|Name			|Direction		|Type		|Description																					|
+|---------------|---------------|-----------|-----------------------------------------------------------------------------------------------|
+|VDD			|Input			|Supply		|1.8 V supply input.																			|
+|VSS			|Input			|Supply		|Ground.																						|
+|VREF			|Input			|Analog		|1.2 V reference voltage.																		|
+|VREF_GND		|Input			|Analog		|Reference voltage ground.																		|
+|VCM			|Input			|Analog		|0.6 V common-mode voltage.																		|
+|VIN_P			|Input			|Analog		|Positive input signal.																			|
+|VIN_N			|Input			|Analog		|Negative input signal.																			|
+|CLK			|Input			|Digital	|Clock input.																					|
+|RST_Z			|Input			|Digital	|Enable input.																					|
+|START			|Input			|Digital	|Start conversion input. Keep high to convert continuously.										|
+|EN_OFFSET_CAL	|Input			|Digital	|Enables comparator offset self-calibration.													|
+|SINGLE_ENDED	|Input			|Digital	|Configures ADC for single-ended input and VIN_N is used as ground reference.					|
+|CLK_DATA		|Output			|Digital	|Rising edge used to sample the 6 MSBs and falling edge used for the 6 LSBs of ADC output. 		|
+|DATA[5:0]		|Output			|Digital	|Result of the conversion.																		|
+
 ## Specification
 
 |Parameter									|Min		|Typical			|Max	|Unit	|
@@ -57,5 +76,32 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 
 
 **TODO**
+
+## Verification
+Top level was verified for the following conditions:
+
+|Corner						|Supply Voltage		|Common-mode Voltage	|Temperature	|Status	|
+|---------------------------|-------------------|-----------------------|---------------|-------|
+|Nominal					|1.8 V				|0.6 V					|27 ºC			|✅		|
+|Nominal, C extraction		|1.8 V				|0.6 V					|27 ºC			|❌		|
+|Nominal, RC extraction		|1.8 V				|0.6 V					|27 ºC			|❌		|
+|FETs ff, RC low			|1.7 V				|0.5 V					|0 ºC			|✅		|
+|FETs ff, RC low			|1.7 V				|0.5 V					|85 ºC			|❌		|
+|FETs ff, RC low			|1.7 V				|0.7 V					|0 ºC			|❌		|
+|FETs ff, RC low			|1.7 V				|0.7 V					|85 ºC			|❌		|
+|FETs ff, RC low			|1.9 V				|0.5 V					|0 ºC			|❌		|
+|FETs ff, RC low			|1.9 V				|0.5 V					|85 ºC			|❌		|
+|FETs ff, RC low			|1.9 V				|0.7 V					|0 ºC			|❌		|
+|FETs ff, RC low			|1.9 V				|0.7 V					|85 ºC			|❌		|
+|FETs ss, RC high			|1.7 V				|0.5 V					|0 ºC			|❌		|
+|FETs ss, RC high			|1.7 V				|0.5 V					|85 ºC			|❌		|
+|FETs ss, RC high			|1.7 V				|0.7 V					|0 ºC			|❌		|
+|FETs ss, RC high			|1.7 V				|0.7 V					|85 ºC			|❌		|
+|FETs ss, RC high			|1.9 V				|0.5 V					|0 ºC			|❌		|
+|FETs ss, RC high			|1.9 V				|0.5 V					|85 ºC			|❌		|
+|FETs ss, RC high			|1.9 V				|0.7 V					|0 ºC			|❌		|
+|FETs ss, RC high			|1.9 V				|0.7 V					|85 ºC			|❌		|
+
+
 ## Validation Results
 **TODO**
