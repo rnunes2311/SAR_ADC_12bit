@@ -10,21 +10,26 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 
 ## Current Status
 
-|Stage					|Status		|Comment						|
-|-----------------------|-----------|-------------------------------|
-|Schematic				|✅			|								|
-|State Machine			|✅			|								|
-|Verification			|❌			|Not finished					|
-|Layout					|❌			|Top level routing not finished	|
-|DRC & LVS				|❌			|Top level DRC & LVS missing	|
-|TinyTapeout Submission	|❌			|Target: 1st of June			|
+|Stage					|Status		|Comment									|
+|-----------------------|-----------|-------------------------------------------|
+|Schematic				|✅			|											|
+|State Machine			|✅			|											|
+|Verification			|❌			|Working on it!								|
+|Layout					|✅			|Layout done, TinyTapeout template missing	|
+|DRC & LVS				|✅			|DRC & LVS clean							|
+|TinyTapeout Submission	|❌			|Target: 1st of June						|
 
 
 ## Theory
-**TODO**
+**Topics:**
+- Binary search algorithm
+- IMCS switching scheme
+- Comparator common-mode voltage requirements
+- Capacitive DAC
+- Noise
 
 ### Waveforms from Simulation
-![alt text](./media/waveforms.png "SAR ADC Layout")
+![alt text](./media/waveforms.png "SAR ADC Waveforms")
 
 ## Pinout
 
@@ -53,7 +58,7 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 |Power Consumption							|			|					|		|µA		|
 |Temperature								|0			|27					|85		|ºC		|
 |Reference Voltage							|1.15		|1.2				|1.25	|V		|
-|Input Common Mode Voltage (differential)	|0.5		|0.6				|0.7	|V		|
+|Input Common Mode Voltage (differential)⁶	|0.5		|0.6				|0.7	|V		|
 |Ground Reference Voltage (single-ended)	|-0.1		|0					|0.1	|V		|
 |Output resistance for analog inputs		|			|					|500	|Ω		|
 |Clock Frequency¹							|			|					|20		|MHz	|
@@ -72,8 +77,8 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 ² Clock falling edge triggers the latched comparator, therefore clock low pulse width has to be larger than latched comparator propagation delay.\
 ³ Typical values for INL/DNL based on C extraction. Mismatch is not included.\
 ⁴ SNDR/ENOB do not include distortion introduced by TinyTapeout analog MUX.\
-⁵ Noise estimated, not obtained directly from simulation.
-
+⁵ Noise estimated, not obtained directly from simulation.\
+⁶ Both 2*VIN(CM)-VCM and VCM should respect the limits to ensure comparator input common-mode voltage range is respected.
 
 **TODO**
 
@@ -85,14 +90,14 @@ Top level was verified for the following conditions:
 |Nominal					|1.8 V				|0.6 V					|27 ºC			|✅		|
 |Nominal, C extraction		|1.8 V				|0.6 V					|27 ºC			|❌		|
 |Nominal, RC extraction		|1.8 V				|0.6 V					|27 ºC			|❌		|
-|FETs ff, RC low			|1.7 V				|0.5 V					|0 ºC			|✅		|
-|FETs ff, RC low			|1.7 V				|0.5 V					|85 ºC			|❌		|
-|FETs ff, RC low			|1.7 V				|0.7 V					|0 ºC			|❌		|
-|FETs ff, RC low			|1.7 V				|0.7 V					|85 ºC			|❌		|
-|FETs ff, RC low			|1.9 V				|0.5 V					|0 ºC			|❌		|
-|FETs ff, RC low			|1.9 V				|0.5 V					|85 ºC			|❌		|
-|FETs ff, RC low			|1.9 V				|0.7 V					|0 ºC			|❌		|
-|FETs ff, RC low			|1.9 V				|0.7 V					|85 ºC			|❌		|
+|FETs ff, RC low			|1.7 V				|0.5 V					|0 ºC			|⚠️¹	|
+|FETs ff, RC low			|1.7 V				|0.5 V					|85 ºC			|⚠️¹	|
+|FETs ff, RC low			|1.7 V				|0.7 V					|0 ºC			|✅		|
+|FETs ff, RC low			|1.7 V				|0.7 V					|85 ºC			|✅		|
+|FETs ff, RC low			|1.9 V				|0.5 V					|0 ºC			|✅		|
+|FETs ff, RC low			|1.9 V				|0.5 V					|85 ºC			|✅		|
+|FETs ff, RC low			|1.9 V				|0.7 V					|0 ºC			|✅		|
+|FETs ff, RC low			|1.9 V				|0.7 V					|85 ºC			|✅		|
 |FETs ss, RC high			|1.7 V				|0.5 V					|0 ºC			|❌		|
 |FETs ss, RC high			|1.7 V				|0.5 V					|85 ºC			|❌		|
 |FETs ss, RC high			|1.7 V				|0.7 V					|0 ºC			|❌		|
@@ -101,6 +106,13 @@ Top level was verified for the following conditions:
 |FETs ss, RC high			|1.9 V				|0.5 V					|85 ºC			|❌		|
 |FETs ss, RC high			|1.9 V				|0.7 V					|0 ºC			|❌		|
 |FETs ss, RC high			|1.9 V				|0.7 V					|85 ºC			|❌		|
+
+¹ VDAC_P (or VDAC_N) = 2*VCM-VIN_P (or VIN_N) during the determination of the MSB. If VIN_P (or VIN_N) > 2*VCM, VDAC_P (or VDAC_N) goes below 0 V, causing the charge in the S&H capacitor not to be conserved either because of parasitic PN junction between top plate switch (drain/source) and substrate being slightly forward biased or NMOS transistor being slightly switched on. See appendix 1 for detailed results.
+
+### DNL/INL
+The DNL and INL were estimated by extracting all the DAC capacitors (MIM and parasitic metal capacitances) from the C extraction netlist.
+A python script reads the netlist file, extracts all the relevant capacitances and simulates the output of the ADC for a sweep of the input signal in order to calculate the DNL and INL. The results can be seen in the figure below.
+![alt text](./media/dnl_inl.png "SAR ADC DNL and INL")
 
 
 ## Validation Results

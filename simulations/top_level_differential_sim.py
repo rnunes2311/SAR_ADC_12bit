@@ -5,7 +5,7 @@ import numpy as np
 from tabulate import tabulate
 
 # Change file name if needed
-LTR = RawRead("./simulation/top_level_differential_sim_nom_1V8_0V6_27C.raw")
+LTR = RawRead("./simulation/top_level_differential_sim.raw")
 
 fig, ax = plt.subplots(12, 1, height_ratios=[10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], sharex=True)
 
@@ -116,6 +116,7 @@ n = 12
 expected_codes = np.round((vin_samples/vref + 1) * 2**(n-1) - 0.5).astype(int)
 
 # Extract obtained output codes
+
 obtained_codes = [0]*len(expected_codes)
 for i in range(6):
     data_rising_dig = data[i].get_wave()[clk_data_rising] > vdd/2
