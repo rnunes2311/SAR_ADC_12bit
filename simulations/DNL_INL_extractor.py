@@ -152,6 +152,8 @@ ax[1].plot(inl, **next(my_colors), label="INL")
 ax[1].set_xlabel("Output Code")
 ax[0].set_ylabel("DNL (LSB)")
 ax[1].set_ylabel("INL (LSB)")
+ax[0].set_xlim(0,2**12-1)
+ax[0].set_xticks([0, 2**10, 2**11, 3*(2**10), 2**12-1])
 fig.suptitle("Expected ADC DNL/INL")
 
 
