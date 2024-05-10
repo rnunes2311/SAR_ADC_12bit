@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 60 160 860 560 {flags=graph
-y1=0.48
-y2=0.49
+y1=0.1
+y2=0.87
 ypos1=1.7
 ypos2=1.9
 divy=5
 subdivy=4
 unity=1
-x1=5.7413907e-06
-x2=5.7445858e-06
+x1=0
+x2=1.7048087e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -43,8 +43,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=5.7413907e-06
-x2=5.7445858e-06
+x1=0
+x2=1.7048087e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -59,15 +59,15 @@ logx=0
 logy=0
 digital=1}
 B 2 60 580 860 980 {flags=graph
-y1=0.78
-y2=0.83
+y1=0.0076
+y2=1.8
 ypos1=1.7
 ypos2=1.9
 divy=5
 subdivy=4
 unity=1
-x1=5.7413907e-06
-x2=5.7445858e-06
+x1=0
+x2=1.7048087e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -179,7 +179,12 @@ value="
 
 .option GMIN=1e-12 reltol=1e-5
 .control
-		set num_threads=8
+		set ngbehavior=hsa
+          		set skywaterpdk
+          		set ng_nomodcheck
+          		set num_threads=4
+          		option noinit
+          		option klu
 		tran 10n 7u
 		write top_level_differential_sim.raw
 .endc

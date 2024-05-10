@@ -88,7 +88,7 @@ Top level was verified for the following conditions:
 |Corner						|Supply Voltage		|Common-mode Voltage	|Temperature	|Status	|
 |---------------------------|-------------------|-----------------------|---------------|-------|
 |Nominal					|1.8 V				|0.6 V					|27 ºC			|✅		|
-|Nominal, C extraction		|1.8 V				|0.6 V					|27 ºC			|❌		|
+|Nominal, C extraction		|1.8 V				|0.6 V					|27 ºC			|✅		|
 |Nominal, RC extraction		|1.8 V				|0.6 V					|27 ºC			|❌		|
 |FETs ff, RC low			|1.7 V				|0.5 V					|0 ºC			|⚠️¹	|
 |FETs ff, RC low			|1.7 V				|0.5 V					|85 ºC			|⚠️¹	|
