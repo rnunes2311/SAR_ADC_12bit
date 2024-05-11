@@ -107,9 +107,9 @@ table = [["PDAC bottom plate net", "PDAC capacitance to top plate (fF)", "PDAC c
 
 for i in range(len(btm_plates_p)):
     if i == 0:
-        table.append([btm_plates_p[i], round(cdac_p_par[i],2), 1, btm_plates_n[i], round(cdac_n_par[i],2), 1])
+        table.append([btm_plates_p[i], round(cdac_p_par[i],5), 1, btm_plates_n[i], round(cdac_n_par[i],5), 1])
     else:
-        table.append([btm_plates_p[i], round(cdac_p_par[i],2), round(cdac_p_par[i]/cdac_p_par[i-1],3), btm_plates_n[i], round(cdac_n_par[i],2), round(cdac_p_par[i]/cdac_p_par[i-1],3)])
+        table.append([btm_plates_p[i], round(cdac_p_par[i],5), round(cdac_p_par[i]/cdac_p_par[i-1],3), btm_plates_n[i], round(cdac_n_par[i],5), round(cdac_p_par[i]/cdac_p_par[i-1],3)])
 
 print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
 
