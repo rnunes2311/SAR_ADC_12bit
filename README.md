@@ -26,6 +26,7 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 - IMCS switching scheme
 - Comparator common-mode voltage requirements
 - Capacitive DAC
+- Bottom plate sampling
 - Noise
 
 ### Waveforms from Simulation
@@ -98,9 +99,9 @@ Top level was verified for the following conditions:
 |FETs ff, RC low			|1.9 V				|0.5 V					|85 ºC			|✅		|
 |FETs ff, RC low			|1.9 V				|0.7 V					|0 ºC			|✅		|
 |FETs ff, RC low			|1.9 V				|0.7 V					|85 ºC			|✅		|
-|FETs ss, RC high			|1.7 V				|0.5 V					|0 ºC			|❌		|
-|FETs ss, RC high			|1.7 V				|0.5 V					|85 ºC			|❌		|
-|FETs ss, RC high			|1.7 V				|0.7 V					|0 ºC			|❌		|
+|FETs ss, RC high			|1.7 V				|0.5 V					|0 ºC			|✅		|
+|FETs ss, RC high			|1.7 V				|0.5 V					|85 ºC			|✅		|
+|FETs ss, RC high			|1.7 V				|0.7 V					|0 ºC			|✅		|
 |FETs ss, RC high			|1.7 V				|0.7 V					|85 ºC			|❌		|
 |FETs ss, RC high			|1.9 V				|0.5 V					|0 ºC			|❌		|
 |FETs ss, RC high			|1.9 V				|0.5 V					|85 ºC			|❌		|
