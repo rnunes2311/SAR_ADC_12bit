@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 60 160 860 560 {flags=graph
-y1=0.00087
+y1=-0.2
 y2=1.8
 ypos1=-0.11
 ypos2=2
@@ -14,7 +14,7 @@ divy=5
 subdivy=4
 unity=1
 x1=0
-x2=1.1009556e-06
+x2=0.000208
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -33,12 +33,9 @@ sim_type=tran
 
 
 
-color="6 7 8 9 10"
+color="6 7"
 node="vin_p
-vin_n
-start
-rst_z
-clk"}
+vin_n"}
 B 2 890 160 1690 560 {flags=graph
 y1=0
 y2=2
@@ -48,7 +45,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1.1009556e-06
+x2=0.000208
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -63,7 +60,7 @@ logx=0
 logy=0
 digital=1}
 B 2 60 580 860 980 {flags=graph
-y1=0.014
+y1=-0.019
 y2=1.2
 ypos1=1.7
 ypos2=1.9
@@ -71,7 +68,7 @@ divy=5
 subdivy=4
 unity=1
 x1=0
-x2=1.1009556e-06
+x2=0.000208
 divx=5
 subdivx=1
 xlabmag=1.0

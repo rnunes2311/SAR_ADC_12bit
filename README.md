@@ -56,7 +56,7 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 |Parameter									|Min		|Typical			|Max	|Unit	|
 |-------------------------------------------|-----------|-------------------|-------|-------|
 |Supply Voltage								|1.7		|1.8				|1.9	|V		|
-|Power Consumption							|			|					|		|µA		|
+|Power Consumption							|			|347.5				|		|µW		|
 |Temperature								|0			|27					|85		|ºC		|
 |Reference Voltage							|1.15		|1.2				|1.25	|V		|
 |Input Common Mode Voltage (differential)⁶	|0.5		|0.6				|0.7	|V		|
@@ -66,13 +66,14 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 |Clock Low Pulse Width²						|10			|					|		|ns		|
 |Sampling Frequency							|			|1/16 of clock freq.|		|		|
 |Sampling Capacitance						|			|~ 4.1				|		|pF		|
-|INL³										|			|					|		|LSB	|
-|DNL³										|			|					|		|LSB	|
-|ENOB without noise⁴						|			|					|		|bit	|
+|INL³										|-0.4		|					|0.4	|LSB	|
+|DNL³										|-0.3		|					|0.1	|LSB	|
+|ENOB without noise⁴						|			|11.8				|		|bit	|
 |ENOB with noise⁴𝄒⁵							|			|					|		|bit	|
-|SNDR without noise⁴						|			|					|		|dB		|
+|SNDR without noise⁴						|			|72.7				|		|dB		|
 |SNDR with noise⁴𝄒⁵							|			|					|		|dB		|
-|SFDR⁴										|			|					|		|dB		|
+|SFDR⁴										|			|83.0				|		|dB		|
+|THD⁴										|			|79.4				|		|dB		|
 
 ¹ Input signal is sampled for 2 clock cycles. Clock/sampling frequency is limited by the 500 Ω resistance from the pads to the circuit in the TinyTapeout IC.\
 ² Clock falling edge triggers the latched comparator, therefore clock low pulse width has to be larger than latched comparator propagation delay.\
@@ -115,6 +116,11 @@ The DNL and INL were estimated by extracting all the DAC capacitors (MIM and par
 A python script reads the netlist file, extracts all the relevant capacitances and simulates the output of the ADC for a sweep of the input signal in order to calculate the DNL and INL. The results can be seen in the figure below.
 ![alt text](./media/dnl_inl.png "SAR ADC DNL and INL")
 
+### Dynamic Performance
+The dynamic performance of the ADC was obtained by sampling 256 points with a sampling frequency of 1.25 MHz and a full-scale 327.148438 kHz input signal (for coherent sampling).
+Due to the long simulation time the simulation was only done for nominal corner and typical conditions. Due to the slightly non-linear DAC the ENOB is slightly smaller than 12 bit.
+In reality the sampling noise and the comparator noise will further reduce the ENOB.
+![alt text](./media/spectrum.png "SAR ADC Dynamic Performance")
 
 ## Validation Results
 **TODO**
