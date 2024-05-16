@@ -65,7 +65,7 @@ The ADC can be configured as differential (12 bit) or single-ended (11 bit). The
 |Clock Frequency¹							|			|					|20		|MHz	|
 |Clock Low Pulse Width²						|10			|					|		|ns		|
 |Sampling Frequency							|			|1/16 of clock freq.|		|		|
-|Sampling Capacitance						|			|~ 4.1				|		|pF		|
+|Sampling Capacitance						|			|1.8				|		|pF		|
 |INL³										|-0.4		|					|0.4	|LSB	|
 |DNL³										|-0.3		|					|0.1	|LSB	|
 |ENOB without noise⁴						|			|11.8				|		|bit	|
