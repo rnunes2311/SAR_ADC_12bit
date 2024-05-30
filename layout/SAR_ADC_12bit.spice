@@ -1680,14 +1680,6 @@ Xsky130_fd_pr__pfet_01v8_M4CK9Z_0 LOAD_CAL_Z CAL_P EN_COMP_Z EN VDD VDD VDD m1_1
 Xx22 EN x6/Y x7/Y VSS VSS VDD VDD LOAD_CAL_Z sky130_fd_sc_hd__nand3_1
 .ends
 
-.subckt sky130_fd_pr__pfet_01v8_7FRQHJ a_n3087_118# a_n3029_21# a_29_n965# a_n3087_n868#
-+ a_n29_n868# a_29_21# a_3029_n868# a_3029_118# w_n3225_n1087# a_n3029_n965# a_n29_118#
-X0 a_n29_118# a_n3029_21# a_n3087_118# w_n3225_n1087# sky130_fd_pr__pfet_01v8 ad=0.54375 pd=4.04 as=1.0875 ps=8.08 w=3.75 l=15
-X1 a_3029_118# a_29_21# a_n29_118# w_n3225_n1087# sky130_fd_pr__pfet_01v8 ad=1.0875 pd=8.08 as=0.54375 ps=4.04 w=3.75 l=15
-X2 a_n29_n868# a_n3029_n965# a_n3087_n868# w_n3225_n1087# sky130_fd_pr__pfet_01v8 ad=0.54375 pd=4.04 as=1.0875 ps=8.08 w=3.75 l=15
-X3 a_3029_n868# a_29_n965# a_n29_n868# w_n3225_n1087# sky130_fd_pr__pfet_01v8 ad=1.0875 pd=8.08 as=0.54375 ps=4.04 w=3.75 l=15
-.ends
-
 .subckt sky130_fd_pr__pfet_01v8_XG6TDL a_n159_n426# a_111_431# a_33_n426# a_n221_n400#
 + a_n129_n400# a_63_n400# a_n81_431# w_n359_n619# a_n33_n400# a_159_n400#
 X0 a_n129_n400# a_n159_n426# a_n221_n400# w_n359_n619# sky130_fd_pr__pfet_01v8 ad=0.66 pd=4.33 as=1.24 ps=8.62 w=4 l=0.15
@@ -1716,12 +1708,18 @@ X1 a_n33_n400# a_n63_n426# a_n125_n400# a_n227_n574# sky130_fd_pr__nfet_01v8 ad=
 X0 a_90_n400# a_n90_n488# a_n148_n400# a_n282_n622# sky130_fd_pr__nfet_05v0_nvt ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=0.9
 .ends
 
+.subckt sky130_fd_pr__pfet_01v8_CMU2ES a_29_n895# a_n3407_118# a_3349_118# a_n3349_n895#
++ a_n29_n798# w_n3545_n1017# a_29_21# a_n3407_n798# a_n3349_21# a_n29_118# a_3349_n798#
+X0 a_3349_118# a_29_21# a_n29_118# w_n3545_n1017# sky130_fd_pr__pfet_01v8 ad=0.986 pd=7.38 as=0.493 ps=3.69 w=3.4 l=16.6
+X1 a_n29_n798# a_n3349_n895# a_n3407_n798# w_n3545_n1017# sky130_fd_pr__pfet_01v8 ad=0.493 pd=3.69 as=0.986 ps=7.38 w=3.4 l=16.6
+X2 a_3349_n798# a_29_n895# a_n29_n798# w_n3545_n1017# sky130_fd_pr__pfet_01v8 ad=0.986 pd=7.38 as=0.493 ps=3.69 w=3.4 l=16.6
+X3 a_n29_118# a_n3349_21# a_n3407_118# w_n3545_n1017# sky130_fd_pr__pfet_01v8 ad=0.493 pd=3.69 as=0.986 ps=7.38 w=3.4 l=16.6
+.ends
+
 .subckt bootstrap VDD VSS VIN SW_ON EN VGATE
 Xx1 EN VSS VSS VDD VDD EN_Z sky130_fd_sc_hd__inv_4
 Xx2 VGATE_1V8 VSS VSS VDD VDD x3/A sky130_fd_sc_hd__inv_2
 Xx3 x3/A VSS VSS VDD VDD SW_ON sky130_fd_sc_hd__inv_4
-Xsky130_fd_pr__pfet_01v8_7FRQHJ_0 Vtop Vbottom Vbottom Vtop Vtop Vbottom Vtop Vtop
-+ Vtop Vbottom Vtop sky130_fd_pr__pfet_01v8_7FRQHJ
 Xsky130_fd_pr__pfet_01v8_XG6TDL_0 EN_Z EN_Z EN_Z Vtop VGATE VGATE EN_Z Vtop Vtop Vtop
 + sky130_fd_pr__pfet_01v8_XG6TDL
 XXM1 Vtop VDD Vtop VGATE sky130_fd_pr__pfet_01v8_XGS3BL
@@ -1730,9 +1728,11 @@ XXM4 VSS VSS VSS EN_Z Vd sky130_fd_pr__nfet_01v8_6EHS5V
 XXM5 VSS VSS VSS EN_Z Vbottom sky130_fd_pr__nfet_01v8_6EHS5V
 XXM7 VDD VGATE_1V8 VSS VGATE sky130_fd_pr__nfet_05v0_nvt_JFFQEL
 XXM8 VSS VIN VIN VGATE Vbottom sky130_fd_pr__nfet_01v8_6EHS5V
+Xsky130_fd_pr__pfet_01v8_CMU2ES_0 Vbottom Vtop Vtop Vbottom Vtop Vtop Vbottom Vtop
++ Vbottom Vtop Vtop sky130_fd_pr__pfet_01v8_CMU2ES
 .ends
 
-.subckt CDAC_mim_12bit C0_dummy C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 VSS Ctop
+.subckt CDAC_mim_12bit C0_dummy C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 Ctop VSS
 .ends
 
 .subckt sky130_fd_pr__nfet_01v8_D6PFL8 a_15_n800# a_n561_n800# a_n177_n800# a_111_n800#
@@ -1946,16 +1946,16 @@ Xsky130_fd_pr__nfet_01v8_KJP4PL_0 VREF_GND EN_VSS[1] Cbtm_0 VREF_GND Cbtm_2 EN_V
 + switches_0/EN_VREF_Z[3] switches_0/EN_VCM_SW switches_0/EN_VSS[10] switches_0/EN_VSS[4]
 + switches_0/EN_VREF_Z[9] switches_0/EN_VREF_Z[1] switches_0/EN_VCM[4] switches_0/EN_VSS[2]
 + switches_0/EN_VCM[8] switches_0/EN_VCM[2] switches_0/EN_VSS[8] switches_0/EN_VCM[5]
-+ switches_0/EN_VREF_Z[4] switches_0/VREF_GND switches_0/EN_VREF_Z[6] bootstrap_0/SW_ON
-+ switches_0/EN_VCM[7] switches_0/EN_VREF_Z[8] switches_0/EN_VSS[7] switches_0/VREF
-+ switches_0/EN_VCM[9] bootstrap_0/EN CDAC_mim_12bit_1/Ctop switches_0/EN_VREF_Z[2]
-+ switches_0/EN_VSS[1] switches_0/EN_VCM_DUMMY switches_0/EN_VREF_Z[0] switches_0/VCM
++ switches_0/EN_VREF_Z[4] switches_0/VREF_GND switches_0/EN_VREF_Z[6] switches_0/EN_VCM[7]
++ switches_0/EN_VREF_Z[8] switches_0/EN_VSS[7] switches_0/VREF switches_0/EN_VCM[9]
++ bootstrap_0/EN CDAC_mim_12bit_1/Ctop switches_0/EN_VREF_Z[2] switches_0/EN_VSS[1]
++ bootstrap_0/SW_ON switches_0/EN_VCM_DUMMY switches_0/EN_VREF_Z[0] switches_0/VCM
 + switches_0/EN_VCM[10] switches_0/EN_VREF_Z[5] VSUBS switches_0/EN_VCM[1] switches_0/EN_VCM[0]
 Xbootstrap_0 switches_0/VDD VSUBS switches_0/VIN bootstrap_0/SW_ON bootstrap_0/EN
 + switches_0/EN_VIN bootstrap
 XCDAC_mim_12bit_1 switches_0/Cbtm_0_dummy switches_0/Cbtm_0 switches_0/Cbtm_1 switches_0/Cbtm_2
 + switches_0/Cbtm_3 switches_0/Cbtm_4 switches_0/Cbtm_5 switches_0/Cbtm_6 switches_0/Cbtm_7
-+ switches_0/Cbtm_8 switches_0/Cbtm_9 switches_0/Cbtm_10 VSUBS CDAC_mim_12bit_1/Ctop
++ switches_0/Cbtm_8 switches_0/Cbtm_9 switches_0/Cbtm_10 CDAC_mim_12bit_1/Ctop VSUBS
 + CDAC_mim_12bit
 Xswitches_0 switches_0/EN_VREF_Z[10] switches_0/EN_VREF_Z[9] switches_0/EN_VREF_Z[8]
 + switches_0/EN_VREF_Z[7] switches_0/EN_VREF_Z[6] switches_0/EN_VREF_Z[5] switches_0/EN_VREF_Z[4]
@@ -2024,9 +2024,9 @@ XDAC_and_SW_0 state_machine_0/vref_z_n_o[7] state_machine_0/vss_n_o[6] state_mac
 + state_machine_0/vss_n_o[4] state_machine_0/vref_z_n_o[9] state_machine_0/vref_z_n_o[1]
 + state_machine_0/vcm_o[4] state_machine_0/vss_n_o[2] state_machine_0/vcm_o[8] state_machine_0/vcm_o[2]
 + state_machine_0/vss_n_o[8] state_machine_0/vcm_o[5] state_machine_0/vref_z_n_o[4]
-+ VREF_GND state_machine_0/vref_z_n_o[6] SMPL_ON_N state_machine_0/vcm_o[7] state_machine_0/vref_z_n_o[8]
++ VREF_GND state_machine_0/vref_z_n_o[6] state_machine_0/vcm_o[7] state_machine_0/vref_z_n_o[8]
 + state_machine_0/vss_n_o[7] VREF state_machine_0/vcm_o[9] state_machine_0/sample_o
-+ VDAC_N state_machine_0/vref_z_n_o[2] state_machine_0/vss_n_o[1] state_machine_0/vcm_dummy_o
++ VDAC_N state_machine_0/vref_z_n_o[2] state_machine_0/vss_n_o[1] SMPL_ON_N state_machine_0/vcm_dummy_o
 + state_machine_0/vref_z_n_o[0] VCM state_machine_0/vcm_o[10] state_machine_0/vref_z_n_o[5]
 + VSS state_machine_0/vcm_o[1] state_machine_0/vcm_o[0] DAC_and_SW
 XDAC_and_SW_2 break_before_make_0/EN_VREF_Z_O[7] break_before_make_0/EN_VSS_O[6] break_before_make_0/EN_VSS_O[0]
@@ -2037,9 +2037,9 @@ XDAC_and_SW_2 break_before_make_0/EN_VREF_Z_O[7] break_before_make_0/EN_VSS_O[6]
 + break_before_make_0/EN_VREF_Z_O[1] state_machine_0/vcm_o[4] break_before_make_0/EN_VSS_O[2]
 + state_machine_0/vcm_o[8] state_machine_0/vcm_o[2] break_before_make_0/EN_VSS_O[8]
 + state_machine_0/vcm_o[5] break_before_make_0/EN_VREF_Z_O[4] VREF_GND break_before_make_0/EN_VREF_Z_O[6]
-+ SMPL_ON_P state_machine_0/vcm_o[7] break_before_make_0/EN_VREF_Z_O[8] break_before_make_0/EN_VSS_O[7]
++ state_machine_0/vcm_o[7] break_before_make_0/EN_VREF_Z_O[8] break_before_make_0/EN_VSS_O[7]
 + VREF state_machine_0/vcm_o[9] state_machine_0/sample_o VDAC_P break_before_make_0/EN_VREF_Z_O[2]
-+ break_before_make_0/EN_VSS_O[1] state_machine_0/vcm_dummy_o break_before_make_0/EN_VREF_Z_O[0]
++ break_before_make_0/EN_VSS_O[1] SMPL_ON_P state_machine_0/vcm_dummy_o break_before_make_0/EN_VREF_Z_O[0]
 + VCM state_machine_0/vcm_o[10] break_before_make_0/EN_VREF_Z_O[5] VSS state_machine_0/vcm_o[1]
 + state_machine_0/vcm_o[0] DAC_and_SW
 .ends

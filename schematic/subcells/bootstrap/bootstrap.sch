@@ -165,8 +165,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 260 300 3 0 {name=M6
-W=15
-L=15
+W=13.6
+L=16.6
 nf=4
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

@@ -6,7 +6,8 @@
 .subckt CDAC_12bit C0_dummy_btm C0_btm C1_btm C2_btm C3_btm C4_btm C5_btm C6_btm C7_btm C8_btm C9_btm C10_btm VDAC VSS
 .ends
 
-.subckt SAR_ADC_12bit VIN_P VDD VREF VCM VSS VIN_N RST_Z START CLK_DATA DATA[5] DATA[4] DATA[3] DATA[2] DATA[1] DATA[0]
+
+.subckt SAR_ADC_12bit VDD VCM VSS VREF VIN_P VIN_N RST_Z CLK_DATA DATA[5] DATA[4] DATA[3] DATA[2] DATA[1] DATA[0] START
 + EN_OFFSET_CAL CLK VREF_GND SINGLE_ENDED
 *.PININFO VIN_P:I VDD:I VREF:I VCM:I VSS:I VIN_N:I RST_Z:I START:I CLK_DATA:O DATA[5:0]:O EN_OFFSET_CAL:I CLK:I VREF_GND:I
 *+ SINGLE_ENDED:I
@@ -184,7 +185,7 @@ XM2 VGATE EN_Z Vtop Vtop sky130_fd_pr__pfet_01v8 L=0.15 W=16 nf=4 m=1
 XM3 VGATE VDD Vd VSS sky130_fd_pr__nfet_05v0_nvt L=0.9 W=8 nf=2 m=1
 XM4 Vd EN_Z VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=2 m=1
 XM5 Vbottom EN_Z VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=2 m=1
-XM6 Vtop Vbottom Vtop Vtop sky130_fd_pr__pfet_01v8 L=15 W=15 nf=4 m=1
+XM6 Vtop Vbottom Vtop Vtop sky130_fd_pr__pfet_01v8 L=16.6 W=13.6 nf=4 m=1
 x1 EN VSS VSS VDD VDD EN_Z sky130_fd_sc_hd__inv_4
 XM8 VIN VGATE Vbottom VSS sky130_fd_pr__nfet_01v8 L=0.15 W=8 nf=2 m=1
 XM7 VGATE VDD VGATE_1V8 VSS sky130_fd_pr__nfet_05v0_nvt L=0.9 W=4 nf=1 m=1
