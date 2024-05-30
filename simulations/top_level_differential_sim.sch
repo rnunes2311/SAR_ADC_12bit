@@ -141,7 +141,7 @@ value="
 *.include [xschem get current_dirname]/../layout/subcells/state_machine/state_machine_openlane_generated.spice
 
 * C or RC extraction of the SAR ADC
-.include [xschem get current_dirname]/../layout/SAR_ADC_12bit_flat_RCext.spice
+.include [xschem get current_dirname]/../layout/SAR_ADC_12bit_flat.spice
 "
 spice_ignore=false
 place=header}
@@ -179,7 +179,7 @@ value="
 .save x1.c10_p_btm x1.c9_p_btm x1.c8_p_btm x1.c7_p_btm x1.c6_p_btm x1.c5_p_btm x1.c4_p_btm x1.c3_p_btm x1.c2_p_btm x1.c1_p_btm x1.c0_p_btm x1.C0_dummy_p_btm
 .save x1.c10_n_btm x1.c9_n_btm x1.c8_n_btm x1.c7_n_btm x1.c6_n_btm x1.c5_n_btm x1.c4_n_btm x1.c3_n_btm x1.c2_n_btm x1.c1_n_btm x1.c0_n_btm x1.C0_dummy_n_btm
 
-.option GMIN=1e-11 reltol=1e-4
+.option GMIN=1e-12 reltol=1e-5
 .control
 		set ngbehavior=hsa
           		set skywaterpdk

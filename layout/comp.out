@@ -29,6 +29,21 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
+Circuit 1 cell sky130_fd_pr__nfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__nfet_01v8_lvt are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8_lvt is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8_lvt is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8_lvt     |Circuit 2: sky130_fd_pr__nfet_01v8_lvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__nfet_01v8_lvt are equivalent.
+
 Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
 Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
@@ -58,21 +73,6 @@ Circuit 1: sky130_fd_pr__nfet_05v0_nvt     |Circuit 2: sky130_fd_pr__nfet_05v0_n
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_05v0_nvt and sky130_fd_pr__nfet_05v0_nvt are equivalent.
-
-Circuit 1 cell sky130_fd_pr__nfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__nfet_01v8_lvt are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8_lvt is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8_lvt is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__nfet_01v8_lvt     |Circuit 2: sky130_fd_pr__nfet_01v8_lvt     
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
-4                                          |4                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__nfet_01v8_lvt are equivalent.
 
 Circuit 1 cell sky130_fd_pr__pfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__pfet_01v8_lvt are black boxes.
 Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8_lvt is a placeholder, treated as a black box.
@@ -1788,24 +1788,28 @@ VNB                                        |VNB
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_sc_hd__nand3_1 and sky130_fd_sc_hd__nand3_1 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_6HJFYD in circuit bootstrap (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_MAQRRG in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_XG6TDL in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_XGS3BL in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_05v0_nvt_F93ZEE in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_6EHS5V in circuit bootstrap (0)(3 instances)
 Flattening unmatched subcell sky130_fd_pr__nfet_05v0_nvt_JFFQEL in circuit bootstrap (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_B2JNY3 in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_CMU2ES in circuit bootstrap (0)(1 instance)
 
-Class bootstrap (0):  Merged 10 parallel devices.
+Class bootstrap (0):  Merged 13 parallel devices.
 Subcircuit summary:
 Circuit 1: bootstrap                       |Circuit 2: bootstrap                       
 -------------------------------------------|-------------------------------------------
 sky130_fd_sc_hd__inv_4 (2)                 |sky130_fd_sc_hd__inv_4 (2)                 
+sky130_fd_pr__nfet_01v8_lvt (1)            |sky130_fd_pr__nfet_01v8_lvt (1)            
 sky130_fd_sc_hd__inv_2 (1)                 |sky130_fd_sc_hd__inv_2 (1)                 
-sky130_fd_pr__pfet_01v8 (9->3)             |sky130_fd_pr__pfet_01v8 (3)                
+sky130_fd_pr__pfet_01v8 (10->4)            |sky130_fd_pr__pfet_01v8 (4)                
 sky130_fd_pr__nfet_05v0_nvt (3->2)         |sky130_fd_pr__nfet_05v0_nvt (2)            
-sky130_fd_pr__nfet_01v8 (6->3)             |sky130_fd_pr__nfet_01v8 (3)                
-Number of devices: 11                      |Number of devices: 11                      
-Number of nets: 12                         |Number of nets: 12                         
+sky130_fd_pr__nfet_01v8 (10->4)            |sky130_fd_pr__nfet_01v8 (4)                
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 13                         |Number of nets: 13                         
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
 
@@ -1813,11 +1817,11 @@ Subcircuit pins:
 Circuit 1: bootstrap                       |Circuit 2: bootstrap                       
 -------------------------------------------|-------------------------------------------
 VGATE                                      |VGATE                                      
+VIN                                        |VIN                                        
+SW_ON                                      |SW_ON                                      
 VDD                                        |VDD                                        
 VSS                                        |VSS                                        
 EN                                         |EN                                         
-VIN                                        |VIN                                        
-SW_ON                                      |SW_ON                                      
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes bootstrap and bootstrap are equivalent.

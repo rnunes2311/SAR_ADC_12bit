@@ -1003,7 +1003,7 @@ X9 VGND C a_368_53# VNB sky130_fd_pr__nfet_01v8 ad=0.122275 pd=1.08 as=0.05355 p
 + vref_z_p_o[4] vref_z_p_o[5] vref_z_p_o[6] vref_z_p_o[7] vref_z_p_o[8] vref_z_p_o[9]
 + vss_n_o[0] vss_n_o[10] vss_n_o[1] vss_n_o[2] vss_n_o[3] vss_n_o[4] vss_n_o[5] vss_n_o[6]
 + vss_n_o[7] vss_n_o[8] vss_n_o[9] vss_p_o[0] vss_p_o[10] vss_p_o[1] vss_p_o[2] vss_p_o[3]
-+ vss_p_o[4] vss_p_o[5] vss_p_o[6] vss_p_o[7] vss_p_o[8] vss_p_o[9] VSS VDD
++ vss_p_o[4] vss_p_o[5] vss_p_o[6] vss_p_o[7] vss_p_o[8] vss_p_o[9] VDD VSS
 X_294_ counter\[9\] _103_ VSS VSS VDD VDD net42 sky130_fd_sc_hd__nor2_1
 X_363_ _026_ net107 net117 VSS VSS VDD VDD _020_ sky130_fd_sc_hd__o21a_1
 Xfanout105 state\[1\] VSS VSS VDD VDD net105 sky130_fd_sc_hd__buf_2
@@ -1680,6 +1680,14 @@ Xsky130_fd_pr__pfet_01v8_M4CK9Z_0 LOAD_CAL_Z CAL_P EN_COMP_Z EN VDD VDD VDD m1_1
 Xx22 EN x6/Y x7/Y VSS VSS VDD VDD LOAD_CAL_Z sky130_fd_sc_hd__nand3_1
 .ends
 
+.subckt sky130_fd_pr__nfet_01v8_lvt_6HJFYD a_n73_n69# a_n175_n243# a_n33_n157# a_15_n69#
+X0 a_15_n69# a_n33_n157# a_n73_n69# a_n175_n243# sky130_fd_pr__nfet_01v8_lvt ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_MAQRRG a_n73_n64# a_n33_n161# a_15_n64# w_n211_n284#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n211_n284# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
 .subckt sky130_fd_pr__pfet_01v8_XG6TDL a_n159_n426# a_111_431# a_33_n426# a_n221_n400#
 + a_n129_n400# a_63_n400# a_n81_431# w_n359_n619# a_n33_n400# a_159_n400#
 X0 a_n129_n400# a_n159_n426# a_n221_n400# w_n359_n619# sky130_fd_pr__pfet_01v8 ad=0.66 pd=4.33 as=1.24 ps=8.62 w=4 l=0.15
@@ -1708,6 +1716,14 @@ X1 a_n33_n400# a_n63_n426# a_n125_n400# a_n227_n574# sky130_fd_pr__nfet_01v8 ad=
 X0 a_90_n400# a_n90_n488# a_n148_n400# a_n282_n622# sky130_fd_pr__nfet_05v0_nvt ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=0.9
 .ends
 
+.subckt sky130_fd_pr__nfet_01v8_B2JNY3 a_159_n100# a_n323_n274# a_n129_n100# a_n221_n100#
++ a_63_n100# a_111_122# a_n33_n100# a_15_n188# a_n81_122# a_n177_n188#
+X0 a_n129_n100# a_n177_n188# a_n221_n100# a_n323_n274# sky130_fd_pr__nfet_01v8 ad=0.165 pd=1.33 as=0.31 ps=2.62 w=1 l=0.15
+X1 a_63_n100# a_15_n188# a_n33_n100# a_n323_n274# sky130_fd_pr__nfet_01v8 ad=0.165 pd=1.33 as=0.165 ps=1.33 w=1 l=0.15
+X2 a_n33_n100# a_n81_122# a_n129_n100# a_n323_n274# sky130_fd_pr__nfet_01v8 ad=0.165 pd=1.33 as=0.165 ps=1.33 w=1 l=0.15
+X3 a_159_n100# a_111_122# a_63_n100# a_n323_n274# sky130_fd_pr__nfet_01v8 ad=0.31 pd=2.62 as=0.165 ps=1.33 w=1 l=0.15
+.ends
+
 .subckt sky130_fd_pr__pfet_01v8_CMU2ES a_29_n895# a_n3407_118# a_3349_118# a_n3349_n895#
 + a_n29_n798# w_n3545_n1017# a_29_21# a_n3407_n798# a_n3349_21# a_n29_118# a_3349_n798#
 X0 a_3349_118# a_29_21# a_n29_118# w_n3545_n1017# sky130_fd_pr__pfet_01v8 ad=0.986 pd=7.38 as=0.493 ps=3.69 w=3.4 l=16.6
@@ -1718,16 +1734,20 @@ X3 a_n29_118# a_n3349_21# a_n3407_118# w_n3545_n1017# sky130_fd_pr__pfet_01v8 ad
 
 .subckt bootstrap VDD VSS VIN SW_ON EN VGATE
 Xx1 EN VSS VSS VDD VDD EN_Z sky130_fd_sc_hd__inv_4
-Xx2 VGATE_1V8 VSS VSS VDD VDD x3/A sky130_fd_sc_hd__inv_2
+Xsky130_fd_pr__nfet_01v8_lvt_6HJFYD_0 Vbottom VSS EN a_16106_1129# sky130_fd_pr__nfet_01v8_lvt_6HJFYD
 Xx3 x3/A VSS VSS VDD VDD SW_ON sky130_fd_sc_hd__inv_4
-Xsky130_fd_pr__pfet_01v8_XG6TDL_0 EN_Z EN_Z EN_Z Vtop VGATE VGATE EN_Z Vtop Vtop Vtop
-+ sky130_fd_pr__pfet_01v8_XG6TDL
+Xx2 VGATE_1V8 VSS VSS VDD VDD x3/A sky130_fd_sc_hd__inv_2
+Xsky130_fd_pr__pfet_01v8_MAQRRG_0 a_16106_1129# EN VDD VDD sky130_fd_pr__pfet_01v8_MAQRRG
+Xsky130_fd_pr__pfet_01v8_XG6TDL_0 a_16106_1129# a_16106_1129# a_16106_1129# Vtop VGATE
++ VGATE a_16106_1129# Vtop Vtop Vtop sky130_fd_pr__pfet_01v8_XG6TDL
 XXM1 Vtop VDD Vtop VGATE sky130_fd_pr__pfet_01v8_XGS3BL
 XXM3 VGATE Vd VDD VSS VGATE VDD sky130_fd_pr__nfet_05v0_nvt_F93ZEE
 XXM4 VSS VSS VSS EN_Z Vd sky130_fd_pr__nfet_01v8_6EHS5V
 XXM5 VSS VSS VSS EN_Z Vbottom sky130_fd_pr__nfet_01v8_6EHS5V
 XXM7 VDD VGATE_1V8 VSS VGATE sky130_fd_pr__nfet_05v0_nvt_JFFQEL
 XXM8 VSS VIN VIN VGATE Vbottom sky130_fd_pr__nfet_01v8_6EHS5V
+Xsky130_fd_pr__nfet_01v8_B2JNY3_0 Vbottom VSS a_16106_1129# Vbottom a_16106_1129#
++ VGATE Vbottom VGATE VGATE VGATE sky130_fd_pr__nfet_01v8_B2JNY3
 Xsky130_fd_pr__pfet_01v8_CMU2ES_0 Vbottom Vtop Vtop Vbottom Vtop Vtop Vbottom Vtop
 + Vbottom Vtop Vtop sky130_fd_pr__pfet_01v8_CMU2ES
 .ends
@@ -1972,8 +1992,8 @@ Xswitches_0 switches_0/EN_VREF_Z[10] switches_0/EN_VREF_Z[9] switches_0/EN_VREF_
 + switches_0/EN_VCM[6] switches_0/VDD switches_0/VDAC switches_0/VREF_GND VSUBS switches
 .ends
 
-.subckt SAR_ADC_12bit VIN_P VDD VREF VCM VSS VIN_N RST_Z START CLK_DATA DATA[5] DATA[4] DATA[3] DATA[2] DATA[1] DATA[0]
-+ EN_OFFSET_CAL CLK VREF_GND SINGLE_ENDED
+.subckt SAR_ADC_12bit CLK_DATA DATA[0] DATA[1] DATA[2] DATA[3] DATA[4] DATA[5] RST_Z
++ START EN_OFFSET_CAL VDD CLK SINGLE_ENDED VIN_P VIN_N VCM VREF VREF_GND VSS
 Xpreamplifier_0 VDAC_P VDAC_N VDAC_Ni VDAC_Pi RST_Z CAL_P CAL_N VDD VSS preamplifier
 Xstate_machine_0 CLK CLK_DATA COMP_P DATA[0] DATA[1] DATA[2] DATA[3] DATA[4] DATA[5]
 + en_comp EN_OFFSET_CAL offset_calibration_0/EN state_machine_0/en_vcm_sw_o state_machine_0/en_vcm_sw_o
@@ -1998,7 +2018,7 @@ Xstate_machine_0 CLK CLK_DATA COMP_P DATA[0] DATA[1] DATA[2] DATA[3] DATA[4] DAT
 + state_machine_0/vss_p_o[0] state_machine_0/vss_p_o[10] state_machine_0/vss_p_o[1]
 + state_machine_0/vss_p_o[2] state_machine_0/vss_p_o[3] state_machine_0/vss_p_o[4]
 + state_machine_0/vss_p_o[5] state_machine_0/vss_p_o[6] state_machine_0/vss_p_o[7]
-+ state_machine_0/vss_p_o[8] state_machine_0/vss_p_o[9] VSS VDD state_machine
++ state_machine_0/vss_p_o[8] state_machine_0/vss_p_o[9] VDD VSS state_machine
 Xbreak_before_make_0 state_machine_0/vss_p_o[10] state_machine_0/vss_p_o[9] state_machine_0/vss_p_o[8]
 + state_machine_0/vss_p_o[7] state_machine_0/vss_p_o[6] state_machine_0/vss_p_o[5]
 + state_machine_0/vss_p_o[4] state_machine_0/vss_p_o[3] state_machine_0/vss_p_o[2]
