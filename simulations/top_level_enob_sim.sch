@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0
-x2=0.000208
+x1=7.7926261e-05
+x2=7.9844721e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -44,8 +44,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=0.000208
+x1=7.7926261e-05
+x2=7.9844721e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -67,8 +67,8 @@ ypos2=1.9
 divy=5
 subdivy=4
 unity=1
-x1=0
-x2=0.000208
+x1=7.7926261e-05
+x2=7.9844721e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -86,9 +86,10 @@ digital=0
 sim_type=tran
 
 
-color="4 10"
+color="4 10 4"
 node="x1.vdac_p
-x1.vdac_n"}
+x1.vdac_n
+i(v1)"}
 N 360 -380 360 -360 {
 lab=#net1}
 N 440 -380 440 -360 {
